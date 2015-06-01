@@ -1,2 +1,2 @@
-# raintank-website-v2
+# website-v2
 new raintank website
