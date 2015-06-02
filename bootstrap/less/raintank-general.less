@@ -1,0 +1,41 @@
+//
+// Global
+// --------------------------------------------------
+html {
+  /* make type beautiful */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//
+// navigation
+// --------------------------------------------------
+.nav-container {
+  .container-fixed();
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+    margin-left:20px;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+        margin-left:20px;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+        margin-left:20px;
+  }
+}
+
+//
+// title
+// --------------------------------------------------
+.main-logo {
+  font-size: 110px;
+  line-height: 10px;
+}
+
+.home-hero {
+    background: url('../../dist/img/rt-home-bg.png') 0 0 fixed no-repeat; 
+    background-size:100% auto; 
+  }
