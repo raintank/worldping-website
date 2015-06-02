@@ -169,7 +169,7 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>-theme.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
         },
-        src: 'less/theme.less',
+        src: 'less/raintank.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
       }
     },
