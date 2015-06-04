@@ -10,17 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Raintank</title>
+    <title>raintank: open source infrastructure monitoring solution</title>
 
     <!-- Bootstrap core CSS -->
-   <!--  <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="../dist/css/bootstrap.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <!-- <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-    <link href="../dist/css/bootstrap-theme.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../dist/css/raintank.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,82 +24,135 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Custom styles for this template -->
+<!--     <link href="../dist/css/carousel.css" rel="stylesheet"> -->
+
   </head>
-
-  <body role="document" class="home-hero">
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="">
-      <div class="nav-container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><i class="main-logo icon-rt-raintank_wordmark"></i></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown"> <!-- active class could be on this element -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">the vision</a></li>
-                <li><a href="#">the team</a></li>
-                <li><a href="#">join us</a></li>
-              </ul>
-            </li>
-              <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">what is litmus</a></li>
-                <li><a href="#">usecase 1</a></li>
-                <li><a href="#">usecase 2</a></li>
-                <li><a href="#">usecase 3</a></li>
-              </ul>
-            </li>
-            <li><a href="#">community</a></li>
-            <li><a href="#">partners</a></li>
-            <li><a href="#">blog</a></li>
-<!--           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">the vision</a></li>
-                <li><a href="#">the team</a></li>
-                <li><a href="#">join us</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
-          </ul>
-
-          <ul class="nav navbar-signup">
-            <li><a href="#">sign Up</a></li>
-            <li><a href="#">sign In</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+<!-- NAVBAR
+================================================== -->
+<body role="document">
+  <div class="navbar-wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><i class="main-logo icon-rt-raintank_wordmark"></i></a>
       </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown"> <!-- active class could be on this element -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">the vision</a></li>
+              <li><a href="#">the team</a></li>
+              <li><a href="#">join us</a></li>
+            </ul>
+          </li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">what is litmus</a></li>
+              <li><a href="#">usecase 1</a></li>
+              <li><a href="#">usecase 2</a></li>
+              <li><a href="#">usecase 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">community</a></li>
+          <li><a href="#">partners</a></li>
+          <li><a href="#">blog</a></li>
+  <!--           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">the vision</a></li>
+              <li><a href="#">the team</a></li>
+              <li><a href="#">join us</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li> -->
+        </ul>
+        <div class="nav-btn"><a class="navbar-right signInCTA" href="#">Sign In</a></div>
+        <div class="nav-btn"><a class="navbar-right signUpCTA" href="#">Sign Up</a></div>
+
+    
+      </div><!--/.nav-collapse -->
     </nav>
+  </div>
+</div>
+    <!-- Carousel
+    ================================================== -->
 
-<!--     <div class="container theme-showcase" role="main">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="8000">
+      <!-- Indicators -->
+<!--       <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol> -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../dist/img/rt-home-bg.png" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>raintank is an open-source monitoring platform which collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
+              <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
 
-      <!-- Main jumbotron for a primary marketing message or call to action 
-      <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+      <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div><!-- /.carousel -->
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="main-content-container">
+    <div class="marketing">
+      <!-- START THE FEATURETTES -->
+      <!-- <hr class="featurette-divider"> -->
+
+      <div class="row featurette">
+        <div class="col-md-12">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
       </div>
-    </div> -->
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 raintank inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/docs.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../docs/assets/js/vendor/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
