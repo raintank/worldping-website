@@ -94,6 +94,33 @@ html {
 }
 
 
+/* CONTAINER ADJUSTMENTS
+-------------------------------------------------- */
+.main-content-container {
+  .container-fixed();
+  position:relative;
+  background-color:@body-bg;
+
+
+  @media (min-width: @screen-sm-min) {
+    width: (@container-sm - 50px);
+     margin-top:-120px;
+     padding: 0 @grid-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    width: (@container-md - 50px);
+     margin-top:-120px;
+     padding: 0 @grid-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: (@container-lg - 50px);
+     margin-top:-120px;
+     padding: 0 @grid-gutter-width;
+  }
+  max-width:1110px;
+}
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -147,7 +174,7 @@ html {
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1;
   letter-spacing: -1px;
 }
@@ -184,12 +211,14 @@ html {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 27px;
+    color: @brand-primary;
   }
 }
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 120px;
+    margin-top: 60px;
+    margin-bottom:60px;
   }
 }

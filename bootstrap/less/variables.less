@@ -242,7 +242,7 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    rgba(0,0,0, 0.6);
+@dropdown-bg:                    rgba(0,0,0, 0.7);
 //** Dropdown menu `border-color`.
 @dropdown-border:                none;
 //** Dropdown menu `border-color` **for IE8**.
@@ -251,14 +251,17 @@
 @dropdown-divider-bg:            lighen(@black, 50%);
 
 //** Dropdown link text color.
-@dropdown-link-color:            @gray-lighter;
+@dropdown-link-color:            @gray-light;
+
 //** Hover color for dropdown links.
 @dropdown-link-hover-color:      @white;
+
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         @gray-dark;
+@dropdown-link-hover-bg:         transparent;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
+
 //** Active dropdown menu item background color.
 @dropdown-link-active-bg:        @component-active-bg;
 
@@ -405,7 +408,7 @@
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @white;
 @navbar-inverse-link-weight:         		300;
-@navbar-inverse-bg:                         rgba(0,0,0, 0.6);
+@navbar-inverse-bg:                         rgba(0,0,0, 0.7);
 @navbar-inverse-border:                     none;
 
 // Inverted navbar links
@@ -724,7 +727,7 @@
 
 //** Border color for elements within panels
 @panel-inner-border:          #ddd;
-@panel-footer-bg:             #f5f5f5;
+@panel-footer-bg:             @gray-darker;
 
 @panel-default-text:          @gray-dark;
 @panel-default-border:        #ddd;
