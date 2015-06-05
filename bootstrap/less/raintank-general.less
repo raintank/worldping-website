@@ -90,34 +90,7 @@ html {
   padding-left:40px;
   padding-right:40px;
   width: auto;
-  max-width:1120px;
-}
-
-
-/* CONTAINER ADJUSTMENTS
--------------------------------------------------- */
-.main-content-container {
-  .container-fixed();
-  position:relative;
-  background-color:@body-bg;
-
-
-  @media (min-width: @screen-sm-min) {
-    width: (@container-sm - 50px);
-     margin-top:-120px;
-     padding: 0 @grid-gutter-width;
-  }
-  @media (min-width: @screen-md-min) {
-    width: (@container-md - 50px);
-     margin-top:-120px;
-     padding: 0 @grid-gutter-width;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: (@container-lg - 50px);
-     margin-top:-120px;
-     padding: 0 @grid-gutter-width;
-  }
-  max-width:1110px;
+  max-width:1150px;
 }
 
 
@@ -126,8 +99,7 @@ html {
 
 /* Carousel base class */
 .carousel {
-  height: 600px;
-  margin-bottom: 60px;
+  min-height: 500px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -136,7 +108,7 @@ html {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 600px;
+  min-height: 500px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -144,7 +116,105 @@ html {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 600px;
+  min-height: 500px;
+}
+
+
+
+/* CONTAINER ADJUSTMENTS
+-------------------------------------------------- */
+.carousel-content-container {
+.carousel-caption h1 {opacity:.75; font-size:30px; line-height:1.4; max-width:760px;}
+
+  .container-fixed();
+
+  @media (min-width: @screen-sm-min) {
+    width: (@container-sm);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 4%;
+
+     .carousel-caption h1 {font-size:34px; line-height:1.4;}
+  }
+
+  @media (min-width: @screen-md-min) {
+    width: (@container-md - 100px);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 5%;
+
+      .carousel-caption h1 {font-size:34px; line-height:1.4;}
+  }
+
+  @media (min-width: @screen-lg-min) {
+    width: (@container-lg - 100px);
+    margin-left: calc(15% - 38px); // make it line up with the box edge, not the content
+
+      .carousel-caption h1 {font-size:34px; line-height:1.4;}
+  }
+  max-width:900px;
+}
+
+.main-content-container {
+  .container-fixed();
+  position:relative;
+  margin-bottom:60px;
+  padding-top:20px;
+  background-color:@body-bg;
+
+  @media (min-width: @screen-sm-min) {
+    margin-top:-120px; // puts it over the top of the hero for visual interest
+    width: (@container-sm);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 4%;
+  }
+
+  @media (min-width: @screen-md-min) {
+    margin-top:-120px; // puts it over the top of the hero for visual interest
+    width: (@container-md - 100px);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 5%;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    margin-top:-120px; // puts it over the top of the hero for visual interest
+    width: (@container-lg - 100px);
+    padding-left: 38px;
+    padding-left: 38px;
+    margin-left: 15%;
+  }
+  max-width:900px;
+}
+
+
+.footer-content-container {
+  .container-fixed();
+  position:relative;
+  padding-top:40px;
+
+  @media (min-width: @screen-sm-min) {
+    width: (@container-sm);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 4%;
+  }
+
+  @media (min-width: @screen-md-min) {
+    width: (@container-md - 100px);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 5%;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    width: (@container-lg - 100px);
+    padding-left: 38px;
+    padding-left: 38px;
+    margin-left: 15%;
+  }
+  max-width:900px;
 }
 
 
@@ -177,6 +247,16 @@ html {
   font-weight: 100;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+
+
+/* FOOTER
+------------------------- */
+
+footer {
+  background-color: @gray-base;
+  min-height:320px;
 }
 
 
@@ -218,7 +298,7 @@ html {
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 60px;
-    margin-bottom:60px;
+    // margin-top: 60px;
+    margin-bottom:40px;
   }
 }
