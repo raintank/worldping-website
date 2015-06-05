@@ -1288,7 +1288,7 @@ p {
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 19.6px;
   }
 }
 small,
@@ -1326,6 +1326,9 @@ mark,
 }
 .text-muted {
   color: #8d8d8d;
+}
+.text-highlight {
+  color: #ea2531;
 }
 .text-primary {
   color: #13b2d4;
@@ -7426,7 +7429,7 @@ footer {
   }
   .featurette-heading {
     font-size: 27px;
-    color: #13b2d4;
+    line-height: 1.2;
   }
 }
 @media (min-width: 992px) {
