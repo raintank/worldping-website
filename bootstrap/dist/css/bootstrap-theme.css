@@ -66,8 +66,8 @@
 .primaryCTA:visited:hover,
 .primaryCTA:active,
 .primaryCTA:visited:active {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
 }
@@ -87,8 +87,8 @@
 .seconfaryCTA:visited:hover,
 .secondaryCTA:active,
 .seconfaryCTA:visited:active {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
 }
