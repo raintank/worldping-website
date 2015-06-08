@@ -46,27 +46,29 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="dropdown"> <!-- active class could be on this element -->
+              <li class="dropdown"> <!-- active class could be on this element if in this section -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">the vision</a></li>
-                  <li><a href="#">the team</a></li>
+                  <li><a href="#">the raintank vision</a></li>
+                  <li><a href="#">about the team</a></li>
                   <li><a href="#">join us</a></li>
                 </ul>
               </li>
-                <li class="dropdown">
+                <li class="dropdown"> <!-- active class could be on this element if in this section -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">what is litmus</a></li>
-                  <li><a href="#">usecase 1</a></li>
-                  <li><a href="#">usecase 2</a></li>
-                  <li><a href="#">usecase 3</a></li>
+                  <li><a href="#">for service providers</a></li>
+                  <li><a href="#">for developers</a></li>
+                  <li><a href="#">for operators</a></li>
+                  <li><a href="#">for website owners</a></li>
                 </ul>
               </li>
-              <li><a href="#">community</a></li>
-              <li><a href="#">partners</a></li>
-              <li><a href="#">blog</a></li>
-      <!--           <li class="dropdown">
+              <li><a href="#">community</a></li> <!-- active class could be on this element if in this section -->
+              <li><a href="#">partners</a></li> <!-- active class could be on this element if in this section -->
+              <li><a href="#">blog</a></li> <!-- active class could be on this element if in this section -->
+              <!--           
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">the vision</a></li>
@@ -77,7 +79,8 @@
                   <li><a href="#">Separated link</a></li>
                   <li><a href="#">One more separated link</a></li>
                 </ul>
-              </li> -->
+              </li> 
+              -->
             </ul>
             <div class="nav-btn"><a class="navbar-right signInCTA" href="#">Sign In</a></div>
             <div class="nav-btn"><a class="navbar-right signUpCTA" href="#">Sign Up</a></div>
@@ -85,75 +88,189 @@
       </nav>
     </div>
   </div>
+
     <!-- Carousel
     ================================================== -->
-
-    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="8000">
-      <!-- Indicators -->
-<!--       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-      </ol> -->
+    <div id="myCarousel" class="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img src="../dist/img/rt-home-bg.png" alt="First slide">
           <div class="carousel-content-container">
             <div class="carousel-caption">
-              <h1>raintank is an open-source monitoring platform which collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
+              <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
+              <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div><!-- /.carousel -->
+    </div>
+
+  <!-- Main page content 
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container then offset the content. -->
+
+  <div class="main-content-container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="beta-heading text-primary">infrastructure monitoring is broken. <br/><span class="text-highlight">(and it's geting worse)</span></h2>
+        <p class="lead">It's gotten <strong>complicated</strong>, <strong>frustrating</strong> and <strong>expensive</strong>.</p>
+        
+        <p class="">It's become a massive hallucination. People get bombarded with confusing alerts, so they can stare at nonsensical charts while half awake, just to see if a problem even exists.</p>
+        <p class=""><strong>data deluge</strong> Traffic's way up, but so is the amount of metrics, messages and alerts from your ever-growing stack.</p>
+        <p class=""><strong>terrible choices</strong> A proprietary solution? SaaS? It'll be expensive, and you'll lose control. Open source? Could be a time sink.</p>
+        <p class=""><strong>fractured vision</strong> You want correlation and collaboration, across your whole stack. Disparate tools and data make seeing the whole picture hard.</p>
+        <p class="">It doesn't have to be so bad.</p>
+
+        <h2 class="text-primary" style="margin-bottom:30px;">raintank is fixing it.</h2>
+       <div class="nav-btn"><a class="primaryCTA" href="#">Find Out How</a></div>
+      </div>
+
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+  
+<!--   <div class="media-content-container container-fluid" style="height:500px; background-color:#fff;">
+    media carousel
+  </div>   -->
+
+  <!-- Carousel
+    ================================================== -->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="8000">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+         <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol> 
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../dist/img/rt-home-bg.png" alt="First slide">
+          <div class="carousel-content-container">
+            <div class="carousel-caption">
+              <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
               <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
             </div>
           </div>
         </div>
 
-      <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+         <div class="item">
+          <img src="../dist/img/rt-home-bg.png" alt="First slide">
+          <div class="carousel-content-container">
+            <div class="carousel-caption">
+              <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
+              <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+
+         <div class="item">
+          <img src="../dist/img/rt-home-bg.png" alt="First slide">
+          <div class="carousel-content-container">
+            <div class="carousel-caption">
+              <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
+              <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a> -->
+      </a>
     </div><!-- /.carousel -->
-    </div>
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-  <div class="main-content-container">
-    <div class="marketing">
-      <!-- START THE FEATURETTES -->
-      <!-- <hr class="featurette-divider"> -->
-
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading text-primary">infrastructure monitoring is broken. <br/><span class="text-highlight">(and it's geting worse)</span></h2>
-          <p class="lead">It's gotten <strong>complicated</strong>, <strong>frustrating</strong> and <strong>expensive</strong>.</p>
-          
-          <p class="">It's become a massive hallucination. People get bombarded with confusing alerts, so they can stare at nonsensical charts while half awake, just to see if a problem even exists.</p>
-          <p class=""><strong>data deluge</strong> Traffic's way up, but so is the amount of metrics, messages and alerts from your ever-growing stack.</p>
-          <p class=""><strong>terrible choices</strong> A proprietary solution? SaaS? It'll be expensive, and you'll lose control. Open source? Could be a time sink.</p>
-          <p class=""><strong>fractured vision</strong> You want correlation and collaboration, across your whole stack. Disparate tools and data make seeing the whole picture hard.</p>
-          <p class="">It doesn't have to be so bad.</p>
-          <h2 class="text-primary" style="margin-bottom:30px;">raintank is fixing it.</h2>
-         <div class="nav-btn"><a class="primaryCTA" href="#">Find Out How</a></div>
-        </div>
-      </div>
-      <!-- /END THE FEATURETTES -->
-    </div><!-- /.container -->
   </div>
-  
-  <div class="media-content-container container-fluid" style="height:500px; background-color:#fff;">
-    media carousel
-  </div>  
 
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
    <div class="footer-content-container">
-    <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
-    <p>&copy; 2015 raintank inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </div>
+   <div class="row">
+        <div class="col-xs-6 col-md-9">
+
+
+
+      <div class="row">
+        <div class="col-xs-12 col-md-2">
+          <ul>
+             <li class="title">about</li>
+             <li><a href="#">the vision</a></li>
+             <li><a href="#">the team</a></li>
+             <li><a href="#">join us</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <ul>
+             <li class="title">litmus</li>
+             <li><a href="#">what is litmus?</a></li>
+             <li><a href="#">service providers</a></li>
+             <li><a href="#">developers</a></li>
+             <li><a href="#">perators</a></li>
+             <li><a href="#">website owners</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <ul>
+            <li class="title">community</li>
+            <li><a href="#">on open source</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">newsletter</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <ul>
+            <li class="title"><a href="#">partners</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-1">
+          <ul>
+            <li class="title"><a href="#">blog</a></li>
+          </ul>
+        </div>
+        </div>
+        </div>
+
+
+   <div class="row">
+        <div class="col-xs-6 col-md-3">
+
+
+        <div class="col-xs-12 col-md-12">
+          <ul class="text-right">
+            <li><span class="title">e:</span> <a href="mailto:hello@raintank.io" class="contact">hello@raintank.io</a></li>
+            <li><span class="title">p:</span> 877.666.1234</li>
+          </ul>
+          <ul class="text-right text-muted">
+            <li>29 broadway</li>
+            <li>penthouse</li>
+            <li>new york, ny 10006</li>
+          </ul>
+        </div>
+      </div>
+</div>
+</div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <p>&copy; 2015 raintank inc.</p>
+        </div>
+      </div>  
+  
+
+
+   </div>
   </footer>
 
  
+
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

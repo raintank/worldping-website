@@ -249,7 +249,9 @@
 .navbar-inverse {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a {
+  font-weight: normal;
+}
 .navbar-inverse .navbar-nav > .active > a {
   font-weight: 700;
 }

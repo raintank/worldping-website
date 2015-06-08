@@ -132,23 +132,23 @@ html {
     width: (@container-sm);
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 4%;
+    margin-left: 1%;
 
      .carousel-caption h1 {font-size:34px; line-height:1.4;}
   }
 
   @media (min-width: @screen-md-min) {
-    width: (@container-md - 100px);
+    width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 5%;
+    margin-left: 2%;
 
       .carousel-caption h1 {font-size:34px; line-height:1.4;}
   }
 
   @media (min-width: @screen-lg-min) {
-    width: (@container-lg - 100px);
-    margin-left: calc(15% - 38px); // make it line up with the box edge, not the content
+    width: (@container-lg - 370px); // ~800px
+    margin-left: calc(18% - 34px); // make it line up with the box edge, not the content
 
       .carousel-caption h1 {font-size:34px; line-height:1.4;}
   }
@@ -159,7 +159,7 @@ html {
   .container-fixed();
   position:relative;
   margin-bottom:60px;
-  padding-top:20px;
+  padding-top:40px;
   background-color:@body-bg;
 
   @media (min-width: @screen-sm-min) {
@@ -172,7 +172,7 @@ html {
 
   @media (min-width: @screen-md-min) {
     margin-top:-120px; // puts it over the top of the hero for visual interest
-    width: (@container-md - 100px);
+    width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
     margin-left: 5%;
@@ -180,10 +180,10 @@ html {
 
   @media (min-width: @screen-lg-min) {
     margin-top:-120px; // puts it over the top of the hero for visual interest
-    width: (@container-lg - 100px);
+    width: (@container-lg - 370px); // ~800px
     padding-left: 38px;
     padding-left: 38px;
-    margin-left: 15%;
+    margin-left: 18%;
   }
   max-width:900px;
   // background: url("../img/ping_graph.png") repeat-x left bottom; 
@@ -203,17 +203,17 @@ html {
   }
 
   @media (min-width: @screen-md-min) {
-    width: (@container-md - 100px);
+    width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
     margin-left: 5%;
   }
 
   @media (min-width: @screen-lg-min) {
-    width: (@container-lg - 100px);
+    width: (@container-lg - 370px); // ~800px
     padding-left: 38px;
     padding-left: 38px;
-    margin-left: 15%;
+    margin-left: 18%;
   }
   max-width:900px;
 }
@@ -222,7 +222,7 @@ html {
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
+/* Center align the text within the three columns below the carousel  */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
@@ -244,10 +244,12 @@ html {
 }
 
 /* Thin out the marketing headings */
-.featurette-heading {
+.beta-heading {
   font-weight: 100;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: -1px;
+  margin-bottom:40px;
+  margin-top:0;
 }
 
 
@@ -258,8 +260,14 @@ html {
 footer {
   background-color: @gray-base;
   min-height:320px;
+  color:@gray-lighter;
+  font-size: @font-size-small;
 }
 
+footer .row {margin-bottom:40px;}
+footer ul {list-style: none; padding-left:0; margin-bottom:20px;}
+footer a {color:@white;}
+footer a.contact {color:@brand-primary;}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -291,15 +299,13 @@ footer {
     line-height: 1.4;
   }
 
-  .featurette-heading {
-    font-size: 27px;
-    line-height:1.2;
+  .beta-heading {
+
   }
 }
 
 @media (min-width: 992px) {
-  .featurette-heading {
-    // margin-top: 60px;
-    margin-bottom:40px;
+  .beta-heading {
+
   }
 }
