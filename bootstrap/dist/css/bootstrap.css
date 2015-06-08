@@ -6247,6 +6247,18 @@ button.close {
 .carousel-caption .btn {
   text-shadow: none;
 }
+.hero-caption {
+  max-width: 800px;
+  top: 100px;
+  z-index: 10;
+  padding-top: 120px;
+  padding-bottom: 180px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.hero-caption .btn {
+  text-shadow: none;
+}
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,
@@ -6264,9 +6276,6 @@ button.close {
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
     margin-right: -15px;
-  }
-  .carousel-caption {
-    padding-bottom: 30px;
   }
   .carousel-indicators {
     bottom: 200px;
@@ -6302,8 +6311,8 @@ button.close {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
-.carousel-content-container:before,
-.carousel-content-container:after,
+.hero-content-container:before,
+.hero-content-container:after,
 .main-content-container:before,
 .main-content-container:after,
 .footer-content-container:before,
@@ -6326,7 +6335,7 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-.carousel-content-container:after,
+.hero-content-container:after,
 .main-content-container:after,
 .footer-content-container:after {
   clear: both;
@@ -7148,8 +7157,10 @@ html {
   line-height: 10px;
 }
 .home-hero {
-  background: url('../../dist/img/rt-home-bg.png') 0 0 fixed no-repeat;
-  background-size: 100% auto;
+  background: url(../../dist/img/rt-home-bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .helperBoxContent {
   /* adds some padding to keep the box organized */
@@ -7241,51 +7252,60 @@ html {
   min-width: 100%;
   min-height: 500px;
 }
+.hero,
+.content {
+  position: relative;
+  width: 100%;
+}
+.inner {
+  min-height: auto;
+  position: relative;
+}
 /* CONTAINER ADJUSTMENTS
 -------------------------------------------------- */
-.carousel-content-container {
+.hero-content-container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
   max-width: 900px;
 }
-.carousel-content-container .carousel-caption h1 {
+.hero-content-container .hero-caption h1 {
   opacity: .75;
   font-size: 30px;
   line-height: 1.4;
   max-width: 760px;
 }
 @media (min-width: 768px) {
-  .carousel-content-container {
+  .hero-content-container {
     width: 750px;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 1%;
   }
-  .carousel-content-container .carousel-caption h1 {
+  .hero-content-container .hero-caption h1 {
     font-size: 34px;
     line-height: 1.4;
   }
 }
 @media (min-width: 992px) {
-  .carousel-content-container {
+  .hero-content-container {
     width: 800px;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 2%;
   }
-  .carousel-content-container .carousel-caption h1 {
+  .hero-content-container .hero-caption h1 {
     font-size: 34px;
     line-height: 1.4;
   }
 }
 @media (min-width: 1200px) {
-  .carousel-content-container {
+  .hero-content-container {
     width: 800px;
     margin-left: calc(18% - 34px);
   }
-  .carousel-content-container .carousel-caption h1 {
+  .hero-content-container .hero-caption h1 {
     font-size: 34px;
     line-height: 1.4;
   }

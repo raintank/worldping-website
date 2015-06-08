@@ -15,10 +15,12 @@ html {
   line-height: 10px;
 }
 
-.home-hero {
-    background: url('../../dist/img/rt-home-bg.png') 0 0 fixed no-repeat; 
-    background-size:100% auto; 
-  }
+.home-hero{
+  background:url(../../dist/img/rt-home-bg.png);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
 
   .helperBoxContent{ /* adds some padding to keep the box organized */
             padding:10px 25px 30px 25px;
@@ -120,12 +122,20 @@ html {
 }
 
 
+.hero, .content{
+  position:relative;
+  width: 100%;
+}
+
+.inner{
+  min-height:auto;
+  position: relative;
+}
 
 /* CONTAINER ADJUSTMENTS
 -------------------------------------------------- */
-.carousel-content-container {
-.carousel-caption h1 {opacity:.75; font-size:30px; line-height:1.4; max-width:760px;}
-
+.hero-content-container {
+.hero-caption h1 {opacity:.75; font-size:30px; line-height:1.4; max-width:760px;}
   .container-fixed();
 
   @media (min-width: @screen-sm-min) {
@@ -134,7 +144,7 @@ html {
     padding-right: @grid-gutter-width;
     margin-left: 1%;
 
-     .carousel-caption h1 {font-size:34px; line-height:1.4;}
+     .hero-caption h1 {font-size:34px; line-height:1.4;}
   }
 
   @media (min-width: @screen-md-min) {
@@ -143,17 +153,18 @@ html {
     padding-right: @grid-gutter-width;
     margin-left: 2%;
 
-      .carousel-caption h1 {font-size:34px; line-height:1.4;}
+      .hero-caption h1 {font-size:34px; line-height:1.4;}
   }
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 370px); // ~800px
     margin-left: calc(18% - 34px); // make it line up with the box edge, not the content
 
-      .carousel-caption h1 {font-size:34px; line-height:1.4;}
+      .hero-caption h1 {font-size:34px; line-height:1.4;}
   }
   max-width:900px;
 }
+
 
 .main-content-container {
   .container-fixed();
