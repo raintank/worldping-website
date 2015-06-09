@@ -137,13 +137,12 @@ html {
   .container-fixed();
 
   .hero-caption {
-    max-width:760px;
     z-index: 10;
     padding-top: 160px;
     padding-bottom:40px;
     & h1 {
       opacity:.75;
-      font-size:30px;
+      font-size:26px;
       margin-bottom:40px;
       line-height:1.4;
       color: @carousel-caption-color;
@@ -155,10 +154,10 @@ html {
 }
 
   @media (min-width: @screen-sm-min) {
-    width: (@container-sm);
+    width: 810px;
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 1%;
+    margin-left: calc(4% - 30px); // make it line up with the box edge, not the content
 
      .hero-caption {
       padding-bottom:150px;
@@ -170,10 +169,10 @@ html {
   }
 
   @media (min-width: @screen-md-min) {
-    width: (@container-md - 170px); // ~800px
+    width: 860px;
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 3%;
+    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
 
       .hero-caption {
         padding-bottom:150px;
@@ -185,8 +184,8 @@ html {
   }
 
   @media (min-width: @screen-lg-min) {
-    width: (@container-lg - 370px); // ~800px
-    margin-left: calc(18% - 34px); // make it line up with the box edge, not the content
+    width: 840px;
+    margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
 
       .hero-caption {
         padding-bottom:150px;
@@ -196,7 +195,6 @@ html {
       }
     }
   }
-  max-width:900px;
 }
 
 
@@ -220,7 +218,7 @@ html {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 5%;
+    margin-left: 10%;
   }
 
   @media (min-width: @screen-lg-min) {
@@ -228,7 +226,7 @@ html {
     width: (@container-lg - 370px); // ~800px
     padding-left: 38px;
     padding-left: 38px;
-    margin-left: 18%;
+    margin-left: 15%;
   }
   max-width:900px;
   // background: url("../img/ping_graph.png") repeat-x left bottom; 
@@ -258,7 +256,7 @@ html {
     width: (@container-lg - 370px); // ~800px
     padding-left: 38px;
     padding-left: 38px;
-    margin-left: 18%;
+    margin-left: 15%;
   }
   max-width:900px;
 }

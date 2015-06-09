@@ -7277,17 +7277,15 @@ html {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 900px;
 }
 .hero-content-container .hero-caption {
-  max-width: 760px;
   z-index: 10;
   padding-top: 160px;
   padding-bottom: 40px;
 }
 .hero-content-container .hero-caption h1 {
   opacity: .75;
-  font-size: 30px;
+  font-size: 26px;
   margin-bottom: 40px;
   line-height: 1.4;
   color: #ffffff;
@@ -7298,10 +7296,10 @@ html {
 }
 @media (min-width: 768px) {
   .hero-content-container {
-    width: 750px;
+    width: 810px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 1%;
+    margin-left: calc(4% - 30px);
   }
   .hero-content-container .hero-caption {
     padding-bottom: 150px;
@@ -7313,10 +7311,10 @@ html {
 }
 @media (min-width: 992px) {
   .hero-content-container {
-    width: 800px;
+    width: 860px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 3%;
+    margin-left: calc(10% - 30px);
   }
   .hero-content-container .hero-caption {
     padding-bottom: 150px;
@@ -7328,8 +7326,8 @@ html {
 }
 @media (min-width: 1200px) {
   .hero-content-container {
-    width: 800px;
-    margin-left: calc(18% - 34px);
+    width: 840px;
+    margin-left: calc(15% - 30px);
   }
   .hero-content-container .hero-caption {
     padding-bottom: 150px;
@@ -7365,7 +7363,7 @@ html {
     width: 800px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 5%;
+    margin-left: 10%;
   }
 }
 @media (min-width: 1200px) {
@@ -7373,7 +7371,7 @@ html {
     margin-top: -120px;
     width: 800px;
     padding-left: 38px;
-    margin-left: 18%;
+    margin-left: 15%;
   }
 }
 .footer-content-container {
@@ -7405,7 +7403,7 @@ html {
   .footer-content-container {
     width: 800px;
     padding-left: 38px;
-    margin-left: 18%;
+    margin-left: 15%;
   }
 }
 /* MARKETING CONTENT
