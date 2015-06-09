@@ -3487,8 +3487,10 @@ tbody.collapse.in {
 .open > a {
   outline: 0;
 }
-.dropdown:hover .dropdown-menu {
-  display: block;
+@media only screen and (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 .dropdown-menu-right {
   left: auto;
