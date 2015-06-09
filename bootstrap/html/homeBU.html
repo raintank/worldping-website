@@ -64,8 +64,8 @@
                   <li><a href="#">for website owners</a></li>
                 </ul>
               </li>
-              <li><a href="#">open source</a></li> <!-- active class could be on this element if in this section -->
-              <!-- <li><a href="#">partners</a></li> --> <!-- active class could be on this element if in this section -->
+              <li><a href="#">community</a></li> <!-- active class could be on this element if in this section -->
+              <li><a href="#">partners</a></li> <!-- active class could be on this element if in this section -->
               <li><a href="#">blog</a></li> <!-- active class could be on this element if in this section -->
               <!--           
               <li class="dropdown">
@@ -91,14 +91,14 @@
 
   <!-- Hero
   ================================================== -->
-  <section class="hero home-hero">
-    <div class=" hero-content-container inner">
+  <div class="" style="min-height:600px; background:#000 url(../dist/img/rt-home-bg.png) top left no-repeat; background-size:cover;">
+    <div class="hero-content-container">
       <div class="hero-caption">
-      <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1>
-      <p class="large"><a class="btn primaryRevCTA" href="#" role="button">Check Out our Free Beta</a></p>
+        <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1><br/>
+        <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
       </div>
     </div>
-  </section>
+  </div>
 
 
   <!-- Main page content 
@@ -107,19 +107,25 @@
 
   <div class="main-content-container">
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="beta-heading text-primary">Introducting Litmus. <span class="text-highlight">Raintank's flagship integration.</span></h2>
-        <p class="lead">Intro sentence or two about litmus</p>
+      <div class="col-md-8">
+        <h2 class="beta-heading text-primary">infrastructure monitoring is broken. <br/><span class="text-highlight">(and it's geting worse)</span></h2>
+        <p class="lead">It's gotten <strong>complicated</strong>, <strong>frustrating</strong> and <strong>expensive</strong>.</p>
         
-        <p class="text-center"><strong>badge badge badge</strong></p>
-        <p class="text-center">visuals</p>
-        <p class="text-center"><strong>list the 4 use-cases w/ links to each</strong></p>
-       <div class="text-center nav-btn"><a class="primaryCTA" href="#">Sign Up for our Free Beta</a></div>
+        <p class="">It's become a massive hallucination. People get bombarded with confusing alerts, so they can stare at nonsensical charts while half awake, just to see if a problem even exists.</p>
+        <p class=""><strong>data deluge</strong> Traffic's way up, but so is the amount of metrics, messages and alerts from your ever-growing stack.</p>
+        <p class=""><strong>terrible choices</strong> A proprietary solution? SaaS? It'll be expensive, and you'll lose control. Open source? Could be a time sink.</p>
+        <p class=""><strong>fractured vision</strong> You want correlation and collaboration, across your whole stack. Disparate tools and data make seeing the whole picture hard.</p>
+        <p class="">It doesn't have to be so bad.</p>
+
+        <h2 class="text-primary" style="margin-bottom:30px;">raintank is fixing it.</h2>
+       <div class="nav-btn"><a class="primaryCTA" href="#">Find Out How</a></div>
       </div>
 
+      <div class="col-md-4">
+      </div>
     </div>
   </div>
-
+  
 <!--   <div class="media-content-container container-fluid" style="height:500px; background-color:#fff;">
     media carousel
   </div>   -->
@@ -172,7 +178,7 @@
      <div class="row">
       <div class="col-xs-6 col-md-9">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-2">
+          <div class="col-xs-12 col-md-2">
             <ul>
                <li class="title">about</li>
                <li><a href="#">the vision</a></li>
@@ -180,7 +186,7 @@
                <li><a href="#">join us</a></li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-md-3">
             <ul>
                <li class="title">litmus</li>
                <li><a href="#">what is litmus?</a></li>
@@ -190,47 +196,56 @@
                <li><a href="#">website owners</a></li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12 col-md-3">
             <ul>
-              <li class="title"><a href="#">open source</a></li>
+              <li class="title">community</li>
+              <li><a href="#">on open source</a></li>
+              <li><a href="#">github</a></li>
+              <li><a href="#">newsletter</a></li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-2">
+          <div class="col-xs-12 col-md-2">
             <ul>
               <li class="title"><a href="#">partners</a></li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-2">
+          <div class="col-xs-12 col-md-2">
             <ul>
               <li class="title"><a href="#">blog</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="row">
-          <div class="col-xs-12 col-md-12">
-            <ul class="text-right">
-              <li><span class="title">e:</span> <a href="mailto:hello@raintank.io" class="contact">hello@raintank.io</a></li>
-              <li><span class="title">p:</span> 877.666.1234</li>
-            </ul>
-            <ul class="text-right text-muted">
-              <li>29 broadway</li>
-              <li>penthouse</li>
-              <li>new york, ny 10006</li>
-            </ul>
+
+       <div class="row">
+          <div class="col-xs-6 col-md-3">
+            <div class="col-xs-12 col-md-12">
+              <ul class="text-right">
+                <li><span class="title">e:</span> <a href="mailto:hello@raintank.io" class="contact">hello@raintank.io</a></li>
+                <li><span class="title">p:</span> 877.666.1234</li>
+              </ul>
+              <ul class="text-right text-muted">
+                <li>29 broadway</li>
+                <li>penthouse</li>
+                <li>new york, ny 10006</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <p>&copy; 2015 raintank inc.</p>
-      </div>
-    </div>  
+      <div class="row">
+        <div class="col-md-12">
+          <p>&copy; 2015 raintank inc.</p>
+        </div>
+      </div>  
+
    </div>
   </footer>
+
+ 
+
+
 
 
     <!-- Bootstrap core JavaScript
