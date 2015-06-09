@@ -95,7 +95,6 @@ html {
   max-width:1150px;
 }
 
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -135,8 +134,25 @@ html {
 /* CONTAINER ADJUSTMENTS
 -------------------------------------------------- */
 .hero-content-container {
-.hero-caption h1 {opacity:.75; font-size:30px; line-height:1.4; max-width:760px;}
   .container-fixed();
+
+  .hero-caption {
+    max-width:760px;
+    z-index: 10;
+    padding-top: 160px;
+    padding-bottom:40px;
+    & h1 {
+      opacity:.75;
+      font-size:30px;
+      margin-bottom:40px;
+      line-height:1.4;
+      color: @carousel-caption-color;
+      text-shadow: @carousel-text-shadow;
+    }
+    & .btn {
+      text-shadow: none; // No shadow for button elements in carousel-caption
+    }
+}
 
   @media (min-width: @screen-sm-min) {
     width: (@container-sm);
@@ -144,23 +160,41 @@ html {
     padding-right: @grid-gutter-width;
     margin-left: 1%;
 
-     .hero-caption h1 {font-size:34px; line-height:1.4;}
+     .hero-caption {
+      padding-bottom:150px;
+      & h1 {
+        font-size:30px; 
+        margin-bottom:30px;
+      }
+    }
   }
 
   @media (min-width: @screen-md-min) {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 2%;
+    margin-left: 3%;
 
-      .hero-caption h1 {font-size:34px; line-height:1.4;}
+      .hero-caption {
+        padding-bottom:150px;
+        & h1 {
+        font-size:30px; 
+        margin-bottom:30px;
+        }
+      }
   }
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 370px); // ~800px
     margin-left: calc(18% - 34px); // make it line up with the box edge, not the content
 
-      .hero-caption h1 {font-size:34px; line-height:1.4;}
+      .hero-caption {
+        padding-bottom:150px;
+        & h1 {
+        font-size:34px; 
+        margin-bottom:30px;
+      }
+    }
   }
   max-width:900px;
 }
@@ -259,8 +293,8 @@ html {
   font-weight: 100;
   line-height: 1.2;
   letter-spacing: -1px;
-  margin-bottom:40px;
-  margin-top:0;
+  margin-bottom: 40px;
+  margin-top: 0;
 }
 
 
@@ -311,12 +345,10 @@ footer a.contact {color:@brand-primary;}
   }
 
   .beta-heading {
-
   }
 }
 
 @media (min-width: 992px) {
   .beta-heading {
-
   }
 }

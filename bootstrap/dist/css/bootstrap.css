@@ -6247,18 +6247,6 @@ button.close {
 .carousel-caption .btn {
   text-shadow: none;
 }
-.hero-caption {
-  max-width: 800px;
-  top: 100px;
-  z-index: 10;
-  padding-top: 120px;
-  padding-bottom: 180px;
-  color: #ffffff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.hero-caption .btn {
-  text-shadow: none;
-}
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,
@@ -6781,6 +6769,27 @@ button.close {
   text-decoration: none;
   cursor: pointer;
 }
+.primaryRevCTA,
+.primaryRevCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #13b2d4;
+  background: transparent;
+  color: #13b2d4;
+  border-radius: 2px;
+  transition: 0.15s;
+}
+.primaryRevCTA:hover,
+.primaryRevCTA:visited:hover,
+.primaryRevCTA:active,
+.primaryRevCTA:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
 .secondaryCTA,
 .seconfaryCTA:visited {
   display: inline-block;
@@ -7270,11 +7279,22 @@ html {
   padding-right: 15px;
   max-width: 900px;
 }
+.hero-content-container .hero-caption {
+  max-width: 760px;
+  z-index: 10;
+  padding-top: 160px;
+  padding-bottom: 40px;
+}
 .hero-content-container .hero-caption h1 {
   opacity: .75;
   font-size: 30px;
+  margin-bottom: 40px;
   line-height: 1.4;
-  max-width: 760px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.hero-content-container .hero-caption .btn {
+  text-shadow: none;
 }
 @media (min-width: 768px) {
   .hero-content-container {
@@ -7283,9 +7303,12 @@ html {
     padding-right: 30px;
     margin-left: 1%;
   }
+  .hero-content-container .hero-caption {
+    padding-bottom: 150px;
+  }
   .hero-content-container .hero-caption h1 {
-    font-size: 34px;
-    line-height: 1.4;
+    font-size: 30px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 992px) {
@@ -7293,11 +7316,14 @@ html {
     width: 800px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 2%;
+    margin-left: 3%;
+  }
+  .hero-content-container .hero-caption {
+    padding-bottom: 150px;
   }
   .hero-content-container .hero-caption h1 {
-    font-size: 34px;
-    line-height: 1.4;
+    font-size: 30px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 1200px) {
@@ -7305,9 +7331,12 @@ html {
     width: 800px;
     margin-left: calc(18% - 34px);
   }
+  .hero-content-container .hero-caption {
+    padding-bottom: 150px;
+  }
   .hero-content-container .hero-caption h1 {
     font-size: 34px;
-    line-height: 1.4;
+    margin-bottom: 30px;
   }
 }
 .main-content-container {
