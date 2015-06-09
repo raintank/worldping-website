@@ -6053,11 +6053,12 @@ button.close {
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 500px;
+  min-height: 500px;
 }
 .carousel-inner > .item {
   display: none;
   position: relative;
-  min-height: 500px;
   -webkit-transition: 0.6s ease-in-out left;
   -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
@@ -6131,16 +6132,16 @@ button.close {
 }
 .carousel-control {
   position: absolute;
-  top: 0;
+  top: 40%;
   left: 0;
-  bottom: 0;
-  width: 15%;
+  width: 70px;
+  height: 70px;
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
-  color: #ffffff;
+  color: #13b2d4;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border: 1px solid #13b2d4;
 }
 .carousel-control.right {
   left: auto;
@@ -6149,7 +6150,7 @@ button.close {
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
-  color: #ffffff;
+  color: #13b2d4;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
@@ -6204,7 +6205,7 @@ button.close {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #ffffff;
+  border: 1px solid #13b2d4;
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
@@ -6214,38 +6215,30 @@ button.close {
   margin: 0;
   width: 12px;
   height: 12px;
-  background-color: #ffffff;
-}
-/*
-  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
-  Need to override the 3.3 new styles for modern browsers & apply opacity
-*/
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+  background-color: #13b2d4;
 }
 .carousel-caption {
-  position: absolute;
-  max-width: 800px;
-  top: 100px;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: #13b2d4;
+}
+@media (min-width: 768px) {
+  .carousel-caption {
+    margin-left: calc(4% - 30px);
+  }
+}
+@media (min-width: 992px) {
+  .carousel-caption {
+    margin-left: calc(10% - 30px);
+  }
+}
+@media (min-width: 1200px) {
+  .carousel-caption {
+    margin-left: calc(15% - 30px);
+  }
 }
 .carousel-caption .btn {
   text-shadow: none;
@@ -6268,8 +6261,13 @@ button.close {
   .carousel-control .icon-next {
     margin-right: -15px;
   }
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
   .carousel-indicators {
-    bottom: 200px;
+    bottom: 20px;
   }
 }
 .clearfix:before,
