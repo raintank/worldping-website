@@ -1,11 +1,10 @@
 //
 // Carousel
 // --------------------------------------------------
-
-
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
+  background-color: @white;
 }
 
 .carousel-inner {
@@ -16,6 +15,7 @@
   > .item {
     display: none;
     position: relative;
+    min-height: 500px;
     .transition(.6s ease-in-out left);
 
     // Account for jankitude on images
@@ -23,6 +23,11 @@
     > a > img {
       &:extend(.img-responsive);
       line-height: 1;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // min-width: 100%;
+      // min-height: 500px;
     }
 
     // WebKit CSS3 transforms for supported devices
@@ -246,7 +251,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: @carousel-caption-color;
-  text-shadow: @carousel-text-shadow;
+  // text-shadow: @carousel-text-shadow;
   & .btn {
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
