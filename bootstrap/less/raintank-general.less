@@ -22,46 +22,46 @@ html {
   background-attachment:fixed;
 }
 
-  .helperBoxContent{ /* adds some padding to keep the box organized */
-            padding:10px 25px 30px 25px;
-            margin:15px 20px 6px 8px;
-            background-color: rgba(0,0,0,0.3);
-            border-radius: 2px;
-        }
+.helperBoxContent{ /* adds some padding to keep the box organized */
+  padding:10px 25px 30px 25px;
+  margin:15px 20px 6px 8px;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 2px;
+}
 
 .helperBorder1 {
-    border: 1px solid #13b2d4;
-    -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-    -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-    border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
-    border-image-slice: 1;  
-    border-radius: 2px;
-    padding:0em;
-    width:100%;
+  border: 1px solid #13b2d4;
+  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
+  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
+  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
+  border-image-slice: 1;  
+  border-radius: 2px;
+  padding:0em;
+  width:100%;
 }
 .helperBorder2 {
-    position: relative;
-    top:-5px;
-    right:-5px;
-    border: 1px solid #13b2d4;
-    -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-    -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-    border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
-    border-image-slice: 1;  
-    border-radius: 2px;
-    width:100%;
+  position: relative;
+  top:-5px;
+  right:-5px;
+  border: 1px solid #13b2d4;
+  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
+  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
+  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
+  border-image-slice: 1;  
+  border-radius: 2px;
+  width:100%;
 }
 .helperBorder3{
-    position: relative;
-    top:-5px;
-    right:-5px;
-    border: 1px solid #13b2d4;
-    -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-    -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-    border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
-    border-image-slice: 1;  
-    border-radius: 2px;
-    width:100%;
+  position: relative;
+  top:-5px;
+  right:-5px;
+  border: 1px solid #13b2d4;
+  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
+  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
+  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
+  border-image-slice: 1;  
+  border-radius: 2px;
+  width:100%;
 }
  
 
@@ -107,7 +107,7 @@ html {
   position: relative;
 }
 
-/* CONTAINER ADJUSTMENTS
+/* CONTAINER ADJUSTMENTS FOR WIDTH AND OFFSET
 -------------------------------------------------- */
 .hero-content-container {
   .container-fixed();
@@ -117,12 +117,12 @@ html {
     padding-top: 160px;
     padding-bottom:40px;
     & h1 {
-      opacity:.75;
-      font-size:26px;
-      margin-bottom:40px;
-      line-height:1.4;
-      color: @white;
-      text-shadow: @carousel-text-shadow;
+    opacity:.75;
+    font-size:26px;
+    margin-bottom:40px;
+    line-height:1.4;
+    color: @white;
+    text-shadow: @carousel-text-shadow;
     }
     & .btn {
       text-shadow: none; // No shadow for button elements in carousel-caption
@@ -138,8 +138,8 @@ html {
      .hero-caption {
       padding-bottom:150px;
       & h1 {
-        font-size:30px; 
-        margin-bottom:30px;
+      font-size:30px; 
+      margin-bottom:30px;
       }
     }
   }
@@ -150,29 +150,41 @@ html {
     padding-right: @grid-gutter-width;
     margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
 
-      .hero-caption {
-        padding-bottom:150px;
-        & h1 {
-        font-size:30px; 
-        margin-bottom:30px;
-        }
+    .hero-caption {
+      padding-bottom:150px;
+      & h1 {
+      font-size:30px; 
+      margin-bottom:30px;
       }
+    }
   }
 
   @media (min-width: @screen-lg-min) {
     width: 840px;
     margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
 
-      .hero-caption {
-        padding-bottom:150px;
-        & h1 {
-        font-size:34px; 
-        margin-bottom:30px;
+    .hero-caption {
+      padding-bottom:150px;
+      & h1 {
+      font-size:34px; 
+      margin-bottom:30px;
       }
     }
   }
 }
 
+.carousel-content-container {
+  .container-fixed();
+    @media (min-width: @screen-sm-min) {
+    margin-left: calc(4% - 30px); // make it line up with the box edge, not the content
+  }
+      @media (min-width: @screen-md-min) {
+    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+  }
+      @media (min-width: @screen-lg-min) {
+    margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
+  }
+}
 
 .main-content-container {
   .container-fixed();
@@ -206,10 +218,7 @@ html {
     padding-left: 38px;
     margin-left: 15%;
   }
-  max-width:900px;
-  // background: url("../img/ping_graph.png") repeat-x left bottom; 
 }
-
 
 .footer-content-container {
   .container-fixed();
@@ -220,25 +229,33 @@ html {
     width: (@container-sm);
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 4%;
+    margin-left: calc(4% - 30px); // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-md-min) {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 5%;
+    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 370px); // ~800px
     padding-left: 38px;
     padding-left: 38px;
-    margin-left: 15%;
+    margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
   }
-  max-width:900px;
 }
 
+
+
+/* CTA CALLOUTS
+-------------------------------------------------- */
+
+.calloutBlock {
+min-height: 100px;
+background-color: @brand-primary;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
