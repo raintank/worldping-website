@@ -138,6 +138,7 @@ html {
 
      .hero-caption {
       padding-bottom:150px;
+
       & h1 {
       font-size:30px; 
       margin-bottom:30px;
@@ -149,10 +150,11 @@ html {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(5% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
 
     .hero-caption {
       padding-bottom:150px;
+
       & h1 {
       font-size:28px; 
       margin-bottom:30px;
@@ -162,7 +164,7 @@ html {
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 270px); // ~800px
-    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
 
     .hero-caption {
       padding-bottom:150px;
@@ -181,10 +183,10 @@ html {
     margin-left: 0; // make it line up with the box edge, not the content
   }
       @media (min-width: @screen-md-min) {
-    margin-left: calc(5% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
       @media (min-width: @screen-lg-min) {
-    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
 }
 
@@ -264,14 +266,14 @@ html {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(5% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 270px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
 }
 
