@@ -92,7 +92,7 @@ html {
   padding-left:40px;
   padding-right:40px;
   width: auto;
-  max-width:1150px;
+  max-width:1060px;
 }
 
 /* HERO SECTION
@@ -109,6 +109,7 @@ html {
 
 /* CONTAINER ADJUSTMENTS FOR WIDTH AND OFFSET
 -------------------------------------------------- */
+/* HERO */
 .hero-content-container {
   .container-fixed();
 
@@ -130,13 +131,14 @@ html {
 }
 
   @media (min-width: @screen-sm-min) {
-    width: 810px;
+    width: (@container-sm);
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(4% - 30px); // make it line up with the box edge, not the content
+    margin-left: 0; // make it line up with the box edge, not the content
 
      .hero-caption {
       padding-bottom:150px;
+
       & h1 {
       font-size:30px; 
       margin-bottom:30px;
@@ -145,47 +147,50 @@ html {
   }
 
   @media (min-width: @screen-md-min) {
-    width: 860px;
+    width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
 
     .hero-caption {
       padding-bottom:150px;
+
       & h1 {
-      font-size:30px; 
+      font-size:28px; 
       margin-bottom:30px;
       }
     }
   }
 
   @media (min-width: @screen-lg-min) {
-    width: 840px;
-    margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
+    width: (@container-lg - 270px); // ~800px
+    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
 
     .hero-caption {
       padding-bottom:150px;
       & h1 {
-      font-size:34px; 
+      font-size:32px; 
       margin-bottom:30px;
       }
     }
   }
 }
 
+/* MEDIA CAROUSEL */
 .carousel-content-container {
   .container-fixed();
     @media (min-width: @screen-sm-min) {
-    margin-left: calc(4% - 30px); // make it line up with the box edge, not the content
+    margin-left: 0; // make it line up with the box edge, not the content
   }
       @media (min-width: @screen-md-min) {
-    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
       @media (min-width: @screen-lg-min) {
-    margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
 }
 
+/* MAIN CONTENT */
 .main-content-container {
   .container-fixed();
   position:relative;
@@ -200,7 +205,7 @@ html {
     width: (@container-sm);
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 4%;
+    margin-left: 0;
   }
 
   @media (min-width: @screen-md-min) {
@@ -208,41 +213,43 @@ html {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 
   @media (min-width: @screen-lg-min) {
     margin-top:-120px; // puts it over the top of the hero for visual interest
-    width: (@container-lg - 370px); // ~800px
-    padding-left: 38px;
-    padding-left: 38px;
-    margin-left: 15%;
+    width: (@container-lg - 270px); // ~800px
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 10%;
   }
 }
 
+/* GENERIC CONTENT */
 .content-row {
   @media (min-width: @screen-sm-min) {
     width: (@container-sm);
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 4%;
+    margin-left: 0;
   }
 
   @media (min-width: @screen-md-min) {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 
   @media (min-width: @screen-lg-min) {
-    width: (@container-lg - 370px); // ~800px
-    padding-left: 38px;
-    padding-left: 38px;
-    margin-left: 15%;
+    width: (@container-lg - 270px); // ~800px
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: 10%;
   }
 }
 
+/* FOOTER */
 .footer-content-container {
   .container-fixed();
   position:relative;
@@ -252,21 +259,21 @@ html {
     width: (@container-sm);
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(4% - 30px); // make it line up with the box edge, not the content
+    margin-left: 0; // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-md-min) {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(10% - 30px); // make it line up with the box edge, not the content
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-lg-min) {
-    width: (@container-lg - 370px); // ~800px
-    padding-left: 38px;
-    padding-left: 38px;
-    margin-left: calc(15% - 30px); // make it line up with the box edge, not the content
+    width: (@container-lg - 270px); // ~800px
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
   }
 }
 
