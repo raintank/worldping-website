@@ -7613,7 +7613,7 @@ html {
 .page-nav a {
   text-align: center;
   display: block;
-  padding: 18px 70px 13px;
+  padding: 18px 30px 13px;
   color: #404040;
   font-size: 16px;
 }
@@ -7637,7 +7637,7 @@ html {
   }
   .page-nav a {
     display: block;
-    padding: 18px 70px 13px;
+    padding: 18px 30px 13px;
     color: #404040;
     font-size: 16px;
   }
@@ -7646,6 +7646,14 @@ html {
     color: #fff;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+  }
+  .page-nav a.active:hover {
+    color: #ffffff;
+    background-color: #13b2d4;
+  }
+  .page-nav a:hover {
+    color: #161616;
+    background-color: transparent;
   }
 }
 @media (min-width: 1200px) {
