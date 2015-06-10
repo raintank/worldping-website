@@ -7230,7 +7230,7 @@ html {
   padding-left: 40px;
   padding-right: 40px;
   width: auto;
-  max-width: 1150px;
+  max-width: 1060px;
 }
 /* HERO SECTION
 -------------------------------------------------- */
@@ -7245,6 +7245,7 @@ html {
 }
 /* CONTAINER ADJUSTMENTS FOR WIDTH AND OFFSET
 -------------------------------------------------- */
+/* HERO */
 .hero-content-container {
   margin-right: auto;
   margin-left: auto;
@@ -7269,10 +7270,10 @@ html {
 }
 @media (min-width: 768px) {
   .hero-content-container {
-    width: 810px;
+    width: 750px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: calc(4% - 30px);
+    margin-left: 0;
   }
   .hero-content-container .hero-caption {
     padding-bottom: 150px;
@@ -7284,32 +7285,33 @@ html {
 }
 @media (min-width: 992px) {
   .hero-content-container {
-    width: 860px;
+    width: 800px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-left: calc(5% - 30px);
+  }
+  .hero-content-container .hero-caption {
+    padding-bottom: 150px;
+  }
+  .hero-content-container .hero-caption h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-content-container {
+    width: 900px;
     margin-left: calc(10% - 30px);
   }
   .hero-content-container .hero-caption {
     padding-bottom: 150px;
   }
   .hero-content-container .hero-caption h1 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 30px;
   }
 }
-@media (min-width: 1200px) {
-  .hero-content-container {
-    width: 840px;
-    margin-left: calc(15% - 30px);
-  }
-  .hero-content-container .hero-caption {
-    padding-bottom: 150px;
-  }
-  .hero-content-container .hero-caption h1 {
-    font-size: 34px;
-    margin-bottom: 30px;
-  }
-}
+/* MEDIA CAROUSEL */
 .carousel-content-container {
   margin-right: auto;
   margin-left: auto;
@@ -7318,19 +7320,20 @@ html {
 }
 @media (min-width: 768px) {
   .carousel-content-container {
-    margin-left: calc(4% - 30px);
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
   .carousel-content-container {
-    margin-left: calc(10% - 30px);
+    margin-left: calc(5% - 30px);
   }
 }
 @media (min-width: 1200px) {
   .carousel-content-container {
-    margin-left: calc(15% - 30px);
+    margin-left: calc(10% - 30px);
   }
 }
+/* MAIN CONTENT */
 .main-content-container {
   margin-right: auto;
   margin-left: auto;
@@ -7348,7 +7351,7 @@ html {
     width: 750px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 4%;
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -7357,23 +7360,25 @@ html {
     width: 800px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 @media (min-width: 1200px) {
   .main-content-container {
     margin-top: -120px;
-    width: 800px;
-    padding-left: 38px;
-    margin-left: 15%;
+    width: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 10%;
   }
 }
+/* GENERIC CONTENT */
 @media (min-width: 768px) {
   .content-row {
     width: 750px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 4%;
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -7381,16 +7386,18 @@ html {
     width: 800px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 @media (min-width: 1200px) {
   .content-row {
-    width: 800px;
-    padding-left: 38px;
-    margin-left: 15%;
+    width: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 10%;
   }
 }
+/* FOOTER */
 .footer-content-container {
   margin-right: auto;
   margin-left: auto;
@@ -7404,7 +7411,7 @@ html {
     width: 750px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: calc(4% - 30px);
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -7412,14 +7419,15 @@ html {
     width: 800px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-left: calc(10% - 30px);
+    margin-left: calc(5% - 30px);
   }
 }
 @media (min-width: 1200px) {
   .footer-content-container {
-    width: 800px;
-    padding-left: 38px;
-    margin-left: calc(15% - 30px);
+    width: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: calc(10% - 30px);
   }
 }
 /* CALLOUT BLOCKS
