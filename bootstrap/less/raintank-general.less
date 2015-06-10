@@ -491,7 +491,8 @@ html {
 /* Page Nav
 ------------------------- */
 
-.page-nav {
+//mobile first
+.page-nav { 
   display: block;
   margin: 0;
   padding: 0;
@@ -500,9 +501,31 @@ html {
 
 .page-nav > li {
   display: block;
+  border-bottom: 1px solid @gray-lighter;
+margin: 0 -15px;
 }
 
-@media (min-width: @screen-sm) {
+.page-nav a {
+  text-align:center;
+  display: block;
+  padding: 18px 70px 13px;
+  color: #404040;
+  font-size: 16px;
+
+  &.active {
+    background-color: transparent;
+    color: @brand-primary;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+    &:hover{
+    background-color: lighten(@body-bg, 2%);
+  }
+}
+
+// tablet and above
+@media (min-width: @screen-sm) { 
   .page-nav {
     display: table;
     margin: -10px -30px 0;
@@ -510,20 +533,33 @@ html {
 
   .page-nav > li {
     display: table-cell;
+    border-bottom: none;
   }
-}
 
-.page-nav a {
-  display: block;
-  padding: 18px 70px 13px;
-  color: #404040;
-  font-size: 16px;
+  .page-nav a {
+    display: block;
+    padding: 18px 70px 13px;
+    color: #404040;
+    font-size: 16px;
 
   &.active {
     background-color: @brand-primary;
     color: #fff;
+    border-top-left-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
   }
 }
+
+}
+
+// adjust tabs slightly for desktop+  so first one lines up along content box
+@media (min-width: @screen-lg) { 
+  .page-nav {
+    display: table;
+    margin: -10px -38px 0;
+  }
+}
+
 
 
 /* FOOTER
