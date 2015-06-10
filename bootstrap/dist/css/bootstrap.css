@@ -7368,6 +7368,29 @@ html {
     margin-left: 15%;
   }
 }
+@media (min-width: 768px) {
+  .content-row {
+    width: 750px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 4%;
+  }
+}
+@media (min-width: 992px) {
+  .content-row {
+    width: 800px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .content-row {
+    width: 800px;
+    padding-left: 38px;
+    margin-left: 15%;
+  }
+}
 .footer-content-container {
   margin-right: auto;
   margin-left: auto;
@@ -7452,6 +7475,157 @@ html {
   letter-spacing: -1px;
   margin-bottom: 40px;
   margin-top: 40px;
+}
+/* Bios
+------------------------- */
+.team-bio {
+  position: relative;
+  min-height: 200px;
+  margin: 100px 0;
+  padding: 0 15px;
+}
+.team-bio-desc {
+  position: relative;
+}
+.team-bio-name,
+.team-bio-role {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.team-bio-role {
+  color: #13b2d4;
+}
+@media (min-width: 768px) {
+  .team-bio-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+  }
+  .team-bio-desc {
+    padding: 40px 0 0 220px;
+  }
+  .team-bio.right .team-bio-img {
+    right: 0;
+    left: auto;
+  }
+  .team-bio.right .team-bio-desc {
+    padding: 40px 220px 0 0;
+    text-align: right;
+  }
+}
+.team-bio-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.team-bio-links > li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+.team-bio-links a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.team-bio-graph {
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .team-bio-graph {
+    position: absolute;
+    margin: 0;
+  }
+  .team-bio-graph.raj {
+    top: -23px;
+    right: 0;
+  }
+  .team-bio-graph.torkel {
+    top: -54px;
+    left: 50px;
+  }
+  .team-bio-graph.anthony {
+    top: 10px;
+    right: 50px;
+  }
+  .team-bio-graph.matt {
+    top: -27px;
+    left: -50px;
+  }
+  .team-bio-graph.trent {
+    top: -25px;
+    right: -55px;
+  }
+  .team-bio-graph.dieter {
+    top: 35px;
+    left: 20px;
+  }
+  .team-bio-graph.jeremy {
+    top: 32px;
+    right: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .team-bio-graph.raj {
+    right: 35px;
+  }
+  .team-bio-graph.torkel {
+    left: 90px;
+  }
+  .team-bio-graph.anthony {
+    right: 100px;
+  }
+  .team-bio-graph.matt {
+    left: -20px;
+  }
+  .team-bio-graph.trent {
+    right: -15px;
+  }
+  .team-bio-graph.dieter {
+    left: 65px;
+  }
+  .team-bio-graph.jeremy {
+    right: 62px;
+  }
+}
+/* Page Nav
+------------------------- */
+.page-nav {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-nav > li {
+  display: block;
+}
+@media (min-width: 768px) {
+  .page-nav {
+    display: table;
+    margin: -10px -30px 0;
+  }
+  .page-nav > li {
+    display: table-cell;
+  }
+}
+.page-nav a {
+  display: block;
+  padding: 18px 70px 13px;
+  color: #404040;
+  font-size: 16px;
+}
+.page-nav a.active {
+  background-color: #13b2d4;
+  color: #fff;
 }
 /* FOOTER
 ------------------------- */
