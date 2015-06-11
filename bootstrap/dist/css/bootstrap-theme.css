@@ -1,6 +1,6 @@
 .signUpCTA,
 .signUpCTA:visited {
-  width: 80px;
+  width: 100px;
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -10,6 +10,7 @@
   color: #ffffff;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .signUpCTA:hover,
 .signUpCTA:visited:hover,
@@ -30,7 +31,7 @@
 }
 .signInCTA,
 .signInCTA:visited {
-  width: 80px;
+  width: 100px;
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -40,6 +41,7 @@
   color: #8d8d8d;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .signInCTA:hover,
 .signInCTA:visited:hover,
@@ -61,6 +63,7 @@
   color: #13b2d4;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .primaryCTA:hover,
 .primaryCTA:visited:hover,
@@ -82,6 +85,7 @@
   color: #13b2d4;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .primaryRevCTA:hover,
 .primaryRevCTA:visited:hover,
@@ -103,6 +107,7 @@
   color: #8d8d8d;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .secondaryCTA:hover,
 .seconfaryCTA:visited:hover,
@@ -112,6 +117,66 @@
   color: #000000;
   text-decoration: none;
   cursor: pointer;
+}
+.lightCTA,
+.lightCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.lightCTA:hover,
+.lightCTA:visited:hover,
+.lightCTA:active,
+.lightCTA:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.lightCTA:hover,
+.lightCTA:visited:hover,
+.lightCTA:active,
+.lightCTA:visited:active {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #13b2d4;
+}
+.specialCTA,
+.specialCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #13b2d4;
+  background: transparent;
+  color: #13b2d4;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.specialCTA:hover,
+.specialCTA:visited:hover,
+.specialCTA:active,
+.specialCTA:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.specialCTA:hover,
+.specialCTA:visited:hover,
+.specialCTA:active,
+.specialCTA:visited:active {
+  background-color: #13b2d4;
+  border: 1px solid #13b2d4;
+  color: #ffffff;
 }
 .btn-default .badge,
 .btn-primary .badge,

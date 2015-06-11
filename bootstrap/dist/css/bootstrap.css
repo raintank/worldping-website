@@ -6641,6 +6641,12 @@ button.close {
 .icon-rt-online:before {
   content: "\e611";
 }
+.icon-rt-event-error:before {
+  content: "\e623";
+}
+.icon-rt-event:before {
+  content: "\e624";
+}
 .icon-rt-private-collector:before {
   content: "\e612";
 }
@@ -6689,9 +6695,15 @@ button.close {
 .icon-rt-snapshot:before {
   content: "\e61e";
 }
+.icon-rt-grafana-icon:before {
+  content: "\e625";
+}
+.icon-rt-stopwatch:before {
+  content: "\e626";
+}
 .signUpCTA,
 .signUpCTA:visited {
-  width: 80px;
+  width: 100px;
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -6701,6 +6713,7 @@ button.close {
   color: #ffffff;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .signUpCTA:hover,
 .signUpCTA:visited:hover,
@@ -6721,7 +6734,7 @@ button.close {
 }
 .signInCTA,
 .signInCTA:visited {
-  width: 80px;
+  width: 100px;
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -6731,6 +6744,7 @@ button.close {
   color: #8d8d8d;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .signInCTA:hover,
 .signInCTA:visited:hover,
@@ -6752,6 +6766,7 @@ button.close {
   color: #13b2d4;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .primaryCTA:hover,
 .primaryCTA:visited:hover,
@@ -6773,6 +6788,7 @@ button.close {
   color: #13b2d4;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .primaryRevCTA:hover,
 .primaryRevCTA:visited:hover,
@@ -6794,6 +6810,7 @@ button.close {
   color: #8d8d8d;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 }
 .secondaryCTA:hover,
 .seconfaryCTA:visited:hover,
@@ -6803,6 +6820,66 @@ button.close {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
+}
+.lightCTA,
+.lightCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.lightCTA:hover,
+.lightCTA:visited:hover,
+.lightCTA:active,
+.lightCTA:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.lightCTA:hover,
+.lightCTA:visited:hover,
+.lightCTA:active,
+.lightCTA:visited:active {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #13b2d4;
+}
+.specialCTA,
+.specialCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #13b2d4;
+  background: transparent;
+  color: #13b2d4;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.specialCTA:hover,
+.specialCTA:visited:hover,
+.specialCTA:active,
+.specialCTA:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.specialCTA:hover,
+.specialCTA:visited:hover,
+.specialCTA:active,
+.specialCTA:visited:active {
+  background-color: #13b2d4;
+  border: 1px solid #13b2d4;
+  color: #ffffff;
 }
 .btn-default .badge,
 .btn-primary .badge,
@@ -7205,6 +7282,13 @@ html {
   border-radius: 2px;
   width: 100%;
 }
+.primary-icon {
+  color: #161616;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(top left, #161616 0%, #13b2d4 100%) repeat;
+  background: -o-linear-gradient(top left, #161616 0%, #13b2d4 100%) repeat;
+  -webkit-background-clip: text;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -7230,7 +7314,7 @@ html {
   padding-left: 40px;
   padding-right: 40px;
   width: auto;
-  max-width: 1060px;
+  max-width: 1100px;
 }
 /* HERO SECTION
 -------------------------------------------------- */
@@ -7238,6 +7322,7 @@ html {
 .content {
   position: relative;
   width: 100%;
+  background-color: #161616;
 }
 .inner {
   height: auto;
@@ -7257,12 +7342,17 @@ html {
   padding-top: 160px;
   padding-bottom: 40px;
 }
-.hero-content-container .hero-caption h1 {
+.hero-content-container .hero-caption h1,
+.hero-content-container .hero-caption h2,
+.hero-content-container .hero-caption h3,
+.hero-content-container .hero-caption h4 {
+  color: #ffffff;
   opacity: .75;
+}
+.hero-content-container .hero-caption h1 {
   font-size: 26px;
   margin-bottom: 40px;
   line-height: 1.4;
-  color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .hero-content-container .hero-caption .btn {
@@ -7340,7 +7430,7 @@ html {
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
-  margin-bottom: 60px;
+  min-height: 300px;
   background-image: -webkit-linear-gradient(top, #e9e9e9 50%, rgba(233, 233, 233, 0) 100%);
   background-image: -o-linear-gradient(top, #e9e9e9 50%, rgba(233, 233, 233, 0) 100%);
   background-image: linear-gradient(to bottom, #e9e9e9 50%, rgba(233, 233, 233, 0) 100%);
@@ -7371,6 +7461,9 @@ html {
     padding-right: 30px;
     margin-left: 10%;
   }
+}
+.main-content-container.resumed {
+  margin-top: 0;
 }
 /* GENERIC CONTENT */
 @media (min-width: 768px) {
@@ -7439,22 +7532,20 @@ html {
   text-align: center;
   margin-bottom: 20px;
 }
-.calloutBlockBright {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  min-height: 100px;
+.calloutBlock.bright {
   background-color: #ffffff;
-  text-align: center;
-  margin-bottom: 20px;
 }
-.calloutBlockBold {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  min-height: 100px;
+.calloutBlock.bold {
   background-color: #13b2d4;
-  text-align: center;
-  margin-bottom: 20px;
+  background-image: -webkit-linear-gradient(left, #13b2d4 0%, #139ad3 100%);
+  background-image: -o-linear-gradient(left, #13b2d4 0%, #139ad3 100%);
+  background-image: linear-gradient(to right, #13b2d4 0%, #139ad3 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff13b2d4', endColorstr='#ff139ad3', GradientType=0);
   color: #ffffff;
+}
+.calloutBlock h3 {
+  margin-bottom: 30px;
 }
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -7484,44 +7575,61 @@ html {
   margin-bottom: 40px;
   margin-top: 40px;
 }
-/* Bios
+/* Bios and Features
 ------------------------- */
-.team-bio {
+.team-bio,
+.feature {
   position: relative;
   min-height: 200px;
   margin: 100px 0;
   padding: 0 15px;
 }
-.team-bio-desc {
+.team-bio-desc,
+.feature-desc {
   position: relative;
 }
 .team-bio-name,
+.feature-title,
 .team-bio-role {
   margin: 0 0 5px;
   font-size: 18px;
   font-weight: 400;
 }
+.feature-title {
+  color: #ea2531;
+}
 .team-bio-role {
   color: #13b2d4;
 }
 @media (min-width: 768px) {
-  .team-bio-img {
+  .team-bio-img,
+  .feature-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
     height: 200px;
   }
-  .team-bio-desc {
+  .team-bio-desc,
+  .feature-desc {
     padding: 40px 0 0 220px;
   }
-  .team-bio.right .team-bio-img {
+  .team-bio.right .team-bio-img,
+  .feature.right .team-bio-img,
+  .team-bio.right .feature-img,
+  .feature.right .feature-img {
     right: 0;
     left: auto;
   }
-  .team-bio.right .team-bio-desc {
+  .team-bio.right .team-bio-desc,
+  .feature.right .team-bio-desc {
     padding: 40px 220px 0 0;
     text-align: right;
+  }
+  .team-bio.right .feature-desc,
+  .feature.right .feature-desc {
+    padding: 40px 220px 0 0;
+    text-align: left;
   }
 }
 .team-bio-links {
@@ -7723,7 +7831,7 @@ html {
 @media (min-width: 1200px) {
   .page-nav {
     display: table;
-    margin: -10px -38px 0;
+    margin: -10px -30px 0;
   }
 }
 /* FOOTER

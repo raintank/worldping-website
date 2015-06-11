@@ -64,6 +64,14 @@ html {
   width:100%;
 }
  
+ .primary-icon {
+  color: @gray-base;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(top left, @gray-base 0%, @brand-primary 100%) repeat;
+  background: -o-linear-gradient(top left, @gray-base 0%, @brand-primary 100%) repeat;  
+  -webkit-background-clip: text;
+
+ }
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -92,7 +100,7 @@ html {
   padding-left:40px;
   padding-right:40px;
   width: auto;
-  max-width:1060px;
+  max-width:1100px;
 }
 
 /* HERO SECTION
@@ -100,6 +108,7 @@ html {
 .hero, .content{
   position:relative;
   width: 100%;
+  background-color:@gray-base;
 }
 
 .inner{
@@ -117,12 +126,15 @@ html {
     z-index: 10;
     padding-top: 160px;
     padding-bottom:40px;
+    & h1, h2, h3, h4 {
+     color: @white;
+     opacity:.75;
+    }
+
     & h1 {
-    opacity:.75;
     font-size:26px;
     margin-bottom:40px;
     line-height:1.4;
-    color: @white;
     text-shadow: @carousel-text-shadow;
     }
     & .btn {
@@ -194,7 +206,8 @@ html {
 .main-content-container {
   .container-fixed();
   position:relative;
-  margin-bottom:60px;
+  // margin-bottom:60px;
+  min-height:300px;
   // background-color: @body-bg;
   background-image: -webkit-linear-gradient(top, @body-bg 50%, rgba(233, 233, 233, 0) 100%);
   background-image: -o-linear-gradient(top, @body-bg 50%, rgba(233, 233, 233, 0) 100%);
@@ -223,6 +236,7 @@ html {
     padding-right: @grid-gutter-width;
     margin-left: 10%;
   }
+  &.resumed {margin-top:0;}
 }
 
 /* GENERIC CONTENT */
@@ -287,26 +301,28 @@ html {
   min-height: 100px;
   text-align:center;
   margin-bottom: 20px;
+  &.bright {
+    background-color: @white;
+    // background-image: -webkit-linear-gradient(right, #edf1f2 0%, @white 100%);
+    // background-image: -o-linear-gradient(right, #edf1f2 0%, @white 100%);
+    // background-image: linear-gradient(to left, #edf1f2 0%, @white 100%);
+    // background-repeat: repeat-x;
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffedf1f2', endColorstr='#ffffffff', GradientType=0);
+  }
+  &.bold {
+      background-color: @brand-primary;
+      background-image: -webkit-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
+      background-image: -o-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
+      background-image: linear-gradient(to right, @brand-primary 0%, #139ad3 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff13b2d4', endColorstr='#ff139ad3', GradientType=0);
+      color: @white;
+  }
+  h3 {
+    margin-bottom:30px;
+  }
 }
 
-.calloutBlockBright {
-  padding-top:30px;
-  padding-bottom: 30px;
-  min-height: 100px;
-  background-color: @white;
-  text-align:center;
-  margin-bottom: 20px;
-}
-
-.calloutBlockBold {
-  padding-top:30px;
-  padding-bottom: 30px;
-  min-height: 100px;
-  background-color: @brand-primary;
-  text-align:center;
-  margin-bottom: 20px;
-  color: @white;
-}
 
 
 /* MARKETING CONTENT
@@ -343,25 +359,32 @@ html {
 }
 
 
-/* Bios
+/* Bios and Features
 ------------------------- */
 
-.team-bio {
+.team-bio, 
+.feature {
   position: relative;
   min-height: 200px;
   margin: 100px 0;
   padding: 0 15px;
 }
 
-.team-bio-desc {
+.team-bio-desc, 
+.feature-desc {
   position: relative;
 }
 
-.team-bio-name,
+.team-bio-name, 
+.feature-title,
 .team-bio-role {
   margin: 0 0 5px;
   font-size: 18px;
   font-weight: 400;
+}
+
+.feature-title {
+  color:@text-highlight;
 }
 
 .team-bio-role {
@@ -369,7 +392,8 @@ html {
 }
 
 @media (min-width: @screen-sm) {
-  .team-bio-img {
+  .team-bio-img, 
+  .feature-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -377,12 +401,16 @@ html {
     height: 200px;
   }
 
-  .team-bio-desc {
+  .team-bio-desc, 
+  .feature-desc {
     padding: 40px 0 0 220px;
   }
 
-  .team-bio.right {
-    .team-bio-img {
+  .team-bio.right, 
+  .feature.right {
+
+    .team-bio-img, 
+    .feature-img {
       right: 0;
       left: auto;
     }
@@ -390,6 +418,10 @@ html {
     .team-bio-desc {
       padding: 40px 220px 0 0;
       text-align: right;
+    }
+    .feature-desc {
+      padding: 40px 220px 0 0;
+      text-align: left;
     }
   }
 }
@@ -424,7 +456,6 @@ html {
   @media (min-width: @screen-sm) {
     position: absolute;
     margin: 0;
-
     &.raj {
       top: -23px;
       right: 0;
@@ -637,7 +668,7 @@ margin: 0 -15px;
 @media (min-width: @screen-lg) { 
   .page-nav {
     display: table;
-    margin: -10px -38px 0;
+    margin: -10px -30px 0;
   }
 }
 

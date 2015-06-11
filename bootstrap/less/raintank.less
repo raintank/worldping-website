@@ -21,6 +21,7 @@
   color: @color;
   border-radius: 2px;
   transition: 0.15s;
+  text-align: center;
 
   // For light backgrounds. 
   &:hover,
@@ -35,22 +36,22 @@
 // Raintank CTAs
 // ====================================
 
-.signUpCTA,
+.signUpCTA, 
 .signUpCTA:visited{
-  width:80px;
+  width:100px;
   .ButtonCTA(@primaryCTA, @primaryCTA, @white, @white);
 
   &:hover,
   &:active {
    background-color: @white;
    border: 1px solid @white;
-   color: @primaryCTA;
+   color: @brand-primary;
   }
 }
 
 .signInCTA,
 .signInCTA:visited{
-    width:80px;
+    width:100px;
   .ButtonCTA(transparent, @gray-light, @gray-light, @white);
 }
 
@@ -68,6 +69,29 @@
   .ButtonCTA(transparent, @gray-light, @gray-light, @black);
 }
 
+.lightCTA, 
+.lightCTA:visited{
+  .ButtonCTA(transparent, @white, @white, @white);
+
+  &:hover,
+  &:active {
+   background-color: @white;
+   border: 1px solid @white;
+   color: @primaryCTA;
+  }
+}
+
+.specialCTA, 
+.specialCTA:visited{
+  .ButtonCTA(transparent, @primaryCTA, @primaryCTA, @white);
+
+  &:hover,
+  &:active {
+   background-color: @primaryCTA;
+   border: 1px solid @primaryCTA;
+   color: @white;
+  }
+}
 
 // Common styles
 .btn-default,
