@@ -494,6 +494,72 @@ html {
 
 
 
+/* Join Benefits
+------------------------- */
+
+.join-benefits {
+  margin: 0;
+  padding: 0;
+}
+
+.join-benefits-row {
+  border-bottom: 1px solid #d6d6d6;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.join-benefits .join-benefits-item {
+  display: block;
+  overflow: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &:nth-child(odd) {
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  @media (min-width: @screen-sm) {
+    display: inline-block;
+    width: 50%;
+
+    &:nth-child(odd) {
+      padding-right: 20px;
+      border-right: 1px solid #d6d6d6;
+      border-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      padding-left: 20px;
+    }
+  }
+}
+
+.join-benefits-icon {
+  float: left;
+  margin-right: 20px;
+
+  > img {
+    display: block;
+    width: 100px;
+    height: 100px;
+
+    @media (min-width: @screen-sm) {
+      width: 125px;
+      height: 125px;
+    }
+  }
+}
+
+.join-benefits-body {
+  overflow: auto;
+}
+
+.join-benefits-title {
+  font-weight: 400;
+}
+
 
 /* Page Nav
 ------------------------- */
