@@ -178,6 +178,62 @@
   border: 1px solid #13b2d4;
   color: #ffffff;
 }
+.usecase,
+.usecase:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #d5d5d5;
+}
+.usecase:hover,
+.usecase:visited:hover,
+.usecase:active,
+.usecase:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.usecase i.secondary-icon,
+.usecase:visited i.secondary-icon,
+.usecase h3,
+.usecase:visited h3,
+.usecase h4,
+.usecase:visited h4 {
+  color: #ffffff;
+}
+.usecase:hover,
+.usecase:visited:hover,
+.usecase:active,
+.usecase:visited:active {
+  background-color: #13b2d4;
+}
+.usecase:hover i.secondary-icon,
+.usecase:visited:hover i.secondary-icon,
+.usecase:active i.secondary-icon,
+.usecase:visited:active i.secondary-icon,
+.usecase:hover h3,
+.usecase:visited:hover h3,
+.usecase:active h3,
+.usecase:visited:active h3,
+.usecase:hover h4,
+.usecase:visited:hover h4,
+.usecase:active h4,
+.usecase:visited:active h4 {
+  color: #ffffff;
+}
 .btn-default .badge,
 .btn-primary .badge,
 .btn-success .badge,
@@ -330,7 +386,7 @@
 .navbar-brand,
 .navbar-nav > li > a {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-  font-weight: 300;
+  font-weight: 400;
 }
 .navbar-inverse {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -350,7 +406,7 @@
 .navbar-fixed-bottom {
   border-radius: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .navbar .navbar-nav .open .dropdown-menu > .active > a,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
