@@ -46,7 +46,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="dropdown active"> <!-- active class could be on this element if in this section -->
+              <li class="dropdown"> <!-- active class could be on this element if in this section -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="/about/index.html">the raintank vision</a></li>
@@ -56,9 +56,9 @@
                 </ul>
               </li>
               <li><a href="/grafana/index.html">grafana</a></li><!-- active class could be on this element if in this section -->
-              <li class="dropdown"> <!-- active class could be on this element if in this section -->
+              <li class="dropdown active"> <!-- active class could be on this element if in this section -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
-                                 <ul class="dropdown-menu" role="menu">
+                 <ul class="dropdown-menu" role="menu">
                   <li><a href="/litmus/index.html">what is litmus?</a></li>
                   <li><a href="/litmus/use-cases.html">use cases</a></li>
                   <li><a href="/litmus/road-map.html">road-map</a></li>
@@ -90,10 +90,10 @@
 
   <!-- Hero
   ================================================== -->
-  <section class="hero about-hero">
+  <section class="hero home-hero">
     <div class=" hero-content-container inner">
       <div class="hero-caption">
-      <h1>we're always looking for brilliant people to join the team. what are you waiting for?</h1>
+      <h1>introducing litmus. raintank's flagship integration.</h1>
       </div>
     </div>
   </section>
@@ -104,75 +104,43 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
   <div class="main-content-container">
     <ul class="page-nav">
-        <li><a class="" href="index.html">the vision</a></li>
-        <li><a class="" href="team.html">the team</a></li>
-        <li><a class="active" href="join.html">work with us</a></li>
-        <li><a class="" href="open-source.html">open source</a></li> 
+        <li><a class="" href="index.html">what is litmus?</a></li>
+        <li><a class="" href="use-cases.html">use cases</a></li>
+        <li><a class="active" href="road-map.html">road map</a></li>
+        <li><a class="" href="faq.html">faq</a></li>
     </ul>
     <div class="marketing">
       <!-- START THE FEATURETTES -->
       <div class="row">
         <div class="col-md-12">
-          <h2 class="beta-heading text-primary">adventure? excitement? a jedi craves not these things, but at raintank, we're all about it. join us in building a next-generation platform (and have a blast doing it).</h2>
-          <div class="join-benefits">
-            <div class="join-benefits-row">
-              <div class="join-benefits-item">
-                <div class="join-benefits-icon"><img src="../../dist/img/opensource.svg" width="125" height="125"></div>
-                <div class="join-benefits-body">
-                  <h4 class="join-benefits-title">open source</h4>
-                  <p class="join-benefits-desc">Build the future with us, and ship code. Everything we do is completely open source.</p>
-                </div>
-              </div><!-- INLINE
-              BLOCK --><div class="join-benefits-item">
-                <div class="join-benefits-icon"><img src="../../dist/img/ground-floor.svg" width="125" height="125"></div>
-                <div class="join-benefits-body">
-                  <h4 class="join-benefits-title">ground floor</h4>
-                  <p class="join-benefits-desc">We're a small team, with small-seed funding. We control our destiny; the team owns raintank.</p>
-                </div>
-              </div>
-            </div>
-            <div class="join-benefits-row">
-              <div class="join-benefits-item">
-                <div class="join-benefits-icon"><img src="../../dist/img/globe.svg" width="125" height="125"></div>
-                <div class="join-benefits-body">
-                  <h4 class="join-benefits-title">global mindset</h4>
-                  <p class="join-benefits-desc">Founders on three continents, servers in more. Work from wherever you want. We're post-geographical.</p>
-                </div>
-              </div><!-- INLINE
-                BLOCK --><div class="join-benefits-item">
-                <div class="join-benefits-icon"><img src="../../dist/img/heart.svg" width="125" height="125"></div>
-                <div class="join-benefits-body">
-                  <h4 class="join-benefits-title">happy/healthy</h4>
-                  <p class="join-benefits-desc">Mind and body. Real work-life balance. Take unlimited vacation. Get great healthcare.</p>
-                </div>
-              </div>
-            </div>
-            <div class="join-benefits-row">
-              <div class="join-benefits-item">
-                <div class="join-benefits-icon"><img src="../../dist/img/toys.svg" width="125" height="125"></div>
-                <div class="join-benefits-body">
-                  <h4 class="join-benefits-title">the nicest toys</h4>
-                  <p class="join-benefits-desc">Mac? PC? SGI circa 1999? Choose the right tools to do your job, and we'll get them to you.</p>
-                </div>
-              </div><!-- INLINE
-                BLOCK --><div class="join-benefits-item">
-                <div class="join-benefits-icon"><img src="../../dist/img/crazy.svg" width="125" height="125"></div>
-                <div class="join-benefits-body">
-                  <h4 class="join-benefits-title">sound crazy?</h4>
-                  <p class="join-benefits-desc">Sounds good. Help build a new type of platform, and a new kind of company. <strong><a href="mailto:hello@raintank.io">Let's talk</a>.</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 class="beta-heading text-primary">road map</h2>
+          
+
+<h4>Litmus is currently in beta, and we’re hard at work improving it for the 1.0 release.</h4>
+
+<p class="lead">Here’s what’s coming down the pipe:</p>
+
+<p><strong>1. Synthetic browser</strong></p>
+  <p>We will be revamping the HTTP and HTTPS checks to optionally use a synthetic browser. This will provide much more relevant and interesting data, including Javascript execution time and third party dependencies. We are also looking at integrating sitespeed.io to provide performance best practices.</p>
+
+<p><strong>2. Real User Monitoring</strong></p>
+  <p>Litmus is great for providing a noise-free signal from backbone locations around the world. But what about real users on actual last mile or mobile networks? Litmus will soon measure response times from customers actual browsers and networks, allowing for a complimentary perspective.</p>
+
+<p><strong>3. Alerting</strong></p>
+  <p>The beta release of Litmus brings a proof of concept alerting engine within Grafana that is powered by Bosun and currently purpose built for the Litmus use-case. Currently, alerting is only available for downtime and not slowdowns. We plan on improving this alerting engine and bringing it into upstream Grafana.</p>
+
+<p><strong>4. Turnkey Grafana</strong></p>
+  <p>We want to make it easier for people who have downloaded Grafana to use the data that Litmus provides. Litmus should be a way that people can get started with Grafana easily: go from zero to gorgeously data in less than a minute.</p>
+<br/><br/>
         </div>
       </div>
-    </div>  
+    </div><!-- /.marketing -->
   </div>
 
   <div class="calloutBlock bright">
     <div class="content-row">
-      <h3>we're always on the lookout for new talent.</h3>
-      <p><a class="btn specialCTA" href="mailto:hello@raintank.io" role="button">join the team</a></p>
+      <h3>stay up to date on new releases</h3>
+      <p><a class="btn specialCTA" href="#" role="button">sign up now</a></p>
     </div>
   </div>
 

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>raintank: open source infrastructure monitoring solution</title>
+    <title>raintank: an open source platform that collects, stores, and analyzes data from your entire infrastructure stack</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.css" rel="stylesheet">
@@ -58,9 +58,10 @@
               <li><a href="/grafana/index.html">grafana</a></li><!-- active class could be on this element if in this section -->
               <li class="dropdown"> <!-- active class could be on this element if in this section -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu" role="menu">
                   <li><a href="/litmus/index.html">what is litmus?</a></li>
                   <li><a href="/litmus/use-cases.html">use cases</a></li>
+                  <li><a href="/litmus/road-map.html">road-map</a></li>
                   <li><a href="/litmus/faq.html">faq</a></li>
                 </ul>
               </li>
@@ -92,7 +93,7 @@
   <section class="hero home-hero">
     <div class=" hero-content-container inner">
       <div class="hero-caption">
-      <h1>raintank is an open-source monitoring platform that collects, stores and analyzes data about your infrastructure through a gorgeously powerful front-end.</h1>
+      <h1>raintank is an open source platform that collects, stores, and analyzes data from your entire infrastructure stack</h1>
       <p class="large"><a class="btn primaryRevCTA" href="#" role="button">Check Out our Free Beta</a></p>
       </div>
     </div>
@@ -108,42 +109,36 @@
   <div class="main-content-container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h2 class="beta-heading text-primary">Introducting Litmus: <span class="text-highlight">Raintank's flagship integration.</span></h2>
-        <p class="lead text-muted">Litmus monitors your internal and external network performance and uptime from locations all over the world, so that you can spot problems, fix them quickly, and make your users happier.</p>
-            
-        <div class="row">
-          <div class="col-md-7" style="vertical-align:middle;">
-            <Br/><br/><br/>litmus illustration, OODA-style?<br/> Raj wanted to think on this.
-          </div>
-          <div class="col-md-5">
-          <h3 class="text-primary text-left">headline</h3>
-          <p class="lead text-muted text-left">Litmus monitors your internal and external network performance and uptime from locations all over the world, so that you can spot problems, fix them quickly, and make your users happier.</p>
-          </div>
-
+       <div class="litmus-lockup"> <h4 class="text-muted"><strong>Introducing</strong></h4>
+          <span class="text-primary"><a class="" style="font-size:180px; vertical-align:middle" href="/litmus/"><i class="icon-rt-litmus"></i></a></span><br/>
+          <h2>Network Performance Monitoring. Done right.</h2>
         </div>
-<hr class="featurette-divider">
+
+        <h4>Give us a domain name and 60 seconds — we’ll give you over 2,000,000 datapoints per month to help you ensure your uptime and performance— for free.</h4>
+        <p class="lead text-muted">Litmus is our first integration, and is a great way to get started with Grafana. Monitor the data quality of anything from anywhere. Get a handle on your applications performance and availability from all over the world. Keep your users happy by finding and fixing problems fast. </p>
+            
         <!-- badges 3-col nested inside the 12-coll centered-->
          <div class="row">
-          <div class="col-md-4">
+           <div class="col-md-4">
+              <i class="primary-icon icon-rt-grafana-icon"  style="font-size:70px; line-height:80px;"></i>
+              <h3 class="text-primary">the power of grafana</h3>
+              <p>Built on Grafana, Litmus is much more than just vanilla NPM. Use the power of Grafana to bring in your other data sources, and leverage its leading visualization capabilities to create the perfect view that brings it all together.</p>
+              <p><a class="btn secondaryCTA" href="#" role="button">Download Grafana &raquo;</a></p>
+           </div>
 
-            <i class="primary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i>
-            <h3 class="text-primary">60 second setup</h3>
-            <p>Just give us the domain name of your site or app, and we’ll automatically detect what to monitor - no software or agent to install or configure. </p>
-            <p><a class="btn secondaryCTA" href="#" role="button">Get Started &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            
-            <i class="primary-icon icon-rt-globe"  style="font-size:70px; line-height:80px;"></i>
-            <h3 class="text-primary">a global footprint</h3>
-            <p>Monitor performance from all over the planet, across different networks and carriers with dozens of public Litmus collectors, or create your own private collectors.</p>
-            <p><a class="btn secondaryCTA" href="#" role="button">Learn About Litmus &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            
-            <i class="primary-icon icon-rt-grafana-icon"  style="font-size:70px; line-height:80px;"></i>
-            <h3 class="text-primary">built on grafana</h3>
-            <p>Built with care on Grafana, the world's leading open source graph and dashboard composer for visualizing measurement data.</p>
-            <p><a class="btn secondaryCTA" href="#" role="button">Download Grafana &raquo;</a></p>
+           <div class="col-md-4">
+              <i class="primary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i>
+              <h3 class="text-primary">60 second setup</h3>
+              <p>Give us a domain name, and we’ll give you insights in less than a minute. Litmus automatically suggests what to monitor. There’s no software or agents to install or configure.</p>
+              <br/>
+              <p><a class="btn secondaryCTA" href="#" role="button">Get Started &raquo;</a></p>
+           </div>
+
+           <div class="col-md-4">
+              <i class="primary-icon icon-rt-globe"  style="font-size:70px; line-height:80px;"></i>
+              <h3 class="text-primary">a personalized footprint</h3>
+              <p>Monitor from dozens of Limtus locations across the world. Install our open source Collector software to monitor from the locations that are important to you, including your own datacenter and branch offices.</p>
+              <p><a class="btn secondaryCTA" href="#" role="button">Learn About Litmus &raquo;</a></p>
           </div>
         </div>  
 
@@ -155,8 +150,16 @@
 
 <div class="calloutBlock dark scatter-hero">
   <div class="content-row">
-  <h3 class="text-center">litmus can be used by anyone wanting to monitor anything. Perfect for:</h3>
+  <h3 class="text-center">litmus can be used by anyone wanting to monitor anything. perfect for:</h3>
     <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="btn usecase" role="button">
+          <a href="/litmus/devops.html">
+            <h3><i class="secondary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i></h3>
+            <h4 class="text-primary"><strong>devops</strong></h4>
+          </a>
+        </div>
+      </div>
       <div class="col-sm-6 col-md-3">
         <div class="btn usecase" role="button">
           <a href="/litmus/sp.html">
@@ -164,31 +167,15 @@
             <h4 class="text-primary"><strong>service providers</strong></h4>
           </a>
         </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-        <div class="btn usecase" role="button">
-          <a href="/litmus/dev.html">
-            <h3><i class="secondary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i></h3>
-            <h4 class="text-primary"><strong>developers</strong></h4>
-          </a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-        <div class="btn usecase" role="button">
-          <a href="/litmus/ops.html">
-            <h3><i class="secondary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i></h3>
-            <h4 class="text-primary"><strong>operators</strong></h4>
-          </a>
-        </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
+      </div>
+      <div class="col-sm-6 col-md-3">
         <div class="btn usecase" role="button">
           <a href="/litmus/site.html">
             <h3><i class="secondary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i></h3>
             <h4 class="text-primary"><strong>site owners</strong></h4>
           </a>
         </div>
-        </div>
+      </div>
     </div>
   </div>
   </div>
@@ -197,8 +184,15 @@
 
   <div class="calloutBlock bold">
     <div class="content-row">
-      <h3>join the <strong>#metritocracy</strong>. sign up for our free beat</h3>
-      <p><a class="btn lightCTA" href="#" role="button">Sign me Up</a></p>
+      <h3>sound good? sign up for our free beta.</h3>    
+        <form data-parsley-validate action="http://raintank.us9.list-manage.com/subscribe/post?u=332a8b5085fde6390a4408bb1&amp;id=e6455ee744" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="inline-form newsletter-form">           
+          <fieldset>
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_332a8b5085fde6390a4408bb1_1d7e889d23" tabindex="-1" value=""></div>
+            <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" required >
+            <input type="hidden" name="SOURCE" value="website-homepage"> <!-- value tells us which form was filled out -->
+              <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn lightCTA">Sign Me Up</button>
+          </fieldset>
+        </form>
     </div>
   </div>
 
@@ -214,7 +208,7 @@
   <footer>
    <div class="footer-content-container">
      <div class="row">
-      <div class="col-xs-9 col-md-9">
+      <div class="col-xs-7 col-sm-9 col-md-9">
         <div class="row">
           <div class="col-xs-12 col-sm-3 col-md-3">
             <ul>
@@ -235,6 +229,7 @@
                <li class="title">litmus</li>
                <li><a href="/litmus/index.html">what is litmus?</a></li>
                <li><a href="/litmus/use-cases.html">use-cases</a></li>
+               <li><a href="/litmus/road-map.html">road map</a></li>
                <li><a href="/litmus/faq.html">faq</a></li>
             </ul>
           </div>
@@ -245,7 +240,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-3 col-md-3">
+      <div class="col-xs-5 col-sm-3 col-md-3">
         <div class="row">
           <div class="col-xs-12 col-md-12">
             <ul class="text-right">
