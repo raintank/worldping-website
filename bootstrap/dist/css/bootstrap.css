@@ -7321,6 +7321,12 @@ a.anchor {
   background-position: top left;
   background-attachment: fixed;
 }
+.grafana-hero {
+  background: url(../../dist/img/banner_screenshot3.jpg);
+  background-size: cover;
+  background-position: top right;
+  background-attachment: fixed;
+}
 .helperBoxContent {
   /* adds some padding to keep the box organized */
   padding: 10px 25px 30px 25px;
@@ -7708,6 +7714,9 @@ a.anchor {
   margin: 80px 0;
   /* Space out the Bootstrap <hr> more */
 }
+.featurette-divider.slim {
+  margin: 40px 0;
+}
 /* Thin out the marketing headings */
 .beta-heading {
   font-weight: 300;
@@ -7725,6 +7734,11 @@ a.anchor {
   min-height: 200px;
   margin: 100px 0;
   padding: 0 15px;
+}
+.team-bio p,
+.feature p,
+.section p {
+  margin-bottom: 20px;
 }
 .team-bio-desc,
 .feature-desc,
