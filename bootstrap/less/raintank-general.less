@@ -10,9 +10,12 @@ html {
 //
 // misc
 // --------------------------------------------------
+a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
+
 .main-logo {
   font-size: 110px;
   line-height: 10px;
+
 }
 
 .home-hero{
@@ -517,8 +520,8 @@ p {margin-bottom:30px;}
 
 .team-bio-links a {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: #ccc;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -527,6 +530,17 @@ p {margin-bottom:30px;}
   white-space: nowrap;
   overflow: hidden;
 }
+
+a.github {background:#ccc url(../../dist/img/github-icon.svg) no-repeat center;
+    background-size: 80%}
+
+a.twitter {background:#ccc url(../../dist/img/twitter-icon.svg) no-repeat center;
+    background-size: 70%}
+
+a.linkedin {background:#ccc url(../../dist/img/linkedin-icon.svg) no-repeat center;
+    background-size: 70%}
+
+.team-bio-links a:hover {background-color: #333;}
 
 .team-bio-graph {
   margin: 10px;
