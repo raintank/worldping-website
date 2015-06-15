@@ -7649,8 +7649,24 @@ a.anchor {
   min-height: 100px;
   text-align: center;
 }
+.calloutBlock input {
+  height: 36px;
+  border-radius: 3px;
+  border: none;
+  position: relative;
+  top: -4px;
+  width: 240px;
+  margin-right: 10px;
+  padding: 10px;
+  color: #161616;
+}
 .calloutBlock.bright {
   background-color: #ffffff;
+}
+.calloutBlock.bright input {
+  background-color: #ffffff;
+  border: 1px solid #d5d5d5;
+  color: #161616;
 }
 .calloutBlock.bold {
   background-color: #13b2d4;
@@ -7668,17 +7684,6 @@ a.anchor {
 }
 .calloutBlock h3 {
   margin-bottom: 30px;
-}
-.calloutBlock input {
-  height: 36px;
-  border-radius: 3px;
-  border: none;
-  position: relative;
-  top: -4px;
-  width: 240px;
-  margin-right: 10px;
-  padding: 10px;
-  color: #161616;
 }
 .faq p {
   margin-bottom: 30px;
