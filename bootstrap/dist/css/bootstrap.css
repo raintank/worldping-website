@@ -7674,6 +7674,19 @@ a.anchor {
   border: 1px solid #d5d5d5;
   color: #161616;
 }
+.calloutBlock.bright .modal-body input {
+  border-radius: 3px;
+  border: none;
+  position: relative;
+  top: -4px;
+  width: 240px;
+  margin-right: 10px;
+  padding: 10px;
+  color: #161616;
+  height: 37px;
+  width: 400px;
+  vertical-align: super;
+}
 .calloutBlock.bold {
   background-color: #13b2d4;
   background-image: -webkit-linear-gradient(left, #13b2d4 0%, #139ad3 100%);

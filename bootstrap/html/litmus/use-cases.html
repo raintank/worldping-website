@@ -83,10 +83,38 @@
               -->
             </ul>
             <div class="nav-btn"><a class="navbar-right signInCTA" href="http://app.raintank.io">Sign In</a></div>
-            <div class="nav-btn"><a class="navbar-right signUpCTA" href="#">Sign Up</a></div>
+            <div class="nav-btn"><button class="navbar-right signUpCTA" data-toggle="modal" data-target="#signUp">Sign Up</button></div>
         </div><!--/.nav-collapse -->
       </nav>
     </div>
+
+<!-- Modal -->
+<div id="signUp" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="text-primary">sign up for our beta</h4>
+      </div>
+      <div class="modal-body">
+        <form data-parsley-validate action="http://raintank.us9.list-manage.com/subscribe/post?u=332a8b5085fde6390a4408bb1&amp;id=e6455ee744" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="inline-form newsletter-form">           
+          <fieldset>
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_332a8b5085fde6390a4408bb1_1d7e889d23" tabindex="-1" value=""></div>
+            <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" style="height:37px; width:300px;  vertical-align:super;" required >
+            <input type="hidden" name="SOURCE" value="main-sign-up-btn"> <!-- value tells us which form was filled out -->
+              <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn primaryCTA">Sign Me Up</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn primaryCTA" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   <!-- Hero
   ================================================== -->
@@ -115,15 +143,12 @@
       <div class="row">
         <div class="col-md-12">
           <h2 class="beta-heading text-primary">ridiculously easy network performance monitoring</h2>
+          <p class="lead">Litmus can be used by anyone wanting insight to the performance of their web apps. We thought some use cases might help you learn how to take advantage of this historical data.</p>
         </div>
       </div>
 
 
   <div class="row">
-   <div class="col-md-12">
-  <h4 class="text-center">litmus can be used by anyone wanting to monitor anything. Perfect for:</h4>
-  </div>
-    <div class="row">
       <div class="col-sm-4 col-md-4">
         <div class="btn usecase" role="button">
           <a href="#devops">
@@ -163,7 +188,7 @@
       <!-- START THE FEATURETTES -->
       <div class="row feature" style="margin-top:40px;">
         <div class="feature-img">
-          <img class="featurette-image img-responsive img-circle center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="../../dist/img/dev-ops.svg" width="200" alt="for dev-ops">
         </div>
         <div class="feature-desc">
           <h3 class="text-primary">devops</h3><a name="devops" class="anchor"></a>
@@ -184,7 +209,7 @@
 
       <div class="row feature">
         <div class="feature-img">
-          <img class="featurette-image img-responsive img-circle center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/xaas.svg" width="200">
         </div>
         <div class="feature-desc">
           <h3 class="text-primary">service providers</h3><a name="sp" class="anchor"></a>
@@ -203,7 +228,7 @@
 
       <div class="row feature">
         <div class="feature-img">
-          <img class="featurette-image img-responsive img-circle center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="../../dist/img/site.svg" width="200" alt="for site owners">
         </div>
         <div class="feature-desc">
           <h3 class="text-primary">site owners</h3><a name="site" class="anchor"></a>
