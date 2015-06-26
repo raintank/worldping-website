@@ -124,8 +124,8 @@
   <section class="hero home-hero">
     <div class=" hero-content-container inner">
       <div class="hero-caption">
-      <h1>raintank is an open source platform that collects, stores, and analyzes data from your entire infrastructure stack</h1>
-      <p class="large"><a class="btn primaryRevCTA" href="#" role="button">Check Out our Free Beta</a></p>
+      <h1>monitoring is broken. let’s fix it.</h1>
+      <p class="large"><a class="btn primaryRevCTA" data-toggle="modal" data-target="#signUp" role="button">Check Out our Free Beta</a></p>
       </div>
     </div>
   </section>
@@ -136,7 +136,7 @@
   <!-- Wrap the rest of the page in another container then offset the content. -->
 
 <!-- <div class="tester" style="padding-bottom:40px; background: url(../dist/img/ping_graph.png) repeat-x center bottom;"> -->
-<div class="tester">
+<div class="tester"> <!-- tester allows us to put a backround image at the bottom of the content that is 100% width and not contained to the content area -->
   <div class="main-content-container">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -163,12 +163,12 @@
               <h3 class="text-primary">60 second setup</h3>
               <p>Give us a domain name, and we’ll give you insights in less than a minute. Litmus automatically suggests what to monitor. There’s no software or agents to install or configure.</p>
               <br/>
-              <p><a class="btn secondaryCTA" href="/litmus/index.html" role="button">Get Started &raquo;</a></p>
+              <p><a class="btn secondaryCTA" data-toggle="modal" data-target="#signUp" role="button">Get Started &raquo;</a></p>
            </div>
 
            <div class="col-md-4">
               <i class="primary-icon icon-rt-globe"  style="font-size:70px; line-height:80px;"></i>
-              <h3 class="text-primary">a personalized footprint</h3>
+              <h3 class="text-primary">personalized footprint</h3>
               <p>Monitor from dozens of Litmus locations across the world. Install our open source Collector software to monitor from the locations that are important to you, including your own datacenter and branch offices.</p>
               <p><a class="btn secondaryCTA" href="/litmus/index.html" role="button">Learn About Litmus &raquo;</a></p>
           </div>
@@ -177,39 +177,87 @@
       </div> <!-- /col-md-12 -->
     </div>
   </div>
+</div> <!-- /tester -->
 
-<div class="calloutBlock dark scatter-hero">
-  <div class="content-row">
-  <h3 class="text-center">litmus can be used by anyone wanting to monitor any web app. perfect for:</h3>
-    <div class="row">
-      <div class="col-sm-4 col-md-4">
-        <div class="btn usecase" role="button">
-          <a href="/litmus/use-cases.html#devops">
-            <img class="featurette-image img-responsive center-block" src="../dist/img/dev-ops.svg" width="80" alt="for dev-ops">
-            <h4 class="text-primary rev"><strong>devops</strong></h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 col-md-4">
-        <div class="btn usecase" role="button">
-          <a href="/litmus/use-cases.html#sp">
-            <img class="featurette-image img-responsive img-circle center-block" src="../dist/img/xaas.svg" width="80" alt="for service providers">
-            <h4 class="text-primary rev"><strong>service providers</strong></h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 col-md-4">
-        <div class="btn usecase" role="button">
-          <a href="/litmus/use-cases.html#site">
-            <img class="featurette-image img-responsive center-block" src="../dist/img/site.svg" width="80" alt="for site owners">
-            <h4 class="text-primary rev"><strong>site owners</strong></h4>
-          </a>
-        </div>
+
+<!-- screenshot -->
+<div class="calloutBlock mediaBlock stormy">
+    <div class="screenshot-content-container">
+      <div class="screenshot">
+         <div class="item">
+
+             <div class="row">
+             <div class="col-md-9">
+                 <img src="../dist/img/themes_screenshot.png" width="100%" alt="litmus dashboard">
+               </div>
+                <div class="callout col-md-3">
+                <h4 class="text-highlight">choose your flavor</h4>
+                  <p>We've created two beautiful themes that you can switch between at any time.</p>
+                  <p>Both light and dark themes work for for the interface screens as well as dashboards</p>
+                  
+               </div>
+            </div>
+
+         </div>
       </div>
     </div>
-  </div>
-  </div>
-</div> <!-- /tester -->
+ </div>
+
+<!-- screenshot -->
+<div class="calloutBlock cloudy">
+    <div class="gen-content-container">
+
+       <div class="row">
+         <div class="col-md-4">
+            <h3><img class="featurette-image img-responsive center-block" src="../dist/img/rt-users.svg" width="100" alt="collaborate"></h3>
+
+            <h4 class="feature-title">collaborate with anyone</h4> 
+            <p>Litmus makes it easy to share your data with your team, partners, or the web. Take a <a href="http://snapshot.raintank.io/info/" target="_blank">snapshot</a> for sharing it with anyone, giving them access to just the data that you want.</p>
+        </div>
+
+         <div class="col-md-4">
+           <h3><img class="featurette-image img-responsive center-block" src="../dist/img/rt-github.svg" width="100" alt="open source"></h3>
+            
+           <h4 class="feature-title">100% open source</h4> 
+           <p>Litmus is 100% open-source, and also available as a fully supported SaaS and on-premise offering from raintank. Take back control of your data destiny, and avoid lock-in. You always own the raw data.</p>
+        </div>
+
+         <div class="col-md-4">
+          <h3><img class="featurette-image img-responsive center-block" src="../dist/img/rt-github.svg" width="100" alt="open source"></h3>
+            
+           <h4 class="feature-title">bring all your data together</h4> 
+           <p>Litmus is 100% open-source, and also available as a fully supported SaaS and on-premise offering from raintank. Take back control of your data destiny, and avoid lock-in. You always own the raw data.</p>
+        </div>
+
+
+      </div>
+
+    </div>
+ </div>
+
+
+<!-- screenshot -->
+<div class="calloutBlock mediaBlock stormy">
+    <div class="screenshot-content-container">
+      <div class="screenshot">
+         <div class="item">
+
+             <div class="row">
+             <div class="col-md-9">
+                 <img src="../dist/img/dashboards_screenshot.png" width="100%" alt="litmus dashboard">
+               </div>
+                <div class="callout col-md-3">
+                <h4 class="text-highlight">custom dashboards</h4>
+                  <p>We've created two beautiful themes that you can switch between at any time.</p>
+                  <p>Both light and dark themes work for for the interface screens as well as dashboards</p>
+                  
+               </div>
+            </div>
+
+         </div>
+      </div>
+    </div>
+ </div>
 
 
   <div class="calloutBlock bold">

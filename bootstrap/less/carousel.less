@@ -32,6 +32,7 @@
       max-width:800px;
     }
 
+
     // WebKit CSS3 transforms for supported devices
     @media all and (transform-3d), (-webkit-transform-3d) {
       .transition-transform(~'0.6s ease-in-out');
@@ -94,6 +95,29 @@
 
 }
 
+
+.screenshot {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  @media (min-width: @screen-md-min) {
+    max-height:450px;
+  }
+
+
+  > .item {
+    display: block;
+    position: relative;
+
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      &:extend(.img-responsive);
+      line-height: 1;
+      width:100%;
+    }
+  }
+}
 // Left/right controls for nav
 // ---------------------------
 
