@@ -212,6 +212,12 @@
 .usecase:visited h3,
 .usecase h4,
 .usecase:visited h4 {
+  color: #13b2d4;
+}
+.usecase h3.rev,
+.usecase:visited h3.rev,
+.usecase h4.rev,
+.usecase:visited h4.rev {
   color: #ffffff;
 }
 .usecase:hover,
@@ -406,7 +412,7 @@
 .navbar-fixed-bottom {
   border-radius: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar .navbar-nav .open .dropdown-menu > .active > a,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {

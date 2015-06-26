@@ -33,7 +33,7 @@
 ================================================== -->
   <body role="document">
     <div class="navbar-wrapper">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -118,10 +118,11 @@
 
   <!-- Hero
   ================================================== -->
-  <section class="hero home-hero">
+ <section class="hero litmus-hero">
     <div class=" hero-content-container inner">
       <div class="hero-caption">
-      <h1>Where we see Litmus growing.</h1>
+      <h1 class="text-center"><img class="img responsive" style="display:inline-block" src="../../dist/img/litmus-by-white.svg" width="450"/></h1>
+      <h3 class="text-center">ridiculously easy network performance monitoring</h3>
       </div>
     </div>
   </section>
@@ -141,13 +142,11 @@
       <!-- START THE FEATURETTES -->
       <div class="row">
         <div class="col-md-12">
-          <h2 class="beta-heading text-primary">litmus road map</h2>
+          <h2 class="beta-heading text-primary">what’s coming down the pipe?</h2>
           
 
-<h4>Litmus is currently in beta, and we’re hard at work improving it for the 1.0 release.</h4>
-
-<p class="lead text-highlight">Here’s what’s coming down the pipe:</p>
-
+<h4>Litmus is currently in alpha. We have a lot on our backlogs, but here are some of the things we’re focusing on that we’re particularly excited about.</h4>
+<br/>
 <p><strong>1. Synthetic browser</strong></p>
   <p>We will be revamping the HTTP and HTTPS checks to optionally use a synthetic browser. This will provide much more relevant and interesting data, including Javascript execution time and third party dependencies. We are also looking at integrating sitespeed.io to provide performance best practices.</p>
 
@@ -240,6 +239,17 @@
     </div>  
    </div>
   </footer>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58328364-1', 'auto');
+	  ga('send', 'pageview'); 
+	</script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -32,7 +32,7 @@
 ================================================== -->
   <body role="document">
     <div class="navbar-wrapper">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -117,7 +117,7 @@
 
   <!-- Hero
   ================================================== -->
-  <section class="hero home-hero">
+  <section class="hero litmus-hero">
     <div class=" hero-content-container inner">
       <div class="hero-caption">
       <h1 class="text-center"><img class="img responsive" style="display:inline-block" src="../../dist/img/litmus-by-white.svg" width="450"/></h1>
@@ -130,61 +130,113 @@
     <!-- Main page content and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-  <div class="main-content-container">
+  <div class="main-content-container" style="margin-bottom:40px;">
     <ul class="page-nav">
         <li><a class="active" href="index.html">what is litmus?</a></li>
         <li><a class="" href="use-cases.html">use cases</a></li>
         <li><a class="" href="road-map.html">road map</a></li>
         <li><a class="" href="faq.html">faq</a></li>
     </ul>
-    <div class="marketing">
       <!-- START THE FEATURETTES -->
       <div class="row">
         <div class="col-md-12">
-          <h2 class="beta-heading text-primary">Whether you have a simple blog or a globally distributed application, Litmus can help you analyze its performance and availability from around the world.</h2>
+          <h2 class="beta-heading text-primary">litmus continually monitors your apps performance and uptime, from all over the world, so you can make sure your users stay happy.</h2>
           <p class="lead">Litmus monitors your web app performance and uptime, over the Internet and/or your internal network, so that you can make your users happier.</p>
-          <p class="lead">Building on <a href="http://grafana.org" target="_blank">Grafana</a>, we have created a gorgeously powerful, fully open platform to allow you to track and troubleshoot your application performance and availability</p>
-
-          <hr class="featurette-divider" />
+          <p class="lead">Built on <a href="http://grafana.org" target="_blank">Grafana</a>, we have created a gorgeously powerful, fully open platform to allow you to track and troubleshoot your application performance and availability</p>
           
-          <div class="row feature">
-            <div class="feature-img">
-              <img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/rt-pinpoint.svg" width="180" alt="pinpoint the problem quickly">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">pinpoint the problem quickly</h3> 
-              <p>Is the problem a regional network issue? DNS, yet again? A slowdown in the backend?</p>
-              <p>Litmus allows you to pinpoint the problem through gorgeous visualizations, giving you context across different layers of the stack.</p>
-            </div>
-          </div>
-
-          <div class="row feature right">
-            <div class="feature-img">
-              <img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/rt-custom-footprint.svg" width="200" alt="custom global footprint">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">a global footprint you make your own</h3> 
-              <p>Monitor performance from all over the planet, across different networks and carriers with dozens of public Litmus collectors.</p>
-              <p>Install our open-source Collector software to measure the performance of/from your own datacenters and offices, and customize your footprint.</p>
-              <p>Get the complete picture both inside and outside your network.</p>
-            </div>
-          </div>
-
-          <div class="row feature">
-            <div class="feature-img">
-              <img class="featurette-image img-responsive center-block" src="../../dist/img/rt-noise.svg" width="200" alt="reduce the noise">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">reduce the noise</h3> 
-              <p>Litmus provides a clean backbone signal from around the world, and automatically learns what “normal” is so that you don’t have to.</p>
-              <p>RAINDEX, our dynamically computed index of performance from every Collector make your alerts even even cleaner and more actionable.</p>
-            </div>
-          </div>
+          <hr class="featurette-divider slim" />
         </div>
       </div>
-      <hr class="featurette-divider slim" />
-    </div><!-- /.marketing -->
+          
+      <div class="row">
+        <div class="col-md-5">
+           <h3><img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/rt-pinpoint.svg"  width="100"  alt="pinpoint the problem quickly"></h3>
+            <h3 class="feature-title">pinpoint the problem quickly</h3> 
+            <p>Is the problem a regional network issue? DNS, yet again? A slowdown in the backend?</p>
+            <p>Litmus allows you to pinpoint the problem through gorgeous visualizations, giving you context across different layers of the stack.</p>
+  
+          </div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-5 ">
+            <h3><img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/rt-custom-footprint.svg"  width="100"  alt="custom global footprint"></h3>
+    
+            <h3 class="feature-title">a global footprint you make your own</h3> 
+            <p>Monitor performance from all over the planet, across different networks and carriers with dozens of public Litmus collectors.</p>
+            <p>Install our open-source Collector software to measure the performance of/from your own datacenters and offices, and customize your footprint.</p>
+
+          </div>
+      </div>
+    </div>
+
+<!-- screenshot -->
+<div class="calloutBlock mediaBlock stormy">
+    <div class="screenshot-content-container">
+      <div class="screenshot">
+         <div class="item">
+
+             <div class="row">
+               <div class="col-md-9">
+                 <img src="../../dist/img/angle_screenshot.png" width="100%" alt="litmus dashboard">
+               </div>
+               <div class="callout col-md-3">
+               <h4 class="text-reverse">ridiculously easy</h4>
+                 <p>There’s no software or agent to install or configure. Be up and running with Litmus and Grafana in less than 60 seconds.</p>
+                 <p>Just give us the domain name of your site or application, and we’ll automatically detect what to monitor.</p>
+              </div>
+            </div>
+
+         </div>
+      </div>
+    </div>
+ </div>
+
+
+  <div class="main-content-container resumed" style="margin-top:40px; margin-bottom:40px;">
+      <div class="row">
+        <div class="col-md-5 ">
+          <h3><img class="featurette-image img-responsive center-block" src="../../dist/img/rt-noise.svg" width="100" alt="reduce the noise"></h3>
+     
+          <h3 class="feature-title">reduce the noise</h3> 
+          <p>Litmus provides a clean backbone signal from around the world, and automatically learns what “normal” is so that you don’t have to.</p>
+          <p>RAINDEX, our dynamically computed index of performance from every Collector make your alerts even even cleaner and more actionable.</p>
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-5 ">
+         <h3><img class="featurette-image img-responsive center-block" src="../../dist/img/rt-alert.svg" width="120" alt="get alerted"></h3>
+    
+         <h3 class="feature-title">get alerted</h3> 
+         <p>Sit back and relax, we’ll let you know when you experience a problem, and won’t annoy you with false positives.</p>
+
+        </div>
+      </div>
   </div>
+
+
+<!-- screenshot -->
+<div class="calloutBlock mediaBlock stormy">
+    <div class="screenshot-content-container">
+      <div class="screenshot">
+         <div class="item">
+
+             <div class="row">
+               <div class="col-md-9">
+                 <img src="../../dist/img/endpointconfig_screenshot.png" width="100%" alt="configure your monitoring footprint">
+               </div>
+               <div class="callout col-md-3">
+               <h4 class="text-reverse">ridiculously easy</h4>
+                 <p>There’s no software or agent to install or configure. Be up and running with Litmus and Grafana in less than 60 seconds.</p>
+                 <p>Just give us the domain name of your site or application, and we’ll automatically detect what to monitor.</p>
+              </div>
+            </div>
+
+         </div>
+      </div>
+    </div>
+ </div>
+
+
 
   <div class="calloutBlock bold">
     <div class="content-row">
@@ -201,97 +253,53 @@
   </div>
 
 
-  <div class="main-content-container resumed">
-   <div class="marketing">
+  <div class="main-content-container resumed" style="margin-top:40px; margin-bottom:40px;">
       <!-- RESUME THE FEATURETTES -->
       <div class="row">
-        <div class="col-md-12">
-         <div class="row feature right">
-            <div class="feature-img">
-              <img class="featurette-image img-responsive center-block" src="../../dist/img/rt-users.svg" width="180" alt="collaborate">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">collaborate with anyone</h3> 
-              <p>Litmus makes it easy to share your data with your team, partners, or the web. Take a <a href="http://snapshot.raintank.io/info/" target="_blank">snapshot</a> for sharing it with anyone outside your company, giving them access to just the data that you want.</p>
-            </div>
-          </div>
+        <div class="col-md-5">
+         <h3><img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/rt-stopwatch.svg" width="100" alt="ridiculously easy"></h3>
+            
+         <h3 class="feature-title">ridiculously easy to get started</h3> 
+         <p>There’s no software or agent to install or configure. Be up and running with Litmus and Grafana in less than 60 seconds.</p>
+         <p>Just give us the domain name of your site or application, and we’ll automatically detect what to monitor.</p>
 
-          <div class="row feature">
-            <div class="feature-img">
-              <img class="featurette-image img-responsive center-block" src="../../dist/img/rt-alert.svg" width="180" alt="get alerted">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">get alerted</h3> 
-              <p>Sit back and relax, we’ll let you know when you experience a problem, and won’t annoy you with false positives.</p>
-            </div>
-          </div>
+        </div>
 
-          <div class="row feature right">
-            <div class="feature-img">
-              
-              <img class="featurette-image img-responsive center-block" src="../../dist/img/rt-github.svg" width="180" alt="open source">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">open source without the tradeoffs</h3> 
-              <p>Litmus is 100% open-source, and also available as a fully supported SaaS and on-premise offering from raintank. Take back control of your data destiny, and avoid lock-in. You always own the raw data.</p>
-            </div>
-          </div>
+        <div class="col-md-2">
+        </div>
 
-          <div class="row feature">
-            <div class="feature-img">
-              <img class="featurette-image img-responsive img-circle center-block" src="../../dist/img/rt-stopwatch.svg" width="200" alt="ridiculously easy">
-            </div>
-            <div class="feature-desc">
-              <h3 class="feature-title">ridiculously easy to get started</h3> 
-              <p>There’s no software or agent to install or configure. Be up and running with Litmus and Grafana in less than 60 seconds.</p>
-              <p>Just give us the domain name of your site or application, and we’ll automatically detect what to monitor.</p>
-            </div>
-          </div>
+          <div class="col-md-5">
+            <h3 class="text-center"><i class="icon-rt-grafana-icon"  style="font-size:90px; color:#666; line-height:100px;"></i></h3>
+    
+            <h3 class="feature-title">the power of grafana</h3> 
+            <p>Built on Grafana, Litmus is much more than just vanilla NPM. Use the power of Grafana to bring in your other data sources, and leverage its leading visualization capabilities to create the perfect view that brings it all together.</p>
+
         </div>
       </div>
-    </div><!-- /.marketing -->
   </div>
 
-<!-- Carousel
-    ================================================== -->
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="5000">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-      </ol> 
-
-
-    <div class="carousel-content-container">
-      <div class="carousel-inner" role="listbox">
-
-        <div class="item active">
-            <div class="carousel-caption">
-              <h2>caption slide one.</h2>
-              <!-- <p><a class="btn primaryCTA" href="#" role="button">Sign up today</a></p> -->
-            </div>
-            <img src="../../dist/img/dashboard_screenshot.png" width="800" alt="litmus dashboard">
-        </div>
-
+<!-- screenshot -->
+<div class="calloutBlock mediaBlock stormy">
+    <div class="screenshot-content-container">
+      <div class="screenshot">
          <div class="item">
-            <div class="carousel-caption">
-              <h2>caption slide two.</h2>
+
+             <div class="row">
+             <div class="col-md-9">
+                 <img src="../../dist/img/ping_screenshot.png" width="100%" alt="litmus dashboard">
+               </div>
+                <div class="callout col-md-3">
+                <h4 class="text-highlight">beautiful visualizations</h4>
+                  <p>We've created two beautiful themes that you can switch between at any time.</p>
+                  <p>Both light and dark themes work for for the interface screens as well as dashboards</p>
+                  
+               </div>
             </div>
-            <img src="../../dist/img/dashboard_screenshot.png" width="800" alt="litmus dashboard">
-        </div>
+
+         </div>
       </div>
-    </div> 
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-  </div>
+    </div>
+ </div>
 
   <div class="calloutBlock bright">
     <div class="content-row">
@@ -368,6 +376,17 @@
     </div>  
    </div>
   </footer>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58328364-1', 'auto');
+	  ga('send', 'pageview'); 
+	</script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

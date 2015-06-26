@@ -45,6 +45,12 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   background-attachment:fixed;
 }
 
+.litmus-hero{
+  background:url(../../dist/img/litmus-bg.png) 23% 94% no-repeat;
+  // background-size:cover;
+  background-attachment:fixed;
+}
+
 .helperBoxContent{ /* adds some padding to keep the box organized */
   padding:10px 25px 30px 25px;
   margin:15px 20px 6px 8px;
@@ -228,6 +234,30 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   }
 }
 
+.screenshot-content-container {
+  .container-fixed();
+  position:relative;
+
+
+  @media (min-width: @screen-sm-min) {
+  margin-left: 0; // make it line up with the box edge, not the content
+  }
+
+  @media (min-width: @screen-md-min) {
+    width: (@container-sm);
+    width: (@container-md - 170px); // ~800px
+    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
+  }
+
+  @media (min-width: @screen-lg-min) {
+     width: (@container-lg - 270px); // ~800px
+     margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
+  }
+
+}
+
+
+
 /* MAIN CONTENT */
 .main-content-container {
   .container-fixed();
@@ -356,7 +386,24 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   padding-top:30px;
   padding-bottom: 30px;
   min-height: 100px;
-  text-align:center;
+  text-align: center;
+
+  &.mediaBlock {
+    padding-top:0;
+    text-align: left;
+    padding-bottom: 0;
+    
+    .callout {
+      padding-top:30px;
+      padding-bottom:30px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      padding-bottom: 0;
+    }
+
+
+  }
 
   input {
     height: 36px;
@@ -377,33 +424,30 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
     // background-image: linear-gradient(to left, #edf1f2 0%, @white 100%);
     // background-repeat: repeat-x;
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffedf1f2', endColorstr='#ffffffff', GradientType=0);
-  input {
-    background-color: @white;
-    border:1px solid @gray-lighter;
-    color: @gray-base;
+    input {
+      background-color: @white;
+      border:1px solid @gray-lighter;
+      color: @gray-base;
+    }
+    border-bottom: 1px solid @gray-lighter;
+
+    .modal-body {
+      input {
+        border-radius: @border-radius-base;
+        border: none;
+        position: relative;
+        top: -4px;
+        width: 240px;
+        margin-right: 10px;
+        padding: 10px;
+        color: @gray-base;
+        height: 37px;
+        width:400px;
+        vertical-align: super;
+      }
+    }
   }
 
-
-
-.modal-body {
- 
-  input {
-    border-radius: @border-radius-base;
-    border: none;
-    position: relative;
-    top: -4px;
-    width: 240px;
-    margin-right: 10px;
-    padding: 10px;
-    color: @gray-base;
-    height: 37px;
-    width:400px;
-    vertical-align: super;
-  }
-
-}
-
-  }
   &.bold {
       background-color: @brand-primary;
       background-image: -webkit-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
@@ -413,11 +457,36 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff13b2d4', endColorstr='#ff139ad3', GradientType=0);
       color: @white;
   }
+
   &.dark {
       background-color: @gray-base;
       color: @white;
       border-bottom:1px solid @body-bg;
   }
+
+  &.cloudy {
+    background-color: @white;
+    background-image: -webkit-linear-gradient(right, #edf1f2 0%, @white 100%);
+    background-image: -o-linear-gradient(right, #edf1f2 0%, @white 100%);
+    background-image: linear-gradient(to left, #edf1f2 0%, @white 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffedf1f2', endColorstr='#ffffffff', GradientType=0);
+    color: @gray-base;
+    border-bottom: 1px solid @gray-lighter;
+    }
+
+  &.stormy {
+      background-color: @gray-base;
+      background-image: -webkit-linear-gradient(left, @gray-base 0%, @gray-darker 100%);
+      background-image: -o-linear-gradient(left, @gray-base 0%, @gray-darker 100%);
+      background-image: linear-gradient(to right, @gray-base 0%, @gray-darker 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#161616', endColorstr='#222222', GradientType=0);
+      color: @gray-light;
+      border-bottom:1px solid @gray-light;
+      h4 {color:@text-reverse;}
+  }
+  
   h3 {
     margin-bottom:30px;
   }
@@ -437,7 +506,7 @@ p {margin-bottom:30px;}
   text-align: center;
 }
 .marketing h2 {
-  font-weight: normal;
+  // font-weight: normal;
 }
 .marketing .col-lg-4 p {
   margin-right: 10px;
