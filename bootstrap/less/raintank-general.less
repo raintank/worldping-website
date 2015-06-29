@@ -17,38 +17,55 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   line-height: 10px;
 }
 
+
+/* HERO SECTION
+-------------------------------------------------- */
+.hero, .content{
+  position:relative;
+  width: 100%;
+  background-color:@gray-base;
+}
+
+.inner{
+  height: auto;
+  position: relative;
+}
+
 .home-hero{
-  background:url(../../dist/img/rt-home-bg.png);
-  background-size:cover;
-  background-position:center center;
-  background-attachment:fixed;
+  // background:url(../../dist/img/rt-home-bg.png);
+  background: @gray-base url(../../dist/img/endpoint_screenshot.png);
+  background-size: cover;
+  background-position: right;
+  // background-attachment: fixed;
 }
 
 .scatter-hero{
   background:url(../../dist/img/scatterplot.png);
-  background-size:cover;
-  background-position:center center;
-  background-attachment:fixed;
+  background-size: cover;
+  background-position: center center;
+  // background-attachment: fixed;
 }
 
 .about-hero{
   background:url(../../dist/img/democratize-bg.png);
   background-size:cover;
-  background-position:top left;
-  background-attachment:fixed;
+  background-position: top left;
+  // background-attachment: fixed;
 }
 
 .grafana-hero{
   background:url(../../dist/img/banner_screenshot3.jpg);
   background-size:cover;
-  background-position:top right;
-  background-attachment:fixed;
+  background-position: top right;
+  // background-attachment: fixed;
 }
 
 .litmus-hero{
-  background:url(../../dist/img/litmus-bg.png) 23% 94% no-repeat;
-  // background-size:cover;
-  background-attachment:fixed;
+  background:url(../../dist/img/litmus-bg.png);
+  // background-attachment: fixed !important;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .helperBoxContent{ /* adds some padding to keep the box organized */
@@ -135,18 +152,6 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   max-width:1100px;
 }
 
-/* HERO SECTION
--------------------------------------------------- */
-.hero, .content{
-  position:relative;
-  width: 100%;
-  background-color:@gray-base;
-}
-
-.inner{
-  height: auto;
-  position: relative;
-}
 
 /* CONTAINER ADJUSTMENTS FOR WIDTH AND OFFSET
 -------------------------------------------------- */
@@ -256,7 +261,17 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
 
 }
 
-
+input {
+    height: 36px;
+    border-radius: @border-radius-base;
+    border: 1px solid @gray-light;
+    position: relative;
+    top: -4px;
+    width: 240px;
+    margin-right: 10px;
+    padding: 10px;
+    color: @gray-base;
+}
 
 /* MAIN CONTENT */
 .main-content-container {
