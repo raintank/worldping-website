@@ -55,6 +55,17 @@
   .ButtonCTA(transparent, @gray-light, @gray-light, @white);
 }
 
+.heroCTA,
+.heroCTA:visited{
+  .ButtonCTA(rgba(0,0,0,0.5), @primaryCTA, @primaryCTA, @black);
+&:hover,
+  &:active {
+   background-color: rgba(0,0,0,0.5);
+   border: 1px solid @white;
+   color: @white;
+  }
+}
+
 .primaryCTA,
 .primaryCTA:visited{
   .ButtonCTA(transparent, @primaryCTA, @primaryCTA, @black);

@@ -6785,6 +6785,36 @@ button.close {
   text-decoration: none;
   cursor: pointer;
 }
+.heroCTA,
+.heroCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #13b2d4;
+  background: rgba(0, 0, 0, 0.5);
+  color: #13b2d4;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.heroCTA:hover,
+.heroCTA:visited:hover,
+.heroCTA:active,
+.heroCTA:visited:active {
+  border: 1px solid #000000;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.heroCTA:hover,
+.heroCTA:visited:hover,
+.heroCTA:active,
+.heroCTA:visited:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
 .primaryCTA,
 .primaryCTA:visited {
   display: inline-block;
@@ -7333,33 +7363,43 @@ a.anchor {
   font-size: 110px;
   line-height: 10px;
 }
+/* HERO SECTION
+-------------------------------------------------- */
+.hero,
+.content {
+  position: relative;
+  width: 100%;
+  background-color: #161616;
+}
+.inner {
+  height: auto;
+  position: relative;
+}
 .home-hero {
-  background: url(../../dist/img/rt-home-bg.png);
+  background: #161616 url(../../dist/img/endpoint_screenshot.png);
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: right;
 }
 .scatter-hero {
   background: url(../../dist/img/scatterplot.png);
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
 }
 .about-hero {
   background: url(../../dist/img/democratize-bg.png);
   background-size: cover;
   background-position: top left;
-  background-attachment: fixed;
 }
 .grafana-hero {
   background: url(../../dist/img/banner_screenshot3.jpg);
   background-size: cover;
   background-position: top right;
-  background-attachment: fixed;
 }
 .litmus-hero {
-  background: url(../../dist/img/litmus-bg.png) 23% 94% no-repeat;
-  background-attachment: fixed;
+  background: url(../../dist/img/litmus-bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .helperBoxContent {
   /* adds some padding to keep the box organized */
@@ -7438,18 +7478,6 @@ a.anchor {
   padding-right: 40px;
   width: auto;
   max-width: 1100px;
-}
-/* HERO SECTION
--------------------------------------------------- */
-.hero,
-.content {
-  position: relative;
-  width: 100%;
-  background-color: #161616;
-}
-.inner {
-  height: auto;
-  position: relative;
 }
 /* CONTAINER ADJUSTMENTS FOR WIDTH AND OFFSET
 -------------------------------------------------- */
@@ -7570,6 +7598,17 @@ a.anchor {
     width: 900px;
     margin-left: calc(10% - 30px);
   }
+}
+input {
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid #8d8d8d;
+  position: relative;
+  top: -4px;
+  width: 240px;
+  margin-right: 10px;
+  padding: 10px;
+  color: #161616;
 }
 /* MAIN CONTENT */
 .main-content-container {

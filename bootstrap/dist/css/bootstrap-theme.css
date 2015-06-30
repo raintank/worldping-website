@@ -52,6 +52,36 @@
   text-decoration: none;
   cursor: pointer;
 }
+.heroCTA,
+.heroCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #13b2d4;
+  background: rgba(0, 0, 0, 0.5);
+  color: #13b2d4;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.heroCTA:hover,
+.heroCTA:visited:hover,
+.heroCTA:active,
+.heroCTA:visited:active {
+  border: 1px solid #000000;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.heroCTA:hover,
+.heroCTA:visited:hover,
+.heroCTA:active,
+.heroCTA:visited:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
 .primaryCTA,
 .primaryCTA:visited {
   display: inline-block;

@@ -125,7 +125,7 @@
     <div class=" hero-content-container inner">
       <div class="hero-caption">
       <h1>monitoring is broken. let’s fix it.</h1>
-      <p class="large"><a class="btn primaryRevCTA" data-toggle="modal" data-target="#signUp" role="button">Check Out our Free Beta</a></p>
+      <p class="large"><a class="btn heroCTA" data-toggle="modal" data-target="#signUp" role="button">Check Out our Free Beta</a></p>
       </div>
     </div>
   </section>
@@ -135,49 +135,46 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container then offset the content. -->
 
-<!-- <div class="tester" style="padding-bottom:40px; background: url(../dist/img/ping_graph.png) repeat-x center bottom;"> -->
-<div class="tester"> <!-- tester allows us to put a backround image at the bottom of the content that is 100% width and not contained to the content area -->
-  <div class="main-content-container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-       <div class="" style="margin-top:40px;"> <h4 class="text-muted"><strong>introducing</strong></h4>
-          <h3 class=""><img class="img-responsive"  style="display:inline-block" src="../dist/img/litmus-by.svg" width="450"/></h3>
-          <h2 class="beta-heading text-primary">ridiculously easy network performance monitoring</h2>
+<div class="main-content-container text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 style="margin-top:40px;"><img class="img-responsive"  style="display:inline-block" src="../dist/img/litmus-by.svg" width="450"/></h3>
+      <h2 class="">ridiculously easy network performance monitoring</h2>
+      
+      <hr class="featurette-divider slim" />
+
+      <p class="lead text-muted">Litmus is our first integration, and is a great way to get started with <a href="/grafana/">Grafana</a>. Monitor the data quality of any web app from anywhere. Get a handle on your application performance and availability from all over the world. Keep your users happy by finding and fixing problems fast. </p>
+      </div>
+
+      <!-- badges cols nested inside the 12-coll centered-->
+       <div class="row" style="margin-bottom:40px;">
+
+         <div class="col-md-6">
+          <i class="primary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i>
+          <h3 class="text-primary">sign up in 60 seconds free</h3>
+          <p>Give us a domain name, and we’ll give you insights in less than a minute. Litmus automatically suggests what to monitor. There’s no software or agents to install or configure.</p>
+          <br/>
+          <form data-parsley-validate action="http://raintank.us9.list-manage.com/subscribe/post?u=332a8b5085fde6390a4408bb1&amp;id=e6455ee744" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="inline-form newsletter-form">           
+            <fieldset>
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_332a8b5085fde6390a4408bb1_1d7e889d23" tabindex="-1" value=""></div>
+              <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" required >
+              <input type="hidden" name="SOURCE" value="website-homepage"> <!-- value tells us which form was filled out -->
+                <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn primaryCTA">Get Started Free</button>
+            </fieldset>
+           </form>
+         </div>
+
+         <div class="col-md-6">
+            <i class="primary-icon icon-rt-globe"  style="font-size:70px; line-height:80px;"></i>
+            <h3 class="text-primary">a personalized footprint</h3>
+            <p>Monitor from dozens of Litmus locations across the world. Install our open source Collector software to monitor from the locations that are important to you, including your own datacenter and branch offices.</p>
+            <p><a class="btn secondaryCTA" href="/litmus/index.html" role="button">Learn About Litmus &raquo;</a></p>
         </div>
-
-        <h4>Give us a domain name and 60 seconds — we’ll monitor it from all over the world, at high-resolution, for free.</h4>
-        <hr class="featurette-divider slim" />
-        <p class="lead text-muted">Litmus is our first integration, and is a great way to get started with Grafana. Monitor the data quality of any web app from anywhere. Get a handle on your application performance and availability from all over the world. Keep your users happy by finding and fixing problems fast. </p>
-            
-        <!-- badges 3-col nested inside the 12-coll centered-->
-         <div class="row" style="margin-bottom:40px;">
-           <div class="col-md-4">
-              <i class="primary-icon icon-rt-grafana-icon"  style="font-size:70px; line-height:80px;"></i>
-              <h3 class="text-primary">the power of grafana</h3>
-              <p>Built on Grafana, Litmus is much more than just vanilla NPM. Use the power of Grafana to bring in your other data sources, and leverage its leading visualization capabilities to create the perfect view that brings it all together.</p>
-              <p><a class="btn secondaryCTA" href="http://grafana.org/download" role="button">Download Grafana &raquo;</a></p>
-           </div>
-
-           <div class="col-md-4">
-              <i class="primary-icon icon-rt-stopwatch"  style="font-size:70px; line-height:80px;"></i>
-              <h3 class="text-primary">60 second setup</h3>
-              <p>Give us a domain name, and we’ll give you insights in less than a minute. Litmus automatically suggests what to monitor. There’s no software or agents to install or configure.</p>
-              <br/>
-              <p><a class="btn secondaryCTA" data-toggle="modal" data-target="#signUp" role="button">Get Started &raquo;</a></p>
-           </div>
-
-           <div class="col-md-4">
-              <i class="primary-icon icon-rt-globe"  style="font-size:70px; line-height:80px;"></i>
-              <h3 class="text-primary">personalized footprint</h3>
-              <p>Monitor from dozens of Litmus locations across the world. Install our open source Collector software to monitor from the locations that are important to you, including your own datacenter and branch offices.</p>
-              <p><a class="btn secondaryCTA" href="/litmus/index.html" role="button">Learn About Litmus &raquo;</a></p>
-          </div>
-        </div>  
-   
-      </div> <!-- /col-md-12 -->
-    </div>
+      </div>  
+ 
+    </div> <!-- /col-md-12 -->
   </div>
-</div> <!-- /tester -->
+</div>
 
 
 <!-- screenshot -->
@@ -191,9 +188,8 @@
                  <img src="../dist/img/themes_screenshot.png" width="100%" alt="litmus dashboard">
                </div>
                 <div class="callout col-md-3">
-                <h4 class="text-highlight">choose your flavor</h4>
-                  <p>We've created two beautiful themes that you can switch between at any time.</p>
-                  <p>Both light and dark themes work for for the interface screens as well as dashboards</p>
+                <h4 class="text-highlight">a picture that’s right for you</h4>
+                  <p>Raintank is behind and built on top of <a href="/grafana/">Grafana</a>, the world's leading open source visualization software for measurement data. Bring in your other data sources and use its leading capabilities to create that perfect view.</p>
                   
                </div>
             </div>
@@ -223,7 +219,7 @@
         </div>
 
          <div class="col-md-4">
-          <h3><img class="featurette-image img-responsive center-block" src="../dist/img/rt-github.svg" width="100" alt="open source"></h3>
+          <h3><img class="featurette-image img-responsive center-block" src="../dist/img/data_together.svg" width="100" alt="open source"></h3>
             
            <h4 class="feature-title">bring all your data together</h4> 
            <p>Litmus is 100% open-source, and also available as a fully supported SaaS and on-premise offering from raintank. Take back control of your data destiny, and avoid lock-in. You always own the raw data.</p>
@@ -247,9 +243,8 @@
                  <img src="../dist/img/dashboards_screenshot.png" width="100%" alt="litmus dashboard">
                </div>
                 <div class="callout col-md-3">
-                <h4 class="text-highlight">custom dashboards</h4>
-                  <p>We've created two beautiful themes that you can switch between at any time.</p>
-                  <p>Both light and dark themes work for for the interface screens as well as dashboards</p>
+                <h4 class="text-highlight">understand your global performance</h4>
+                  <p>Litmus, our first integration allows you to monitor the data quality of any web app from  all over the world, even inside your own datacenter. Keep your users happy by finding and fixing problems fast.</p>
                   
                </div>
             </div>
@@ -267,7 +262,7 @@
           <fieldset>
             <div style="position: absolute; left: -5000px;"><input type="text" name="b_332a8b5085fde6390a4408bb1_1d7e889d23" tabindex="-1" value=""></div>
             <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" required >
-            <input type="hidden" name="SOURCE" value="website-homepage"> <!-- value tells us which form was filled out -->
+            <input type="hidden" name="SOURCE" value="website-homepage-bottom"> <!-- value tells us which form was filled out -->
               <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn lightCTA">Sign Me Up</button>
           </fieldset>
         </form>
