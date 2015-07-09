@@ -1,3 +1,5 @@
+@import "variables.less";
+
 //
 // Global
 // --------------------------------------------------
@@ -20,48 +22,45 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
 
 /* HERO SECTION
 -------------------------------------------------- */
-.hero, .content{
+.hero, .content {
   position:relative;
   width: 100%;
   background-color:@gray-base;
 }
 
-.inner{
+.inner {
   height: auto;
   position: relative;
 }
 
-.home-hero{
-  // background:url(../../dist/img/rt-home-bg.png);
-  background: @gray-base url(../../dist/img/endpoint_screenshot.png);
+.home-hero {
+  background: @gray-base url(/img/endpoint_screenshot.png);
   background-size: cover;
   background-position: right;
-  // background-attachment: fixed;
 }
 
-.scatter-hero{
-  background:url(../../dist/img/scatterplot.png);
+.scatter-hero {
+  background:url(/img/scatterplot.png);
   background-size: cover;
   background-position: center center;
-  // background-attachment: fixed;
 }
 
-.about-hero{
-  background:url(../../dist/img/democratize-bg.png);
+.about-hero {
+  background:url(/img/democratize-bg.png);
   background-size:cover;
   background-position: top left;
   // background-attachment: fixed;
 }
 
-.grafana-hero{
-  background:url(../../dist/img/banner_screenshot3.jpg);
+.grafana-hero {
+  background:url(/img/banner_screenshot3.jpg);
   background-size:cover;
   background-position: top right;
   // background-attachment: fixed;
 }
 
-.litmus-hero{
-  background:url(../../dist/img/litmus-bg.png);
+.litmus-hero {
+  background:url(/img/litmus-bg.png);
   // background-attachment: fixed !important;
   background-size: cover;
   background-position: center center;
@@ -77,10 +76,10 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
 
 .helperBorder1 {
   border: 1px solid #13b2d4;
-  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
-  border-image-slice: 1;  
+  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);
+  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);
+  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);
+  border-image-slice: 1;
   border-radius: 2px;
   padding:0em;
   width:100%;
@@ -90,10 +89,10 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   top:-5px;
   right:-5px;
   border: 1px solid #13b2d4;
-  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
-  border-image-slice: 1;  
+  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);
+  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);
+  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);
+  border-image-slice: 1;
   border-radius: 2px;
   width:100%;
 }
@@ -102,25 +101,25 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   top:-5px;
   right:-5px;
   border: 1px solid #13b2d4;
-  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);  
-  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);  
-  border-image-slice: 1;  
+  -moz-border-image: -moz-linear-gradient(top left, #fff 0%, #13b2d4 100%);
+  -webkit-border-image: -webkit-linear-gradient(top left, #fff 0%, #13b2d4 100%);
+  border-image: linear-gradient(to bottom right, #fff 0%, #13b2d4 100%);
+  border-image-slice: 1;
   border-radius: 2px;
   width:100%;
 }
- 
- .primary-icon {
+
+.primary-icon {
   color: @gray-base;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(top left, @gray-base 0%, @brand-primary 100%) repeat;
-  background: -o-linear-gradient(top left, @gray-base 0%, @brand-primary 100%) repeat;  
+  background: -o-linear-gradient(top left, @gray-base 0%, @brand-primary 100%) repeat;
   -webkit-background-clip: text;
- }
+}
 
- .secondary-icon {
+.secondary-icon {
   color: @gray-light;
- }
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -164,20 +163,20 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
     padding-top: 160px;
     padding-bottom:40px;
     & h1, h2, h3, h4 {
-     color: @white;
-     opacity:.75;
+      color: @white;
+      opacity:.75;
     }
 
     & h1 {
-    font-size:26px;
-    margin-bottom:40px;
-    line-height:1.4;
-    text-shadow: @carousel-text-shadow;
+      font-size:26px;
+      margin-bottom:40px;
+      line-height:1.4;
+      text-shadow: @carousel-text-shadow;
     }
     & .btn {
       text-shadow: none; // No shadow for button elements in carousel-caption
     }
-}
+  }
 
   @media (min-width: @screen-sm-min) {
     width: (@container-sm);
@@ -185,12 +184,12 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
     padding-right: @grid-gutter-width;
     margin-left: 0; // make it line up with the box edge, not the content
 
-     .hero-caption {
+    .hero-caption {
       padding-bottom:150px;
 
       & h1 {
-      font-size:30px; 
-      margin-bottom:30px;
+        font-size:30px;
+        margin-bottom:30px;
       }
     }
   }
@@ -199,27 +198,27 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
+    margin-left: calc(~'5% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
 
     .hero-caption {
       padding-bottom:150px;
 
       & h1 {
-      font-size:28px; 
-      margin-bottom:30px;
+        font-size:28px;
+        margin-bottom:30px;
       }
     }
   }
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 270px); // ~800px
-    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
+    margin-left: calc(~'10% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
 
     .hero-caption {
       padding-bottom:150px;
       & h1 {
-      font-size:32px; 
-      margin-bottom:30px;
+        font-size:32px;
+        margin-bottom:30px;
       }
     }
   }
@@ -228,14 +227,14 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
 /* MEDIA CAROUSEL */
 .carousel-content-container {
   .container-fixed();
-    @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-sm-min) {
     margin-left: 0; // make it line up with the box edge, not the content
   }
-      @media (min-width: @screen-md-min) {
-    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
+  @media (min-width: @screen-md-min) {
+    margin-left: calc(~'5% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
   }
-      @media (min-width: @screen-lg-min) {
-    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
+  @media (min-width: @screen-lg-min) {
+    margin-left: calc(~'10% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
   }
 }
 
@@ -245,32 +244,32 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
 
 
   @media (min-width: @screen-sm-min) {
-  margin-left: 0; // make it line up with the box edge, not the content
+    margin-left: 0; // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-md-min) {
     width: (@container-sm);
     width: (@container-md - 170px); // ~800px
-    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
+    margin-left: calc(~'5% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-lg-min) {
-     width: (@container-lg - 270px); // ~800px
-     margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
+    width: (@container-lg - 270px); // ~800px
+    margin-left: calc(~'10% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
   }
 
 }
 
 input {
-    height: 36px;
-    border-radius: @border-radius-base;
-    border: 1px solid @gray-light;
-    position: relative;
-    top: -4px;
-    width: 240px;
-    margin-right: 10px;
-    padding: 10px;
-    color: @gray-base;
+  height: 36px;
+  border-radius: @border-radius-base;
+  border: 1px solid @gray-light;
+  position: relative;
+  top: -4px;
+  width: 240px;
+  margin-right: 10px;
+  padding: 10px;
+  color: @gray-base;
 }
 
 /* MAIN CONTENT */
@@ -316,7 +315,7 @@ input {
   // margin-bottom:60px;
   min-height:300px;
   // background-color: @body-bg;
-  
+
   @media (min-width: @screen-sm-min) {
     width: (@container-sm);
     padding-left: @grid-gutter-width;
@@ -382,14 +381,14 @@ input {
     width: (@container-md - 170px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(5% - @grid-gutter-width); // make it line up with the box edge, not the content
+    margin-left: calc(~'5% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
   }
 
   @media (min-width: @screen-lg-min) {
     width: (@container-lg - 270px); // ~800px
     padding-left: @grid-gutter-width;
     padding-right: @grid-gutter-width;
-    margin-left: calc(10% - @grid-gutter-width); // make it line up with the box edge, not the content
+    margin-left: calc(~'10% - @{grid-gutter-width}'); // make it line up with the box edge, not the content
   }
 }
 
@@ -407,7 +406,7 @@ input {
     padding-top:0;
     text-align: left;
     padding-bottom: 0;
-    
+
     .callout {
       padding-top:30px;
       padding-bottom:30px;
@@ -464,19 +463,19 @@ input {
   }
 
   &.bold {
-      background-color: @brand-primary;
-      background-image: -webkit-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
-      background-image: -o-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
-      background-image: linear-gradient(to right, @brand-primary 0%, #139ad3 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff13b2d4', endColorstr='#ff139ad3', GradientType=0);
-      color: @white;
+    background-color: @brand-primary;
+    background-image: -webkit-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
+    background-image: -o-linear-gradient(left, @brand-primary 0%, #139ad3 100%);
+    background-image: linear-gradient(to right, @brand-primary 0%, #139ad3 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff13b2d4', endColorstr='#ff139ad3', GradientType=0);
+    color: @white;
   }
 
   &.dark {
-      background-color: @gray-base;
-      color: @white;
-      border-bottom:1px solid @body-bg;
+    background-color: @gray-base;
+    color: @white;
+    border-bottom:1px solid @body-bg;
   }
 
   &.cloudy {
@@ -488,27 +487,27 @@ input {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffedf1f2', endColorstr='#ffffffff', GradientType=0);
     color: @gray-base;
     border-bottom: 1px solid @gray-lighter;
-    }
+  }
 
   &.stormy {
-      background-color: @gray-base;
-      background-image: -webkit-linear-gradient(left, @gray-base 0%, @gray-darker 100%);
-      background-image: -o-linear-gradient(left, @gray-base 0%, @gray-darker 100%);
-      background-image: linear-gradient(to right, @gray-base 0%, @gray-darker 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#161616', endColorstr='#222222', GradientType=0);
-      color: @gray-light;
-      border-bottom:1px solid @gray-light;
-      h4 {color:@text-reverse;}
+    background-color: @gray-base;
+    background-image: -webkit-linear-gradient(left, @gray-base 0%, @gray-darker 100%);
+    background-image: -o-linear-gradient(left, @gray-base 0%, @gray-darker 100%);
+    background-image: linear-gradient(to right, @gray-base 0%, @gray-darker 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#161616', endColorstr='#222222', GradientType=0);
+    color: @gray-light;
+    border-bottom:1px solid @gray-light;
+    h4 {color:@text-reverse;}
   }
-  
+
   h3 {
     margin-bottom:30px;
   }
 }
 
 .faq {
-p {margin-bottom:30px;}
+  p {margin-bottom:30px;}
 
 }
 
@@ -551,7 +550,7 @@ p {margin-bottom:30px;}
 /* Bios and Features
 ------------------------- */
 
-.team-bio, 
+.team-bio,
 .feature,
 .section {
   position: relative;
@@ -562,13 +561,13 @@ p {margin-bottom:30px;}
   & p {margin-bottom:20px;}
 }
 
-.team-bio-desc, 
+.team-bio-desc,
 .feature-desc,
 .section-desc {
   position: relative;
 }
 
-.team-bio-name, 
+.team-bio-name,
 .feature-title,
 .team-bio-role,
 .section-title {
@@ -587,7 +586,7 @@ p {margin-bottom:30px;}
 }
 
 @media (min-width: @screen-sm) {
-  .team-bio-img, 
+  .team-bio-img,
   .feature-img,
   .section-img {
     position: absolute;
@@ -597,17 +596,17 @@ p {margin-bottom:30px;}
     height: 200px;
   }
 
-  .team-bio-desc, 
+  .team-bio-desc,
   .feature-desc,
   .section-desc {
     padding: 40px 0 0 220px;
   }
 
-  .team-bio.right, 
+  .team-bio.right,
   .feature.right,
   .section.right {
 
-    .team-bio-img, 
+    .team-bio-img,
     .feature-img,
     .section-img {
       right: 0;
@@ -653,14 +652,20 @@ p {margin-bottom:30px;}
   overflow: hidden;
 }
 
-a.github {background:#ccc url(../../dist/img/github-icon.svg) no-repeat center;
-    background-size: 80%}
+a.github {
+  background:#ccc url(/img/github-icon.svg) no-repeat center;
+  background-size: 80%
+}
 
-a.twitter {background:#ccc url(../../dist/img/twitter-icon.svg) no-repeat center;
-    background-size: 70%}
+a.twitter {
+  background:#ccc url(/img/twitter-icon.svg) no-repeat center;
+  background-size: 70%
+}
 
-a.linkedin {background:#ccc url(../../dist/img/linkedin-icon.svg) no-repeat center;
-    background-size: 70%}
+a.linkedin {
+  background:#ccc url(/img/linkedin-icon.svg) no-repeat center;
+  background-size: 70%
+}
 
 .team-bio-links a:hover {background-color: #333;}
 
@@ -810,7 +815,7 @@ a.linkedin {background:#ccc url(../../dist/img/linkedin-icon.svg) no-repeat cent
 ------------------------- */
 
 //mobile first
-.page-nav { 
+.page-nav {
   display: block;
   margin: 0;
   padding: 0;
@@ -820,7 +825,7 @@ a.linkedin {background:#ccc url(../../dist/img/linkedin-icon.svg) no-repeat cent
 .page-nav > li {
   display: block;
   border-bottom: 1px solid @gray-lighter;
-margin: 0 -15px;
+  margin: 0 -15px;
 }
 
 .page-nav a {
@@ -837,13 +842,13 @@ margin: 0 -15px;
     border-top-right-radius: 0;
   }
 
-    &:hover{
+  &:hover{
     background-color: lighten(@body-bg, 2%);
   }
 }
 
 // tablet and above
-@media (min-width: @screen-sm) { 
+@media (min-width: @screen-sm) {
   .page-nav {
     display: table;
     margin: -10px -30px 0;
@@ -860,26 +865,26 @@ margin: 0 -15px;
     color: #404040;
     font-size: 16px;
 
-  &.active {
-    background-color: @brand-primary;
-    color: #fff;
-    border-top-left-radius: @border-radius-base;
-    border-top-right-radius: @border-radius-base;
+    &.active {
+      background-color: @brand-primary;
+      color: #fff;
+      border-top-left-radius: @border-radius-base;
+      border-top-right-radius: @border-radius-base;
+    }
+    &.active:hover{
+      color:@white;
+      background-color: @brand-primary;
+    }
+    &:hover{
+      color:#161616;
+      background-color: transparent;
+    }
   }
-  &.active:hover{
-    color:@white;
-    background-color: @brand-primary;
-  }
-  &:hover{
-    color:#161616;
-    background-color: transparent;
-  }
-}
 
 }
 
 // adjust tabs slightly for desktop+  so first one lines up along content box
-@media (min-width: @screen-lg) { 
+@media (min-width: @screen-lg) {
   .page-nav {
     display: table;
     margin: -10px -30px 0;
