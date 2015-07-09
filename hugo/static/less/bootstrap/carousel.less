@@ -95,11 +95,13 @@
 
 }
 
-
 .screenshot {
   position: relative;
   overflow: hidden;
   width: 100%;
+    &.peek {overflow: visible;
+    img {margin-top: -50px;}
+  }
   @media (min-width: @screen-md-min) {
     max-height:450px;
   }
