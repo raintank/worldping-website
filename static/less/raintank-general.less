@@ -35,7 +35,7 @@ a.anchor{display: block; position: relative; top: -170px; visibility: hidden;}
   // background:url(/img/rt-home-bg.png);
   background: @gray-base url(/img/endpoint_screenshot.png);
   background-size: cover;
-  background-position: right;
+  //background-position: right;
   // background-attachment: fixed;
 }
 
@@ -926,7 +926,16 @@ margin: 0 -15px;
   }
 }
 
+ul.opensource-beliefs {
+  list-style: none;
+  margin-bottom: 60px;
+  & li {
 
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-left: 70px;
+  }   
+}
 
 /* FOOTER
 ------------------------- */
@@ -973,7 +982,7 @@ footer a.contact {color:@brand-primary;}
     line-height: 1.4;
   }
 
-.alpha-heading {font-weight: 500;}
+.alpha-heading {font-weight: 600;}
 }
 
 .beta-heading {
