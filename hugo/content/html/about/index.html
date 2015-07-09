@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>raintank: open source infrastructure monitoring solution</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+<!--     <link href="../dist/css/carousel.css" rel="stylesheet"> -->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body role="document">
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><i class="main-logo icon-rt-raintank_wordmark"></i></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown active"> <!-- active class could be on this element if in this section -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/about/index.html">the raintank vision</a></li>
+                  <li><a href="/about/team.html">about the team</a></li>
+                  <li><a href="/about/join.html">work with us</a></li>
+                  <li><a href="/about/open-source.html">100% open source</a></li>  
+                </ul>
+              </li>
+              <li><a href="/grafana/index.html">grafana</a></li><!-- active class could be on this element if in this section -->
+              <li class="dropdown"> <!-- active class could be on this element if in this section -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
+                                 <ul class="dropdown-menu" role="menu">
+                  <li><a href="/litmus/index.html">what is litmus?</a></li>
+                  <li><a href="/litmus/use-cases.html">use cases</a></li>
+                  <li><a href="/litmus/road-map.html">road-map</a></li>
+                  <li><a href="/litmus/faq.html">faq</a></li>
+                </ul>
+              </li>
+             <!--  <li><a href="partners/index.html">partners</a></li> --> <!-- active class could be on this element if in this section -->
+              <li><a href="http://blog.raintank.io" target="_blank">blog</a></li> <!-- active class could be on this element if in this section -->
+              <!--           
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">the vision</a></li>
+                  <li><a href="#">the team</a></li>
+                  <li><a href="#">join us</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li> 
+              -->
+            </ul>
+            <div class="nav-btn"><a class="navbar-right signInCTA" href="http://app.raintank.io">Sign In</a></div>
+            <div class="nav-btn"><button class="navbar-right signUpCTA" data-toggle="modal" data-target="#signUp">Sign Up</button></div>
+        </div><!--/.nav-collapse -->
+      </nav>
+    </div>
+
+<!-- Modal -->
+<div id="signUp" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="text-primary">sign up for our beta</h4>
+      </div>
+      <div class="modal-body">
+        <form data-parsley-validate action="http://raintank.us9.list-manage.com/subscribe/post?u=332a8b5085fde6390a4408bb1&amp;id=e6455ee744" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="inline-form newsletter-form">           
+          <fieldset>
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_332a8b5085fde6390a4408bb1_1d7e889d23" tabindex="-1" value=""></div>
+            <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" style="height:37px; width:300px;  vertical-align:super;" required >
+            <input type="hidden" name="SOURCE" value="main-sign-up-btn"> <!-- value tells us which form was filled out -->
+              <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn primaryCTA">Sign Me Up</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn primaryCTA" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Hero
+  ================================================== -->
+  <section class="hero about-hero">
+    <div class=" hero-content-container inner">
+      <div class="hero-caption">
+      <h1>monitoring is broken. raintank is fixing it.</h1>
+      </div>
+    </div>
+  </section>
+
+  
+    <!-- Main page content and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div class="main-content-container">
+    <ul class="page-nav">
+        <li><a class="active" href="index.html">the vision</a></li>
+        <li><a class="" href="team.html">the team</a></li>
+        <li><a class="" href="join.html">work with us</a></li>
+        <li><a class="" href="open-source.html">open source</a></li> 
+    </ul>
+    <div class="marketing">
+      <!-- START THE FEATURETTES -->
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="beta-heading text-primary">It's gotten <span class="text-highlight">complicated</span>, <span class="text-highlight">frustrating</span> and <span class="text-highlight">expensive</span>.</h2>
+          <p class="lead"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <p>It's become a massive hallucination. People get bombarded with confusing alerts, so they can stare at nonsensical charts while half awake, just to see if a problem even exists.</p>
+          <p><strong>data deluge</strong> Traffic's way up, but so is the amount of metrics, messages and alerts from your ever-growing stack.</p>
+          <p><strong>terrible choices</strong> A proprietary solution? SaaS? It'll be expensive, and you'll lose control. Open source? Could be a time sink.</p>
+          <p><strong>fractured vision</strong> You want correlation and collaboration, across your whole stack. Disparate tools and data make seeing the whole picture hard.</p>
+          <h4>It doesn't have to be so bad.</h4>        
+          <br/><br/>
+        </div>   
+      </div>
+    </div><!-- /.marketing -->
+  </div>
+  
+  <div class="calloutBlock bold">
+    <div class="gen-content-container" style="text-align:left;">
+      <h3>raintank is fixing it.</h3>
+      
+      <p class="lead">an opensaas monitoring engine</p>
+      <p>We believe all infrastructure platform software is destined to be open source. Our OpenSaaS platform combines the turnkey and scalable nature of a SaaS offering, with all of the advantages of open source software. Run raintank in the cloud, in your datacenter, or as a hybrid deployment. Take back control of your data and destiny, and eliminate lock­-in.</p>
+
+      <p class="lead">that's gorgeously powerful,</p>
+      <p>Leveraging Grafana, the leading open source metrics dashboard, we are building a gorgeously powerful frontend that allows you to view, distill and share clear insights about your infrastructure. Grafana2 will plug into raintank to provide a beautiful and seamless experience that democratizes monitoring. Who said open source wasn't sexy?</p>
+
+      <p class="lead">and unifies data and understanding.</p>
+      <p>Already have Graphite? OpenTSDB? InfluxDB? Connect it to the platform, whether that data is on-premise or in the cloud. Add tons of capabilities around these existing databases, and get a unified view of what's going on. Users, networks, applications, instances, devices and zones: we look at all horizons of your stack. This broad view allows for unprecedented context and situational awareness.</p>
+    </div>
+  </div>
+  
+  <div class="calloutBlock bright">
+    <div class="content-row">
+      <h3>sound interesting? we'd love to chat.</h3>
+      <p><a class="btn specialCTA" href="mailto:hello@raintank.io" role="button">contact us</a></p>
+    </div>
+  </div>
+
+
+ <!-- FOOTER -->
+  <footer>
+   <div class="footer-content-container">
+     <div class="row">
+      <div class="col-xs-7 col-sm-9 col-md-9">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <ul>
+               <li class="title">about</li>
+               <li><a href="/about/index.html">the vision</a></li>
+               <li><a href="/about/team.html">the team</a></li>
+               <li><a href="/about/join.html">work with us</a></li>
+               <li><a href="/about/open-source.html">100% open source</a></li> 
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <ul>
+              <li class="title"><a href="/grafana/index.html">grafana</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <ul>
+               <li class="title">litmus</li>
+               <li><a href="/litmus/index.html">what is litmus?</a></li>
+               <li><a href="/litmus/use-cases.html">use-cases</a></li>
+               <li><a href="/litmus/road-map.html">road map</a></li>
+               <li><a href="/litmus/faq.html">faq</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <ul>
+              <li class="title"><a href="http://blog.raintank.io">blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-5 col-sm-3 col-md-3">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <ul class="text-right">
+              <li><span class="title">e:</span> <a href="mailto:hello@raintank.io" class="contact">hello@raintank.io</a></li>
+              <li><span class="title">p:</span> 877.666.1234</li>
+            </ul>
+            <ul class="text-right text-muted">
+              <li>29 broadway</li>
+              <li>penthouse</li>
+              <li>new york, ny 10006</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>&copy; 2015 raintank inc.</p>
+      </div>
+    </div>  
+   </div>
+  </footer>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58328364-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../docs/assets/js/vendor/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
