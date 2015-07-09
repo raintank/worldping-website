@@ -126,6 +126,36 @@
   text-decoration: none;
   cursor: pointer;
 }
+.primaryAltCTA,
+.primaryAltCTA:visited {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5em 1.0em;
+  border: 1px solid #13b2d4;
+  background: #13b2d4;
+  color: #ffffff;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-align: center;
+}
+.primaryAltCTA:hover,
+.primaryAltCTA:visited:hover,
+.primaryAltCTA:active,
+.primaryAltCTA:visited:active {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.primaryAltCTA:hover,
+.primaryAltCTA:visited:hover,
+.primaryAltCTA:active,
+.primaryAltCTA:visited:active {
+  background-color: #0f8ba5;
+  border: 1px solid #0f8ba5;
+  color: #ffffff;
+}
 .secondaryCTA,
 .seconfaryCTA:visited {
   display: inline-block;
