@@ -1,6 +1,9 @@
 # Hugo default output directory
 /public
 
+# data dir for sqlite db
+/data
+
 ## OS Files
 # Windows
 Thumbs.db
