@@ -6,20 +6,31 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h3 class="text-primary">sign up for our beta</h4>
+        <h3 class="text-primary">get early access</h4>
+        <p class="text-muted">Signing up now guarantees you'll always be part of our <strong>free</strong> tier. <br/>Forever. Forever ever.</p>
       </div>
       <div class="modal-body">
         <form data-parsley-validate action="/earlyaccess" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="inline-form newsletter-form">
           <fieldset>
             <div style="position: absolute; left: -5000px;"><input type="text" name="b_332a8b5085fde6390a4408bb1_1d7e889d23" tabindex="-1" value=""></div>
-            <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" style="height:37px; width:300px;  vertical-align:super;" required >
+            
+            <div class="row" style="margin-bottom:30px;">
+            <div class="col-md-7" style="margin-top:20px;">
+            <input type="email" placeholder="E-mail address" name="EMAIL" id="mce-EMAIL" class="callout-cta" style="height:37px; width:300px; display:block; margin-bottom:10px;" required >
             <input type="hidden" name="SOURCE" value="main-sign-up-btn"> <!-- value tells us which form was filled out -->
-              <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn primaryCTA">Sign Me Up</button>
+              <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn primaryAltCTA">Get Early Access</button>
+            </div>
+            <div class="col-md-5 small" style="border-left:1px solid #e5e5e5; padding:10px 20px 10px 10px;">
+
+            <p><img class="testimonial-img pull-right" src="/img/asr.jpg" />Before raintank, I was living in a van down by the river. With the help of Litmus, I was able to get my network back in action and my life back in order.</p>
+            <p>Adam Rothschild<br/>
+               SVP, Network</p>
+            <img class="testimonial-company" src="/img/packet.png" />
+            
+            </div>
+            </div>  
           </fieldset>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn primaryCTA" data-dismiss="modal">Close</button>
       </div>
     </div>
 
