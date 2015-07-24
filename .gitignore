@@ -2,7 +2,7 @@
 /public
 
 # data dir for sqlite db
-/data
+/data/*
 
 ## OS Files
 # Windows
