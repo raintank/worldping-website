@@ -2,6 +2,9 @@ var Sequelize = require("sequelize");
 var async = require("async");
 var https = require('https');
 var intercom = require('./intercom.json');
+var mkdirp = require('mkdirp');
+
+mkdirp.sync("./data");
 
 // connect to our DB.
 var sequelize = new Sequelize('raintank', null, null, {
