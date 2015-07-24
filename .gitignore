@@ -2,7 +2,9 @@
 /public
 
 # data dir for sqlite db
-/data/*
+/data
+/log
+/forever
 
 # intercom credentials
 intercom.json
