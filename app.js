@@ -7,11 +7,24 @@ var earlyaccess = require("./earlyaccess");
 
 // default static path.
 var staticPath = "build/dist";
+var port = 3001;
 
-var parsedOpts = nopt({"path": path}, {"p": ["--path"]}, process.argv, 2)
+var knownOpts = {
+  "staticpath": path,
+  "port": Number,
+}
+var shortHands = {
+  "s": ["--staticpath"],
+  "p": ["--port"]
+}
+var parsedOpts = nopt(knownOpts, shortHands, process.argv, 2)
 
-if (parsedOpts["path"]) {
-  staticPath = parsedOpts['path'];
+if (parsedOpts["staticpath"]) {
+  staticPath = parsedOpts['staticpath'];
+}
+
+if (parsedOpts["port"]) {
+  port = parsedOpts["port"];
 }
 
 var app = express();
@@ -37,7 +50,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   });
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(port, 'localhost', function () {
   var host = server.address().address;
   var port = server.address().port;
 
