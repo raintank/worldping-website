@@ -76,8 +76,9 @@ var process = function(signup, next) {
 			method: "POST", 
 			headers: {
 				'Content-Type': "application/json",
-				'Authorization': APPID+":"+APIKEY
-			}
+				'Accept': "application/json"
+			},
+			auth: APPID+":"+APIKEY
 		};
 		var request = https.request(opts, function(res) {
 			if (res.statusCode == 200) {
