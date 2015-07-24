@@ -1,6 +1,7 @@
 var Sequelize = require("sequelize");
 var async = require("async");
 var https = require('https');
+var intercom = require('./intercom.json');
 
 // connect to our DB.
 var sequelize = new Sequelize('raintank', null, null, {
@@ -9,9 +10,9 @@ var sequelize = new Sequelize('raintank', null, null, {
 	logging: false
 });
 
-//TODO: load this from a config.
-var APPID = "pi3243fa";
-var APIKEY = "da39a3ee5e6b4b0d3255bfef95601890afd80709";
+
+var APPID = intercom.APPID;
+var APIKEY = intercom.APIKEY;
 
 // define or schema for signups queue.
 var Signups = sequelize.define('Signups', {

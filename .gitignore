@@ -4,6 +4,9 @@
 # data dir for sqlite db
 /data/*
 
+# intercom credentials
+intercom.json
+
 ## OS Files
 # Windows
 Thumbs.db
