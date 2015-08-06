@@ -44,7 +44,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   }
   //queue up the request for asynchronous processing.
   earlyaccess.enqueue(email, source, ua, ip).then(function() {
-  	res.redirect("/earlyaccess/");
+  	res.redirect("https://raintank.typeform.com/to/jIHkbP?email="+encodeURIComponent(email));
   }, function(err) {
   	return res.status(500).send(err);
   });
