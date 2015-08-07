@@ -28,6 +28,9 @@ var Signups = sequelize.define('Signups', {
   source: {
     type: Sequelize.STRING
   },
+  newsletter: {
+    type: Sequelize.BOOLEAN
+  },
   userAgent: {
   	type: Sequelize.STRING
   },
@@ -44,11 +47,12 @@ Signups.sync();
 
 
 // add signups to the queue.
-exports.enqueue = function(email, source, ua, ip) {
+exports.enqueue = function(email, source, newsletter, ua, ip) {
 	console.log("processing earlyaccess signup of: ", email);
 	return Signups.create({
 		email: email,
 		source: source,
+		newsletter: newsletter,
 		clientIP: ip,
 		userAgent: ua,
 		state: "queued"
@@ -65,7 +69,8 @@ var process = function(signup, next) {
 			last_seen_ip: signup.clientIP,
 			last_seen_user_agent: signup.userAgent,
 			custom_attributes: {
-				"signup_source": signup.source
+				"signup_source": signup.source,
+				"newsletter": signup.newsletter
 			}
 		};
 

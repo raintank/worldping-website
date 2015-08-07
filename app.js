@@ -36,6 +36,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.post('/earlyaccess', urlencodedParser, function (req, res) {
   var email = req.body.EMAIL;
   var source = req.body.SOURCE;
+  var newsletter = req.body.NEWSLETTER;
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var ua = req.headers['user-agent'];
 
@@ -43,7 +44,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   	return res.status(400).send("invalid form data.");
   }
   //queue up the request for asynchronous processing.
-  earlyaccess.enqueue(email, source, ua, ip).then(function() {
+  earlyaccess.enqueue(email, source, newsletter, ua, ip).then(function() {
   	res.redirect("https://raintank.typeform.com/to/jIHkbP?email="+encodeURIComponent(email));
   }, function(err) {
   	return res.status(500).send(err);
