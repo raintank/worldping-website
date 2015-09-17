@@ -3,33 +3,36 @@ var nopt = require('nopt');
 var path = require('path');
 var bodyParser = require('body-parser');
 var earlyaccess = require("./earlyaccess");
+var cookieSession = require('cookie-session');
+var config = require('./config.json');
 
-
-// default static path.
-var staticPath = "build/dist";
-var port = 3001;
-
-var knownOpts = {
-  "staticpath": path,
-  "port": Number,
-}
-var shortHands = {
-  "s": ["--staticpath"],
-  "p": ["--port"]
-}
-var parsedOpts = nopt(knownOpts, shortHands, process.argv, 2)
-
-if (parsedOpts["staticpath"]) {
-  staticPath = parsedOpts['staticpath'];
-}
-
-if (parsedOpts["port"]) {
-  port = parsedOpts["port"];
-}
+var staticPath = config.staticPath;
+var port = config.port;
 
 var app = express();
 
+app.use(cookieSession({
+  name: 'rt_session',
+  secret: config.session.key,
+  signed: true
+}));
+
+// User tracking middleware
+// look for "source" query string which means this is an entry page.
+// we then track the source, adwords, twitter, etc.. and all of the other
+// params passed.
+app.use(function(req, res, next) {
+  if (req.query.source) {
+    Object.keys(req.query).forEach(function(key) {
+      req.session[key] = req.query[key];
+    });
+  }
+  next();
+});
+
 app.use(express.static(staticPath));
+
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //handle earlyaccess request.
@@ -44,7 +47,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   	return res.status(400).send("invalid form data.");
   }
   //queue up the request for asynchronous processing.
-  earlyaccess.enqueue(email, source, newsletter, ua, ip).then(function() {
+  earlyaccess.enqueue(email, source, newsletter, req.session, ua, ip).then(function() {
   	res.redirect("https://raintank.typeform.com/to/jIHkbP?email="+encodeURIComponent(email));
   }, function(err) {
   	return res.status(500).send(err);

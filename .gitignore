@@ -7,7 +7,7 @@
 /forever
 
 # intercom credentials
-intercom.json
+config.json
 
 ## OS Files
 # Windows

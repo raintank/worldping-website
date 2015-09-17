@@ -1,7 +1,7 @@
 var Sequelize = require("sequelize");
 var async = require("async");
 var https = require('https');
-var intercom = require('./intercom.json');
+var config = require('./config.json');
 var mkdirp = require('mkdirp');
 
 mkdirp.sync("./data");
@@ -14,8 +14,8 @@ var sequelize = new Sequelize('raintank', null, null, {
 });
 
 
-var APPID = intercom.APPID;
-var APIKEY = intercom.APIKEY;
+var APPID = config.intercom.APPID;
+var APIKEY = config.intercom.APIKEY;
 
 // define or schema for signups queue.
 var Signups = sequelize.define('Signups', {
@@ -30,6 +30,9 @@ var Signups = sequelize.define('Signups', {
   },
   newsletter: {
     type: Sequelize.BOOLEAN
+  },
+  meta: {
+  	type: Sequelize.STRING
   },
   userAgent: {
   	type: Sequelize.STRING
@@ -47,12 +50,13 @@ Signups.sync();
 
 
 // add signups to the queue.
-exports.enqueue = function(email, source, newsletter, ua, ip) {
+exports.enqueue = function(email, source, newsletter, meta, ua, ip) {
 	console.log("processing earlyaccess signup of: ", email);
 	return Signups.create({
 		email: email,
 		source: source,
 		newsletter: newsletter,
+		meta: JSON.stringify(meta),
 		clientIP: ip,
 		userAgent: ua,
 		state: "queued"
@@ -73,6 +77,10 @@ var process = function(signup, next) {
 				"newsletter": signup.newsletter
 			}
 		};
+		var meta = JSON.parse(signup.meta);
+		Object.keys(meta).forEach(function(key) {
+	      payload.custom_attributes["tracking_"+key] = meta[key];
+	    });
 
 		var opts = {
 			host: "api.intercom.io",
