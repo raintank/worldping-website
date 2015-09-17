@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var earlyaccess = require("./earlyaccess");
 var cookieSession = require('cookie-session');
 var config = require('./config.json');
+var querystring = require('querystring');
 
 var staticPath = config.staticPath;
 var port = config.port;
@@ -48,7 +49,17 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   }
   //queue up the request for asynchronous processing.
   earlyaccess.enqueue(email, source, newsletter, req.session, ua, ip).then(function() {
-  	res.redirect("https://raintank.typeform.com/to/jIHkbP?email="+encodeURIComponent(email));
+	var queryParams = {
+		email: email
+	};
+	Object.keys(req.session).forEach(function(key) {
+		if (key === "_ctx") {
+			return;
+		}
+		queryParams["tracking_"+key] = req.session[key];
+	});
+	var queryStr = querystring.stringify(queryParams);
+  	res.redirect("https://raintank.typeform.com/to/jIHkbP?"+queryStr);
   }, function(err) {
   	return res.status(500).send(err);
   });
