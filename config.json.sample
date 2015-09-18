@@ -1,0 +1,11 @@
+{
+	"intercom":	{
+	    "APPID": "appid",
+	    "APIKEY": "key"
+	},
+	"session": {
+		"key": "some secret key"
+	},
+	"port": 3001,
+	"staticPath": "build/dist"
+}
