@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var earlyaccess = require("./earlyaccess");
 var cookieSession = require('cookie-session');
-var config = require('./config.json');
+var config = require('./conf.json');
 var querystring = require('querystring');
 
 var staticPath = config.staticPath;
