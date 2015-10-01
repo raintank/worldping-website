@@ -1,7 +1,7 @@
 var Sequelize = require("sequelize");
 var async = require("async");
 var https = require('https');
-var config = require('./config.json');
+var config = require('./conf.json');
 var mkdirp = require('mkdirp');
 
 mkdirp.sync("./data");
