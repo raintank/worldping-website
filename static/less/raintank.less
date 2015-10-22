@@ -3,6 +3,7 @@
 @import "bootstrap/bootstrap.less";
 @import "icon-font.less";
 @import "raintank-general.less";
+@import "team.less";
 
 //
 // Buttons
@@ -54,13 +55,22 @@
 
 .heroCTA,
 .heroCTA:visited{
-  .ButtonCTA(rgba(0,0,0,0.5), @primaryCTA, @primaryCTA, @black);
-&:hover,
+
+  .ButtonCTA(@primaryCTA, @primaryCTA, @white, @white);
+  
+  &:hover,
   &:active {
-   background-color: rgba(0,0,0,0.5);
-   border: 1px solid @white;
+   background-color: darken(@primaryCTA, 10%);
+   border: 1px solid darken(@primaryCTA, 10%);
    color: @white;
   }
+}
+
+.jumbo {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 40px;
+  margin-bottom: 60px;
 }
 
 .primaryCTA,

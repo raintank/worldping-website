@@ -1,0 +1,188 @@
+/* Bios and Features
+------------------------- */
+
+.team-bio, 
+.feature,
+.section {
+  position: relative;
+  min-height: 200px;
+  margin: 100px 0;
+  padding: 0 15px;
+
+  & p {margin-bottom:20px;}
+}
+
+.team-bio-desc, 
+.feature-desc,
+.section-desc {
+  position: relative;
+}
+
+.team-bio-name, 
+.feature-title,
+.team-bio-role,
+.section-title {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.feature-title,
+.section-title {
+  color:@text-highlight;
+}
+
+.team-bio-role {
+  color: @brand-primary;
+}
+
+@media (min-width: @screen-sm) {
+  .team-bio-img, 
+  .feature-img,
+  .section-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .team-bio-desc, 
+  .feature-desc,
+  .section-desc {
+    padding: 40px 0 0 220px;
+  }
+
+  .team-bio.right, 
+  .feature.right,
+  .section.right {
+
+    .team-bio-img, 
+    .feature-img,
+    .section-img {
+      right: 0;
+      left: auto;
+    }
+
+    .team-bio-desc {
+      padding: 40px 220px 0 0;
+      text-align: right;
+    }
+    .feature-desc {
+      padding: 40px 220px 0 0;
+      text-align: left;
+    }
+    .section-desc {
+      padding: 40px 220px 0 0;
+      text-align: left;
+    }
+  }
+}
+
+.team-bio-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-bio-links > li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.team-bio-links a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #ccc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a.github {background:#ccc url(/img/github-icon.svg) no-repeat center;
+    background-size: 80%}
+
+a.twitter {background:#ccc url(/img/twitter-icon.svg) no-repeat center;
+    background-size: 70%}
+
+a.linkedin {background:#ccc url(/img/linkedin-icon.svg) no-repeat center;
+    background-size: 70%}
+
+.team-bio-links a:hover {background-color: #333;}
+
+.team-bio-graph {
+  margin: 10px;
+
+  @media (min-width: @screen-sm) {
+    position: absolute;
+    margin: 0;
+    &.raj {
+      top: -23px;
+      right: 0;
+    }
+
+    &.torkel {
+      top: -54px;
+      left: 50px;
+    }
+
+    &.anthony {
+      top: 10px;
+      right: 50px;
+    }
+
+    &.matt {
+      top: -27px;
+      left: -50px;
+    }
+
+    &.trent {
+      top: -25px;
+      right: -55px;
+    }
+
+    &.dieter {
+      top: 35px;
+      left: 20px;
+    }
+
+    &.jeremy {
+      top: 32px;
+      right: 20px;
+    }
+  }
+
+  @media (min-width: @screen-md) {
+    &.raj {
+      right: 35px;
+    }
+
+    &.torkel {
+      left: 90px;
+    }
+
+    &.anthony {
+      right: 100px;
+    }
+
+    &.matt {
+      left: -20px;
+    }
+
+    &.trent {
+      right: -15px;
+    }
+
+    &.dieter {
+      left: 65px;
+    }
+
+    &.jeremy {
+      right: 62px;
+    }
+  }
+}
