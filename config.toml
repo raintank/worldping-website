@@ -1,3 +1,9 @@
 baseurl = "http://raintank.io/"
 languageCode = "en-us"
 title = "Raintank"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+  section = "section"

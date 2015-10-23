@@ -1,0 +1,169 @@
+/*
+ * Globals
+ */
+
+article h2, .h2 {
+  border-bottom: 1px solid #eee;
+}
+
+.h2-rectangle {
+  background-color: #13b2d4;
+  width: 3px;
+  position: absolute;
+  height: 30px;
+  margin-left: -13px;
+  transition: 100ms ease-out;
+}
+
+.h2-rectangle:hover {
+  margin-left: -45px;
+  width: 35px;
+}
+
+article h3, .h3 {
+  margin-top: 25px;
+}
+
+article p {
+  margin-bottom: 35px;
+}
+
+article img {
+  max-width: 100%;
+}
+
+article table {
+  margin-bottom: 35px;
+}
+
+article table, article td {
+    border: 1px solid #8d8d8d;
+}
+
+article th {
+  background-color: #8d8d8d;
+  color: white;
+}
+
+article th, article td {
+    padding: 5px;
+}
+
+article {
+  margin-top: 50px;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+.doc-main {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.doc-main pre code {
+  font-size: 16px;
+}
+
+.title-area {
+  margin-bottom: 25px;
+}
+
+/* List items */
+.doc-list-header {
+}
+.doc-entry {
+
+}
+.doc-entry-title {
+
+}
+.doc-entry-meta {
+  font-style: italic;
+  text-align: left;
+}
+
+/* Sidebar modules for boxing content */
+
+@media (min-width: 768px) {
+  .sidebar-override {
+  margin-top: 125px;
+  }
+}
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+.sidebar-toc ul li {
+  list-style-type: none;
+  list-style-position: outside;
+  margin-left: -1.5em;
+  padding: 0;
+}
+
+.tag-box {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+.tag-item {
+  margin: 5px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  line-height: 2;
+  background-color: #ffffff;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+/*
+ * Footer
+ */
+
+.doc-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.doc-footer p:last-child {
+  margin-bottom: 0;
+}
+.doc-footer-em {
+  margin-top: 35px;
+  font-size: 16px;
+}
+

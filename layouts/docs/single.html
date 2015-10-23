@@ -1,0 +1,47 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+  <!-- Hero
+  ================================================== -->
+  <section class="hero home-hero">
+    <div class=" hero-content-container inner">
+      <div class="hero-caption">
+  		<h1 class="alpha-heading">Documentation</h2>
+      </div>
+    </div>
+  </section>
+
+<div class="main-content-container">
+    <ul class="page-nav">
+        <li><a class="active" href="/docs">Documentation</a></li>
+        <li><a class="" href="/tutorials">Tutorials</a></li>
+        <li><a class="" href="/questions">Questions</a></li>
+    </ul>
+    
+	<div class="row">
+		<div class="col-sm-8 doc-main">
+			<main role="main">
+			<!-- <div>
+				<a class="doc-entry-section" href="../">< {{ .Section }}</a>
+			</div> -->
+				<article>
+					<section class="title-area">
+						<a id="title"></a>
+						<h1 class="doc-entry-title">{{ .Title }}</h1>
+						<div class="doc-entry-meta">
+							<span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+						</div>
+					</section>
+					<section>
+						{{ .Content }}
+					</section>
+				</article>
+			</main>
+		</div> <!-- /.doc-main -->
+
+		{{ partial "sidebar-single.html" . }}
+
+	</div> <!-- /.row -->
+</div>
+
+{{ partial "footer.html" . }}

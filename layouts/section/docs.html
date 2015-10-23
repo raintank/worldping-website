@@ -1,0 +1,57 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+  <!-- Hero
+  ================================================== -->
+  <section class="hero home-hero">
+    <div class=" hero-content-container inner">
+      <div class="hero-caption">
+        <h1 class="alpha-heading">Documentation</h2>
+      </div>
+    </div>
+  </section>
+
+<!-- Main page content and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="main-content-container" style="margin-bottom:40px;">
+    <ul class="page-nav">
+        <li><a class="active" href="/docs">Documentation</a></li>
+        <li><a class="" href="/tutorials">Tutorials</a></li>
+        <li><a class="" href="/questions">Questions</a></li>
+    </ul>
+
+
+    <h2>Core documentation</h2>
+    <p>Here is where you will find thorough, up to date articles describing articles describing installtion, configuration, feature breakdown, vocabulary, integrations, and frequently asked questions.</p>
+
+    <section id="documentation">
+        {{ range $key, $taxonomy := .Site.Taxonomies.section }}
+        <div class="col-md-4">
+            <h3> {{ $key }} </h3>
+                <ul class="square-list" style=" margin-left:-20px;">
+                    {{ range first 10 $taxonomy.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                    {{ end }}
+                </ul>
+        </div>
+        {{ end }}
+    </section>
+
+</div>
+
+{{ partial "footer.html" . }}
+
+
+<!--     <section id="menu" style="margin-top: 50px;">
+        <ul>
+            {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+            <li> {{ $key }} </li>
+            <ul>
+                {{ range $taxonomy.Pages }}
+                <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }}</a>| {{ .Section }}</li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </ul>
+    </section> -->
