@@ -1,4 +1,4 @@
-{{ $baseUrl := .Site.BaseUrl }}
+{{ $BaseURL := .Site.BaseURL }}
 <div class="col-sm-3 col-sm-offset-1 doc-sidebar sidebar-override">
 	<div class="sidebar-module">
 		<div class="sidebar-toc" id="scroll-anchors">
@@ -10,7 +10,7 @@
 		<h4>Tags</h4>
 		<div class="tag-box">
 		{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-			<a class="tag-item" href="{{ $baseUrl }}/tags/{{ $name | urlize }}">{{ $name }}</a>
+			<a class="tag-item" href="{{ $BaseURL }}/tags/{{ $name | urlize }}">{{ $name }}</a>
 		{{ end }}
 		</div>
 	</div>
