@@ -6,4 +6,6 @@ tags = [ "raintank", "litmus", "quotas", "endpoints, "collectors" ]
 section = ["Litmus"]
 +++
 
-Quotas in raintank are on both endpoints and collectors. During the private beta, the initial quotas are 10 endpoints and 10 private collectors, however you can request additional of 
+Quotas in raintank are on both endpoints and collectors. During the private beta, the initial quotas are 10 endpoints and 10 private collectors.
+
+To request additional endpoints or private collectors during the private beta, please email hello@raintank.io.
