@@ -1,10 +1,11 @@
 # website-v2
 new raintank website
 
+Prerequisites for new setups:
+- Run `npm install`
+- Make sure Hugo is installed. You can verify Hugo is installed by typing `which hugo` from the command line. If hugo is not found, please install: https://gohugo.io/overview/installing/
 
 Quick build instructions:
-
-Prequisite: For new setups, make sure to run `npm install`. If you've already done this, you can skip.
 
 1. Run `grunt connect` to start the server
 2. In a separate terminal, run `grunt watch dev` to compile into `build/dev/'
