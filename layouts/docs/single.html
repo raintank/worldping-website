@@ -12,6 +12,18 @@
   </section>
 
 <div class="main-content-container">
+	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+	{{ $.Scratch.Add "path" .Site.BaseURL }}
+		<div class="breadcrumbs" style="margin-top:20px;">
+			<a href="/">home</a>
+			  {{ range $index, $element := split $url "/" }} 
+			    {{ $.Scratch.Add "path" $element }}
+			      {{ if ne $element "" }}
+			      / <a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a>
+			      {{ $.Scratch.Add "path" "/" }}
+			      {{ end }}
+			  {{ end }}
+		 </div>
    <!--  <ul class="page-nav">
         <li><a class="active" href="/docs">Documentation</a></li>
         <li><a class="" href="/tutorials">Tutorials</a></li>
@@ -24,7 +36,7 @@
 			<!-- <div>
 				<a class="doc-entry-section" href="../">< {{ .Section }}</a>
 			</div> -->
-				<article>
+				<article style="margin-top:20px;">
 					<section class="title-area">
 						<a id="title"></a>
 						<h1 class="doc-entry-title">{{ .Title }}</h1>
