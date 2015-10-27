@@ -7,7 +7,6 @@ categories = ["Tutorials"]
 section = ["Guides"]
 +++
 
-## Getting started
 This guide will help you get started and acquainted with the Grafana user interface. It assumes you have a working
 Grafana 2.0 instance, and have added at least one Grafana data source.
 

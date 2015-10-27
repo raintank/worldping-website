@@ -6,8 +6,6 @@ tags = [ "grafana", "influxdb", "metrics", "query", "documentation" ]
 section = ["data sources"]
 +++
 
-# InfluxDB
-
 There are currently two separate datasources for InfluxDB in Grafana: InfluxDB 0.8.x and InfluxDB 0.9.x. The API and capabilities of InfluxDB 0.9.x are completely different from InfluxDB 0.8.x. InfluxDB 0.9.x data source support is provided on an experimental basis.
 
 ## Adding the data source to Grafana

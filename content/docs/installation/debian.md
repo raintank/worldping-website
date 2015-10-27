@@ -7,9 +7,6 @@ categories = ["Documentation"]
 section = ["Installation"]
 +++
 
-
-# Installing on Debian / Ubuntu
-
 ## Download
 
 Description | Download

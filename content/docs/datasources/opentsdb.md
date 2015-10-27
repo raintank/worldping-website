@@ -6,8 +6,6 @@ tags = [ "grafana", "opentsdb", "documentation" ]
 section = ["data sources"]
 +++
 
-# OpenTSDB Guide
-
 ## Adding the data source to Grafana
 Open the side menu by clicking the the Grafana icon in the top header. In the side menu under the `Dashboards` link you
 should find a link named `Data Sources`. If this link is missing in the side menu it means that your current
