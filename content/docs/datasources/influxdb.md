@@ -3,7 +3,7 @@ date = "2015-07-01T13:27:26-04:00"
 title = "InfluxDB query guide"
 description = "This is a brief guide to InfluxDB queries within Grafana"
 tags = [ "grafana", "influxdb", "metrics", "query", "documentation" ]
-section = ["Datasources"]
+section = ["data sources"]
 +++
 
 # InfluxDB

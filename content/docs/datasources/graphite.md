@@ -3,7 +3,7 @@ date = "2015-07-01T13:27:26-04:00"
 title = "Graphite query guide"
 description = "This is a brief guide to Graphite queries within Grafana"
 tags = [ "grafana", "graphite", "metrics", "query", "documentation" ]
-section = ["Datasources"]
+section = ["data sources"]
 +++
 
 Here is a change. 
