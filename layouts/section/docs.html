@@ -6,7 +6,7 @@
   <section class="hero home-hero">
     <div class=" hero-content-container inner">
       <div class="hero-caption">
-        <h1 class="alpha-heading">Documentation</h2>
+        <h1 class="alpha-heading">documentation</h2>
       </div>
     </div>
   </section>
@@ -15,27 +15,31 @@
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 <div class="main-content-container" style="margin-bottom:40px;">
-    <ul class="page-nav">
+    <!-- <ul class="page-nav">
         <li><a class="active" href="/docs">Documentation</a></li>
         <li><a class="" href="/tutorials">Tutorials</a></li>
         <li><a class="" href="/questions">Questions</a></li>
-    </ul>
+    </ul> -->
 
 
-    <h2>Core documentation</h2>
+    <h2 class="text-primary">core documentation</h2>
     <p>Here is where you will find thorough, up to date articles describing articles describing installtion, configuration, feature breakdown, vocabulary, integrations, and frequently asked questions.</p>
 
+    <hr class="section-divider" /><br/>
     <section id="documentation">
-        {{ range $key, $taxonomy := .Site.Taxonomies.section }}
-        <div class="col-md-4">
-            <h3> {{ $key }} </h3>
-                <ul class="square-list" style=" margin-left:-20px;">
-                    {{ range first 10 $taxonomy.Pages }}
-                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
-                    {{ end }}
-                </ul>
+        <div class="row">
+            {{ range $key, $taxonomy := .Site.Taxonomies.section }}
+                <div class="col-md-4">
+                    <h3> {{ $key }} </h3>
+                        <img style="margin-bottom:10px;" src="/img/{{ $key }}.svg" width="100"/>
+                        <ul class="square-list" style=" margin-left:-40px; list-style:none;">
+                            {{ range first 10 $taxonomy.Pages }}
+                            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+                            {{ end }}
+                        </ul>
+                </div>
+            {{ end }}
         </div>
-        {{ end }}
     </section>
 
 </div>

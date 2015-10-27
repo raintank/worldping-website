@@ -3,7 +3,7 @@ date = "2015-07-01T13:27:26-04:00"
 title = "OpenTSDB Guide"
 description = "OpenTSDB guide for Grafana"
 tags = [ "grafana", "opentsdb", "documentation" ]
-section = ["Datasources"]
+section = ["data sources"]
 +++
 
 # OpenTSDB Guide
