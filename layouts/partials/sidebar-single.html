@@ -1,11 +1,15 @@
 {{ $BaseURL := .Site.BaseURL }}
 <div class="col-sm-3 col-sm-offset-1 doc-sidebar sidebar-override">
+	{{ if .TableOfContents }}
 	<div class="sidebar-module">
 		<div class="sidebar-toc" id="scroll-anchors">
 			<h4>On this page</h4>
 			{{ .TableOfContents }}
 		</div>
 	</div>
+	{{ end }}
+
+	{{ if .Params.tags }}
 	<div class="sidebar-module">
 		<h4>Tags</h4>
 		<div class="tag-box">
@@ -14,4 +18,5 @@
 		{{ end }}
 		</div>
 	</div>
+	{{ end }}	
 </div><!-- /.doc-sidebar -->

@@ -15,8 +15,8 @@ The auto-discover functionality will attempt to contact your endpoint from the s
 
 ## Monitoring Footprint
 
-### Dynamic Footprint
+#### Dynamic Footprint
 Dynamic footprints are selected on a per tag basis, and will always monitor your endpoint from all collectors the selected tag group(s). As you add or remove collectors from the tag group, 
 
-### Static Footprint
+#### Static Footprint
 A Static footprint will allow your monitoring footprint to remain the same, only monitoring from the specific individual collectors. At the moment, there is no ability to bulk-update static footprints across multiple checks. If you have a number of checks & endpoints to update manually, please [contact us](mailto:hello@raintank.io) and we can take care of it for you.
