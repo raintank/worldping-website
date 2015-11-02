@@ -8,10 +8,36 @@ section = ["Litmus"]
 
 ## DNS
 
+During auto-discover, we will attempt to determine the authoritative nameservers for the selected endpoint. The DNS check will then contact the first responding nameserver and upon successful connection, report an OK state. Once a the first listed nameserver successfully answers, the check is complete. 
+
+The collected stats for DNS are:
+- Answers
+- Time
+- TTL
+
 ## Ping
 
-## Web
+The collected stats for Ping are:
 
-### HTTP
+- Avg
+- Loss
+- Min
+- Max
+- Mean
+- mdev
 
-### HTTPS
+## Web (HTTP & HTTPS)
+
+During auto-discover, we will parse the path and port information, and look for a successful connection to your endpoint. For Content Match, only `regexp` is supported. For full details of capabilities, refer to the great resource at: [https://golang.org/pkg/regexp/syntax/](https://golang.org/pkg/regexp/syntax/)
+
+The collected stats for web checks HTTP and HTTPS are:
+
+- Connect
+- Data length
+- DNS
+- recv
+- send
+- Status Code
+- Throughput
+- Total
+- Wait

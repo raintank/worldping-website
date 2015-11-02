@@ -8,7 +8,7 @@ section = ["Litmus"]
 
 The ping dashboard accepts a single endpoint and multiple collectors, allowing you to isolate and investigate issues down to a single collector or tag group of collectors. The dashboard defaults to showing HTTP, but HTTPS may be selected via *Protocol* in the dashboard variables selector.
 
-![Picture](/img/docs/Litmus-Endpoint-Ping.png)
+![Picture](/img/docs/Litmus-Endpoint-Web.png)
 
 
 1. `Health (Last)`

@@ -6,8 +6,6 @@ tags = [ "raintank", "litmus", "collectors" ]
 section = ["Litmus"]
 +++
 
+The raintank collector provides the execution of periodic network performance tests including HTTP checks, DNS and Ping. The results of each test are then transfered back to the Raintank API where they are processed and inserted into a timeseries database.
 
-## Litmus: Summary
-
-### Litmus Detail: HTTP
-
+Raintank mantains a growing number of official collectors across the world ([View the list](/global-footprint)), but you can also add [Private Collectors](/private-collectors)
