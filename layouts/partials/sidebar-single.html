@@ -9,8 +9,8 @@
 	<div class="sidebar-module">
 		<h4>Tags</h4>
 		<div class="tag-box">
-		{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-			<a class="tag-item" href="{{ $BaseURL }}/tags/{{ $name | urlize }}">{{ $name }}</a>
+		{{ range .Params.tags }}
+			<a class="tag-item" href="{{ $BaseURL }}/tags/{{ . | urlize }}">{{ . }}</a>
 		{{ end }}
 		</div>
 	</div>
