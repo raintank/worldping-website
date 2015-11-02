@@ -10,11 +10,10 @@ The summary dashboard provide a top level view of a single endpoint, showing upt
 
 [Image]
 
-1. Last Check
-2. Error Bar
-3. Summary
+1. `Uptime`: The uptime values are the average `ok_state` over the selected time range. 
+2. `Errors`: The error bars show the OK and Errors over the selected time range. 
+3. `Summary`:
 
-The error bar shows the OKs and Errors for each enabled check. 
+### Drilling down
 
-To view all errors for that endpoint, click the drilldown link in the panel title. 
-
+To view all errors for an endpoint, click the drilldown link in the panel title. 

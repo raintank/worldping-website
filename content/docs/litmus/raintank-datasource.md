@@ -15,10 +15,12 @@ Once you have a raintank account, it can be added as a data source to any instan
 1. `URL`: https://app.raintank.io/api/graphite
 1. `Access`: proxy
 1. `Basic Auth`: Enabled
-1. `User`: <username/email>
-1. `Password`: <your password>
+1. `User`: *username/email*
+1. `Password`: *your password*
 
-## raintank dashboards <3 Grafana
+Note: In order for the dashboards to function properly on import, it's important the datasource name is ***raintank***.
+
+## Raintank dashboards in Grafana
 
 ### Export your raintank dashboard
 
@@ -30,7 +32,7 @@ Alternately, the raw JSON may be accessed directly from within the interface and
 
 ![Picture](/img/docs/export-2.gif)
 
-### Import into Grafana
+### Importing into Grafana
 
 First, log into your Grafana instance. To import the raintank dashboard through the previously saved local JSON file, click the 'Choose file' button in the Import from File section. Note that JSON is not linted or validated prior during upload, so we recommend validating locally if you're editing. 
 

@@ -11,9 +11,9 @@ The DNS dashboard accepts a single endpoint and multiple collectors, allowing yo
 
 ![Picture](/img/docs/Litmus-Endpoint-DNS.png)
 
-1. `DNS Health (Last)`
-2. `DNS Uptime`
-3. `DNS Response`
-4. `DNS Answers`
-5. `DNS Errors`
-6. `DNS Performance`
+1. `Health (Last)`
+2. `Uptime`
+3. `Response`
+4. `Answers`
+5. `Errors`: To reduce noise, OK states are not shown in this graph, only Errors.
+6. `Performance`
