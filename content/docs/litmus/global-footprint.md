@@ -7,7 +7,8 @@ section = ["Litmus"]
 +++
 
 
-Collector name | Location | Provider
+**Collector Name** | **Location** | **Provider**
+------ | ------ | ------
 San Francisco | California, USA | Digital Ocean
 Amsterdam | Netherlands | Digital Ocean
 London | UK | Digital Ocean
