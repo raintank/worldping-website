@@ -14,7 +14,7 @@ section = ["Litmus"]
 Frankfurt | Germany
 Portland | Oregon, USA
 Sydney | Australia
-Tokyo | Japana
+Tokyo | Japan
 
 **Digital Ocean** | 
 ------ | ------ 
