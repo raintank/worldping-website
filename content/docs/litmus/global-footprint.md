@@ -7,25 +7,34 @@ section = ["Litmus"]
 +++
 
 
-**Collector Name** | **Location** | **Provider**
------- | ------ | ------
-San Francisco | California, USA | Digital Ocean
-Amsterdam | Netherlands | Digital Ocean
-London | UK | Digital Ocean
-Singapore | Singapore | Digital Ocean
-New York | New York, USA | Digital Ocean
-Atlanta | Georgia, USA | Vultr
-Newark | New Jersey, USA | Vultr
-Los Angeles | California, USA | Vultr
-Miami | Florida, USA | Vultr
-Chicago | Illinois, USA | Vultr
-Paris | France | Vultr
-Seattle | Washington, USA | Vultr
-San Jose | California, USA | Vultr
-Portland | Oregon, USA |Amazon
-Frankfurt | Germany | Amazon
-Tokyo | Japana | Amazon
-Sydney | Australia | Amazon
-Omaha | Nebraska, USA | Google (GCE)
-Taipei | Taiwan | Google (GCE)
-Charleroi | Belgium | Google (GCE)
+**Amazon** | 
+------ | ------
+Frankfurt | Germany
+Portland | Oregon, USA
+Sydney | Australia
+Tokyo | Japana
+
+**Digital Ocean** | 
+------ | ------ 
+Amsterdam | Netherlands
+London | UK
+New York | New York, USA
+San Francisco | California, USA
+Singapore | Singapore
+
+**Google (GCE)** | 
+------ | ------
+Charleroi | Belgium
+Omaha | Nebraska, USA
+Taipei | Taiwan
+
+**Vultr** | 
+------ | ------
+Atlanta | Georgia, USA
+Chicago | Illinois, USA
+Los Angeles | California, USA
+Miami | Florida, USA
+Newark | New Jersey, USA
+Paris | France
+San Jose | California, USA
+Seattle | Washington, USA
