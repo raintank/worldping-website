@@ -11,9 +11,9 @@ The DNS dashboard accepts a single endpoint and multiple collectors, allowing yo
 
 ![Picture](/img/docs/Litmus-Endpoint-DNS.png)
 
-1. `Health (Last)`
-2. `Uptime`
-3. `Response`
-4. `Answers`
-5. `Errors`: To reduce noise, OK states are not shown in this graph, only Errors.
-6. `Performance`
+1. `Health (Last)`: The health check is the last state of the selected time range. 
+2. `Uptime`: This percentage shows the average DNS uptime of the selected time range.
+3. `Answers`: This singlestat panel shows average DNS answer across selected collectors for the time range.
+4. `Latency`: This singlestat panel shows the average latency across selected collectors for the time range.
+5. `Errors`: To reduce noise, OK states are not shown in this graph, only Errors. In addition to the graph, the legend shows the total errors for each collector for the selected time range. 
+6. `Performance`: The DNS performance panel displays latency on a per-collector basis. In addition to the graph, the legend shows average over the time period and current (last value of the selected time period).

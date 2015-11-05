@@ -12,11 +12,6 @@
   </section>
 
 <div class="main-content-container">
-    <ul class="page-nav">
-        <li><a class="active" href="index.html">Documentation</a></li>
-        <li><a class="" href="use-cases.html">Tutorials</a></li>
-        <li><a class="" href="road-map.html">Questions</a></li>
-    </ul>
     
 	<div class="row">
 		<div class="col-sm-8 doc-main">
@@ -28,7 +23,6 @@
 		{{ range .Data.Pages }}
 					<a class="doc-entry" href="{{ .RelPermalink }}">
 						<h3 class="doc-entry-title">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</h3>
-						<p class="doc-entry-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></p>
 					</a>
 					<p class="doc-entry-summary">{{ .Summary }}</p>
 		{{ end }}
