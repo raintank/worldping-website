@@ -6,7 +6,7 @@ tags = [ "raintank", "litmus", "endpoints" ]
 section = ["Litmus"]
 +++
 
-In Litmus, an endpoint is anything you'd like to monitor. If an endpoint is not publicly accessible, you may add [Private Collectors](/private-collectors) to reach endpoints behind your firewall or internal network. 
+In Litmus, an endpoint is anything you'd like to monitor. If an endpoint is not publicly accessible, you may add [Private Collectors](/docs/litmus/private-collectors) to reach endpoints behind your firewall or internal network. 
 
 
 ## Endpoint Auto-discover
