@@ -1,8 +1,8 @@
 +++
 date = "2015-07-01T13:27:26-04:00"
 title = "Dashboard - Litmus Events"
-description = "Deatiled breakdown of the raintank global footprint"
-tags = [ "raintank", "litmus", "collectors" ]
+description = "Litmus Event dashboard"
+tags = [ "raintank", "litmus", "collectors", "dashboards" ]
 section = ["Litmus"]
 +++
 
@@ -12,9 +12,9 @@ The event dashboard is particularly useful for seeing the raw events reported fr
 
 ![Picture](/img/docs/Litmus-Events.png)
 
-1. `Template Variables`: The template varibales available to the Events dashboard are **endpoint**, **collector**, **monitor type** (also known as check type), and **severity** (OKs and Errors).
+1. `Template Variables`: The template variables available to the Events dashboard are **endpoint**, **collector**, **monitor type** (also known as check type), and **severity** (OKs and Errors).
 1. `Time`: The time of reported state change. 
-1. `Endpoint`: The endpoint 
+1. `Endpoint`: The endpoint related to the event. 
 1. `Collector`: The collector reporting the event. 
 1. `Monitor Type`: The monitor type (check) that the event is related to. 
 1. `Message`: The raw message from sent from the collector. 

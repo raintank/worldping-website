@@ -2,7 +2,7 @@
 date = "2015-07-01T13:27:26-04:00"
 title = "Private Collectors"
 description = "raintank private collectors"
-tags = [ "raintank", "litmus", "private collectors" ]
+tags = [ "raintank", "litmus", "private collectors", "collectors" ]
 section = ["Litmus"]
 +++
 

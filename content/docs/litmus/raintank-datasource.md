@@ -1,8 +1,8 @@
 +++
 date = "2015-07-01T13:27:26-04:00"
 title = "Raintank as a Data Source"
-description = "Deatiled breakdown of the raintank global footprint"
-tags = [ "raintank", "litmus", "collectors" ]
+description = "How to configure your raintank datasource"
+tags = [ "raintank", "litmus", "datasources" ]
 section = ["Litmus"]
 +++
 
