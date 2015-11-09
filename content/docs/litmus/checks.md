@@ -2,7 +2,7 @@
 date = "2015-07-01T13:27:26-04:00"
 title = "Litmus: Types of Checks"
 description = "The basics of an endpoint in Litmus"
-tags = [ "raintank", "litmus", "endpoint" ]
+tags = [ "raintank", "litmus", "endpoints" ]
 section = ["Litmus"]
 +++
 
@@ -20,6 +20,6 @@ The collected stats for Ping are **avg**, **loss**, **min**, **max**, **mean**, 
 
 ## Web (HTTP & HTTPS)
 
-During auto-discover, we will parse the path and port information, and look for a successful connection to your endpoint. For Content Match, only `regexp` is supported. For full details of capabilities, refer to the great resource at: [https://golang.org/pkg/regexp/syntax/](https://golang.org/pkg/regexp/syntax/)
+During auto-discover, we will parse the path and port information and look for a successful connection to your endpoint. For Content Match, only `regexp` is supported. For full details of capabilities, refer to the great resource at: [https://golang.org/pkg/regexp/syntax/](https://golang.org/pkg/regexp/syntax/)
 
 The collected stats for web checks HTTP and HTTPS are **connect**, **data length**, **DNS**, **recv**, **send**, **status code**, **throughput**, **total**, and **wait**.

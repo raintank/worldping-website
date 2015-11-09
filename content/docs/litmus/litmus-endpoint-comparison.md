@@ -12,6 +12,6 @@ The endpoint comparison dashboard is the best way to see trends for multiple end
 
 
 1. `Template Variables`: The template variables allows multi-select of both endpoints and collectors for a single protocol. 
-2. `Overall Performance`: For each endpoint, averages all selected collectors are averaged into a single series line.
-3. `Performance by Collector`: Using dynamic repeating panels, a graph is displayed for each selected collector.
+2. `Overall Performance`: All selected collectors are averaged into a series line, per endpoint. 
+3. `Performance by Collector`: Using dynamic repeating panels, a graph is displayed for each selected collector. 
 

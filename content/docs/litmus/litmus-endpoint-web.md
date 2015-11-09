@@ -1,12 +1,12 @@
 +++
 date = "2015-07-01T13:27:26-04:00"
 title = "Dashboard - Litmus Endpoint: |--- Web"
-description = "Web Dashboard"
-tags = [ "raintank", "litmus", "collectors" ]
+description = "Litmus Web (HTTP and HTTPS) Dashboard"
+tags = [ "raintank", "litmus", "collectors", "dashboards" ]
 section = ["Litmus"]
 +++
 
-The web dashboard accepts a single endpoint and multiple collectors, allowing you to isolate and investigate issues down to a single collector or tag group of collectors. The dashboard defaults to showing HTTP, but HTTPS may be selected via *Protocol* in the dashboard variables selector.
+The web dashboard accepts **one endpoint** and **multiple collectors**, allowing you to isolate and investigate issues down to a single collector or tag group of collectors. The dashboard defaults to showing HTTP, but HTTPS may be selected via *Protocol* in the dashboard variables selector.
 
 ![Picture](/img/docs/Litmus-Endpoint-Web.png)
 

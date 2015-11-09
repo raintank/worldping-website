@@ -1,12 +1,12 @@
 +++
 date = "2015-07-01T13:27:26-04:00"
 title = "Dashboard - Litmus Endpoint: |--- DNS"
-description = "Deatiled breakdown of the raintank global footprint"
-tags = [ "raintank", "litmus", "collectors" ]
+description = "Litmus DNS Dashboard"
+tags = [ "raintank", "litmus", "collectors", "dashboards" ]
 section = ["Litmus"]
 +++
 
-The DNS dashboard accepts a single endpoint and multiple collectors, allowing you to isolate and investigate issues down to a single collector or tag group of collectors. 
+The DNS dashboard accepts **one endpoint** and **multiple collectors**, allowing you to isolate and investigate issues down to a single collector or tag group of collectors. 
 
 
 ![Picture](/img/docs/Litmus-Endpoint-DNS.png)

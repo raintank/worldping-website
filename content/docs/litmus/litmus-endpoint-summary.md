@@ -1,8 +1,8 @@
 +++
 date = "2015-07-01T13:27:26-04:00"
 title = "Dashboard - Litmus: Endpoint Summary"
-description = "Deatiled breakdown of the raintank global footprint"
-tags = [ "raintank", "litmus", "collectors" ]
+description = "Litmus Endpoint Summary Dashboard"
+tags = [ "raintank", "litmus", "collectors", "dashboards" ]
 section = ["Litmus"]
 +++
 
