@@ -10,7 +10,7 @@ Litmus ships with a handful of starter dashboards to help you view and act on yo
 
 ### Dashboard Organization
 
-The bulk of dashboards are centered on individual endpoints. Once selecting a single endpoint, you are able to filter the data based on some or all of global collectors. 
+The bulk of dashboards are centered on individual endpoints. Once selecting a single endpoint, you are able to filter the data based on some or all of global probes. 
 
 #### Endpoint Dashboards
 - [Litmus Endpoint: Comparison](https://app.raintank.io/dashboard/file/rt-endpoint-comparison.json)
@@ -20,6 +20,6 @@ The bulk of dashboards are centered on individual endpoints. Once selecting a si
 - [Litmus Endpoint: |--- Web](https://app.raintank.io/dashboard/file/rt-endpoint-web.json)
 
 #### Other Dashboards
-- [Litmus Collectors](https://app.raintank.io/dashboard/file/rt-collector-summary.json)
+- [Litmus Probes](https://app.raintank.io/dashboard/file/rt-collector-summary.json)
 - [Litmus Events](https://app.raintank.io/dashboard/file/rt-events.json)
 
