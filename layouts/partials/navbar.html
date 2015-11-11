@@ -25,43 +25,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="dropdown"> <!-- active class could be on this element if in this section -->
-							<a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="/about">the raintank vision</a></li>
-								<li><a href="/about/team">about the team</a></li>
-								<li><a href="/about/join">work with us</a></li>
-								<li><a href="/about/open-source">100% open source</a></li>
-							</ul>
-						</li>
-						<li><a href="/grafana/">grafana</a></li><!-- active class could be on this element if in this section -->
-						<li class="dropdown"> <!-- active class could be on this element if in this section -->
-							<a href="/litmus" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">litmus <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="/litmus/">what is litmus?</a></li>
-								<li><a href="/litmus/use-cases">use cases</a></li>
-								<li><a href="/litmus/road-map">road map</a></li>
-								<li><a href="/litmus/faq">faq</a></li>
-							</ul>
-						</li>
-						<li><a href="http://blog.raintank.io" target="_blank">blog</a></li> <!-- active class could be on this element if in this section -->
-						<!--
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">about <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">the vision</a></li>
-								<li><a href="#">the team</a></li>
-								<li><a href="#">join us</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
-						</li>
-						-->
-						
-						<li><a href="/docs/">docs</a></li><!-- active class could be on this element if in this section -->
-					</ul>
+			          {{ $currentNode := . }}
+			          {{ range .Site.Menus.main }}
+
+			          {{ if .HasChildren }}
+			            <li class="dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+			            <a href="{{.URL}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ .Name }}<span class="caret"></span></a>
+			            <ul class="dropdown-menu" role="menu">
+			                {{ range .Children }}
+			                <li>
+			                	<a href="{{.URL}}"> {{ .Name }}</a>
+			                </li>
+			                {{ end }}
+			            </ul>
+
+			          {{else}}
+			            <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+			            	<a href="{{.URL}}">{{ .Name }}</a>
+			          {{end}}
+			          </li>
+			          {{end}}
+			        </ul>
+			        
 					<div class="nav-btn"><a class="navbar-right signInCTA" href="http://app.raintank.io">Sign In</a></div>
 					<div class="nav-btn"><button class="navbar-right signUpCTA" data-toggle="modal" data-target="#signUp">Sign Up</button></div>
 				</div><!--/.nav-collapse -->

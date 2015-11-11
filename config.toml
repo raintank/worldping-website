@@ -1,9 +1,104 @@
 baseurl = "http://raintank.io/"
 languageCode = "en-us"
-title = "Raintank"
+title = "raintank"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
   series = "series"
   section = "section"
+
+
+[[menu.main]]
+    name = "about"
+    weight = -110
+    identifier = "about"
+    url = "/about/"
+
+[[menu.main]]
+    name = "the raintank vision"
+    weight = -110
+    identifier = "vision"
+    url = "/about/"
+    parent = "about"
+
+[[menu.main]]
+    name = "about the team"
+    weight = -100    
+    identifier = "team"
+    url = "/about/team"
+    parent = "about"
+
+[[menu.main]]
+    name = "work with us"
+    weight = -90    
+    identifier = "join"
+    url = "/about/join"
+    parent = "about"
+
+[[menu.main]]
+    name = "100% open source"
+    weight = -80
+    indentifier = "opensource"
+    url = "/about/open-source"
+    parent = "about"
+
+
+
+[[menu.main]]
+    name = "grafana"
+    weight = -110
+    identifier = "grafana"
+    url = "/grafana/"
+
+
+
+[[menu.main]]
+    name = "litmus"
+    weight = -110
+    identifier = "litmus"
+    url = "/litmus/"
+
+[[menu.main]]
+    name = "what is litmus?"
+    weight = -110
+    identifier = "what"
+    url = "/litmus/"
+    parent = "litmus"
+
+[[menu.main]]
+    name = "use cases"
+    weight = -100    
+    identifier = "usecases"
+    url = "/litmus/use-cases"
+    parent = "litmus"
+
+[[menu.main]]
+    name = "road map"
+    weight = -60    
+    identifier = "roadmap"
+    url = "/litmus/roadmap/"
+    parent = "litmus"
+
+[[menu.main]]
+    name = "faq"
+    weight = -80
+    indentifier = "faq"
+    url = "/litmus/faq"
+    parent = "litmus"
+
+
+
+[[menu.main]]
+    name = "blog"
+    weight = -50
+    identifier = "blog"
+    url = "http://blog.raintank.io"
+
+
+
+[[menu.main]]
+    name = "docs"
+    weight = -40
+    identifier = "docs"
+    url = "/docs/"    
