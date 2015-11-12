@@ -16,8 +16,7 @@ Quick build instructions:
 milo.wearecapacity.com
 
 1. ssh into the box
-2. pull the latest commits from github
-3. `cd /var/local/milo.wearecapacity.com && git pull`
+2. pull the latest commits from github: `cd /var/local/milo.wearecapacity.com && git pull`
 4. reprocess the assets, placing them in build/dist: `grunt`
 5. restart application: `service milo restart`
 
@@ -25,7 +24,6 @@ milo.wearecapacity.com
 raintank.io
 
 1. ssh into the box
-2. pull the latest commits from github
-3. `cd /var/local/www && git pull`
+2. pull the latest commits from github: `cd /var/local/www && git pull`
 4. reprocess the assets, placing them in build/dist: `grunt`
 5. restart application: `service raintank restart`
