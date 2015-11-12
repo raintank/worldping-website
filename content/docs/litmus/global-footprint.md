@@ -2,7 +2,7 @@
 date = "2015-07-01T13:27:26-04:00"
 title = "raintank Global Footprint"
 description = "Deatiled breakdown of the raintank global footprint"
-tags = [ "raintank", "litmus", "collectors" ]
+tags = [ "raintank", "litmus", "probes" ]
 section = ["Litmus"]
 +++
 

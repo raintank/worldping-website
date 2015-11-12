@@ -2,7 +2,7 @@
 date = "2015-07-01T13:27:26-04:00"
 title = "Litmus Query Tree"
 description = "Breakdown of the Litmus Query Tree"
-tags = [ "raintank", "litmus", "collectors" ]
+tags = [ "raintank", "litmus", "probes" ]
 section = ["Litmus"]
 +++
 
@@ -10,7 +10,7 @@ You can use the litmus data in your own dashboards, both on the raintank hosted 
 
 <span style="margin-left: 10px;">litmus<br>
 <span style="margin-left: 30px;">$endpoint<br>
-<span style="margin-left: 50px;">$collector<br>
+<span style="margin-left: 50px;">$probe<br>
 <span style="margin-left: 70px;">ping<br>
 <span style="margin-left: 90px;"><em>avg</em><br>
 <span style="margin-left: 90px;"><em>loss</em><br>
