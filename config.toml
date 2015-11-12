@@ -77,7 +77,7 @@ title = "raintank"
     name = "road map"
     weight = -60    
     identifier = "roadmap"
-    url = "/litmus/roadmap/"
+    url = "/litmus/road-map/"
     parent = "litmus"
 
 [[menu.main]]
