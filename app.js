@@ -59,7 +59,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
 		queryParams["tracking_"+key] = req.session[key];
 	});
 	var queryStr = querystring.stringify(queryParams);
-        res.redirect("https://raintank.io/earlyaccess?"+queryStr);
+        res.redirect("/earlyaccess?"+queryStr);
   }, function(err) {
   	return res.status(500).send(err);
   });
