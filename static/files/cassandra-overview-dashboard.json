@@ -97,7 +97,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "alias(consolidateBy(sumSeries(nonNegativeDerivative(collectd.$environment.cassandra.$server.GenericJMX.cassandra_columnfamilies_stats.counter.ReadOperations)), 'max'), 'reads')",
+              "target": "alias(consolidateBy(perSecond(sumSeries(collectd.$environment.cassandra.$server.GenericJMX.cassandra_columnfamilies_stats.counter.ReadOperations)), 'max'), 'reads')",
               "textEditor": false
             }
           ],
@@ -147,7 +147,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "alias(consolidateBy(sumSeries(nonNegativeDerivative(collectd.$environment.cassandra.$server.GenericJMX.cassandra_columnfamilies_stats.counter.WriteOperations)), 'max'), 'reads')",
+              "target": "alias(consolidateBy(sumSeries(perSecond(collectd.$environment.cassandra.$server.GenericJMX.cassandra_columnfamilies_stats.counter.WriteOperations)), 'max'), 'reads')",
               "textEditor": false
             }
           ],
@@ -197,7 +197,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "alias(consolidateBy(sumSeries(nonNegativeDerivative(collectd.$environment.cassandra.$server.GenericJMX.cassandra_columnfamilies_stats.counter.WriteOperations)), 'max'), 'reads')",
+              "target": "alias(consolidateBy(perSecond(sumSeries(collectd.$environment.cassandra.$server.GenericJMX.cassandra_columnfamilies_stats.counter.WriteOperations)), 'max'), 'reads')",
               "textEditor": false
             }
           ],
@@ -1808,6 +1808,6 @@
   },
   "refresh": false,
   "schemaVersion": 8,
-  "version": 0,
+  "version": 3,
   "links": []
 }
