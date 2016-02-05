@@ -1029,7 +1029,7 @@
             "µs",
             "short"
           ],
-          "repeatIteration": 1454634840252,
+          "repeatIteration": 1454638323260,
           "repeatPanelId": 13
         },
         {
@@ -1114,7 +1114,7 @@
             "µs",
             "short"
           ],
-          "repeatIteration": 1454634840252,
+          "repeatIteration": 1454638323260,
           "repeatPanelId": 13
         }
       ],
@@ -1287,7 +1287,7 @@
             "µs",
             "short"
           ],
-          "repeatIteration": 1454634840252,
+          "repeatIteration": 1454638323260,
           "repeatPanelId": 16
         },
         {
@@ -1370,7 +1370,7 @@
             "µs",
             "short"
           ],
-          "repeatIteration": 1454634840252,
+          "repeatIteration": 1454638323260,
           "repeatPanelId": 16
         }
       ],
@@ -1527,7 +1527,7 @@
             "short",
             "short"
           ],
-          "repeatIteration": 1454634840252,
+          "repeatIteration": 1454638323260,
           "repeatPanelId": 17
         },
         {
@@ -1602,7 +1602,7 @@
             "short",
             "short"
           ],
-          "repeatIteration": 1454634840252,
+          "repeatIteration": 1454638323260,
           "repeatPanelId": 17
         }
       ],
@@ -1611,8 +1611,8 @@
     }
   ],
   "time": {
-    "from": "now-1h",
-    "to": "now"
+    "from": "2016-02-04T22:54:58.000Z",
+    "to": "2016-02-04T23:54:58.000Z"
   },
   "timepicker": {
     "now": true,
