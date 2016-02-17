@@ -54,39 +54,38 @@ title = "raintank"
 
 
 [[menu.main]]
-    name = "litmus"
+    name = "worldPing"
     weight = -110
-    identifier = "litmus"
-    url = "/litmus/"
+    identifier = "worldPing"
+    url = "/worldping/"
 
 [[menu.main]]
-    name = "what is litmus?"
+    name = "what is worldPing?"
     weight = -110
     identifier = "what"
-    url = "/litmus/"
-    parent = "litmus"
+    url = "/worldping/"
+    parent = "worldPing"
 
 [[menu.main]]
     name = "use cases"
     weight = -100    
     identifier = "usecases"
-    url = "/litmus/use-cases"
-    parent = "litmus"
+    url = "/worldping/use-cases"
+    parent = "worldPing"
 
 [[menu.main]]
     name = "road map"
     weight = -60    
     identifier = "roadmap"
-    url = "/litmus/road-map/"
-    parent = "litmus"
+    url = "/worldping/road-map/"
+    parent = "worldPing"
 
 [[menu.main]]
     name = "faq"
     weight = -80
     indentifier = "faq"
-    url = "/litmus/faq"
-    parent = "litmus"
-
+    url = "/worldping/faq"
+    parent = "worldPing"
 
 
 [[menu.main]]
