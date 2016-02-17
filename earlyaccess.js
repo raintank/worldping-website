@@ -16,6 +16,7 @@ var sequelize = new Sequelize('raintank', null, null, {
 
 var APPID = config.intercom.APPID;
 var APIKEY = config.intercom.APIKEY;
+var AUTOPILOTAPIKEY = config.autopilot.APIKEY;
 
 // define or schema for signups queue.
 var Signups = sequelize.define('Signups', {
@@ -31,6 +32,9 @@ var Signups = sequelize.define('Signups', {
   newsletter: {
     type: Sequelize.BOOLEAN
   },
+  autopilotSessionId: {
+    type: Sequelize.STRING
+  },  
   meta: {
   	type: Sequelize.STRING
   },
@@ -50,12 +54,13 @@ Signups.sync();
 
 
 // add signups to the queue.
-exports.enqueue = function(email, source, newsletter, meta, ua, ip) {
+exports.enqueue = function(email, source, newsletter, autopilotSessionId, meta, ua, ip) {
 	console.log("processing earlyaccess signup of: ", email);
 	return Signups.create({
 		email: email,
 		source: source,
 		newsletter: newsletter,
+		autopilotSessionId: autopilotSessionId,
 		meta: JSON.stringify(meta),
 		clientIP: ip,
 		userAgent: ua,
@@ -119,6 +124,55 @@ var process = function(signup, next) {
 			});
 		});
 		request.end();
+
+		// Autpilot signup
+		var pilotPayload = {
+			contact: {
+				Email: signup.email,
+				_autopilot_session_id: signup.autopilotSessionId
+			}
+		};
+
+		var pilotOpts = {
+			host: "api2.autopilothq.com",
+			port: 443,
+			path: "/v1/contact",
+			method: "POST", 
+			headers: {
+				'autopilotapikey': AUTOPILOTAPIKEY,
+				'Content-Type': "application/json",
+				'Accept': "application/json"
+			}
+		};
+
+		var pilotRequest = https.request(pilotOpts, function(res) {
+			if (res.statusCode == 200) {
+				signup.state = 'complete';
+			} else {
+				console.log("failed to register user %s at autopilot. status: ", signup.email, res.statusCode);
+				if (signup.createdAt < new Date(new Date() - 10 * 60 * 1000)) {
+					//we have tried too many times.
+					console.log("unable to add userto autpilot after 10minutes. giving up.");	
+					signup.state = 'failed';
+				} else {
+					signup.state = 'queued';
+				}
+			}
+			signup.save().finally(function() {
+				next();
+			});
+		});
+		pilotRequest.write(JSON.stringify(pilotPayload));
+		pilotRequest.on("error", function(err) {
+			console.log(err);
+			signup.state = 'queued';
+			signup.save().finally(function() {
+				next();
+			});
+		});
+		pilotRequest.end();
+		// End Autopilot Section
+
 	}, function(err) {
 		console.log(err);
 		//no need to return an error as the state never changed from queued.
