@@ -41,6 +41,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   var email = req.body.EMAIL;
   var source = req.body.SOURCE;
   var newsletter = req.body.NEWSLETTER;
+  var autopilotSessionId = req.body._autopilot_session_id;
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var ua = req.headers['user-agent'];
 
@@ -48,7 +49,7 @@ app.post('/earlyaccess', urlencodedParser, function (req, res) {
   	return res.status(400).send("invalid form data.");
   }
   //queue up the request for asynchronous processing.
-  earlyaccess.enqueue(email, source, newsletter, req.session, ua, ip).then(function() {
+  earlyaccess.enqueue(email, source, newsletter, autopilotSessionId, req.session, ua, ip).then(function() {
 	var queryParams = {
 		email: email
 	};
