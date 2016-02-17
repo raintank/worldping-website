@@ -54,38 +54,38 @@ title = "raintank"
 
 
 [[menu.main]]
-    name = "world ping"
+    name = "worldPing"
     weight = -110
-    identifier = "world ping"
-    url = "/world-ping/"
+    identifier = "worldPing"
+    url = "/worldping/"
 
 [[menu.main]]
-    name = "what is world ping?"
+    name = "what is worldPing?"
     weight = -110
     identifier = "what"
-    url = "/world-ping/"
-    parent = "world ping"
+    url = "/worldping/"
+    parent = "worldPing"
 
 [[menu.main]]
     name = "use cases"
     weight = -100    
     identifier = "usecases"
-    url = "/world-ping/use-cases"
-    parent = "world ping"
+    url = "/worldping/use-cases"
+    parent = "worldPing"
 
 [[menu.main]]
     name = "road map"
     weight = -60    
     identifier = "roadmap"
-    url = "/world-ping/road-map/"
-    parent = "world ping"
+    url = "/worldping/road-map/"
+    parent = "worldPing"
 
 [[menu.main]]
     name = "faq"
     weight = -80
     indentifier = "faq"
-    url = "/world-ping/faq"
-    parent = "world ping"
+    url = "/worldping/faq"
+    parent = "worldPing"
 
 
 [[menu.main]]
