@@ -21,31 +21,31 @@ var AUTOPILOTAPIKEY = config.autopilot.APIKEY;
 // define or schema for signups queue.
 var Signups = sequelize.define('Signups', {
   email: {
-    type: Sequelize.STRING,
-    validate: {
-    	isEmail: true
-    }
+	type: Sequelize.STRING,
+	validate: {
+		isEmail: true
+	}
   },
   source: {
-    type: Sequelize.STRING
+	type: Sequelize.STRING
   },
   newsletter: {
-    type: Sequelize.BOOLEAN
+	type: Sequelize.BOOLEAN
   },
   autopilotSessionId: {
-    type: Sequelize.STRING
+	type: Sequelize.STRING
   },  
   meta: {
-  	type: Sequelize.STRING
+	type: Sequelize.STRING
   },
   userAgent: {
-  	type: Sequelize.STRING
+	type: Sequelize.STRING
   },
   clientIP: {
-  	type: Sequelize.STRING
+	type: Sequelize.STRING
   },
   state: {
-  	type: Sequelize.STRING,
+	type: Sequelize.STRING,
   },
 });
 
@@ -56,7 +56,8 @@ Signups.sync();
 // add signups to the queue.
 exports.enqueue = function(email, source, newsletter, autopilotSessionId, meta, ua, ip) {
 	console.log("processing earlyaccess signup of: ", email);
-	return Signups.create({
+	//create two entries in the db. One for tracking intercom and one for autopilot
+	return Signups.bulkCreate([{
 		email: email,
 		source: source,
 		newsletter: newsletter,
@@ -65,10 +66,19 @@ exports.enqueue = function(email, source, newsletter, autopilotSessionId, meta, 
 		clientIP: ip,
 		userAgent: ua,
 		state: "queued"
-	});
+	},{
+		email: email,
+		source: source,
+		newsletter: newsletter,
+		autopilotSessionId: "",
+		meta: JSON.stringify(meta),
+		clientIP: ip,
+		userAgent: ua,
+		state: "queued"
+	}]);
 }
 
-var process = function(signup, next) {
+var processIntercom = function(signup, next) {
 	signup.set("state", "processing", {reset: true});
 	signup.save().then(function() {
 		//send the signup to intercom.
@@ -84,8 +94,8 @@ var process = function(signup, next) {
 		};
 		var meta = JSON.parse(signup.meta);
 		Object.keys(meta).forEach(function(key) {
-	      payload.custom_attributes["tracking_"+key] = meta[key];
-	    });
+		  payload.custom_attributes["tracking_"+key] = meta[key];
+		});
 
 		var opts = {
 			host: "api.intercom.io",
@@ -101,6 +111,7 @@ var process = function(signup, next) {
 		var request = https.request(opts, function(res) {
 			if (res.statusCode == 200) {
 				signup.state = 'complete';
+				console.log("Added to Intercom successfully.");
 			} else {
 				console.log("failed to register user %s at intercom. status: ", signup.email, res.statusCode);
 				if (signup.createdAt < new Date(new Date() - 10 * 60 * 1000)) {
@@ -108,6 +119,7 @@ var process = function(signup, next) {
 					console.log("unable to add user after 10minutes. giving up.");	
 					signup.state = 'failed';
 				} else {
+					console.log("Intercom task re-queued.")
 					signup.state = 'queued';
 				}
 			}
@@ -119,12 +131,22 @@ var process = function(signup, next) {
 		request.on("error", function(err) {
 			console.log(err);
 			signup.state = 'queued';
+			console.log("Intercom task re-queued.")
 			signup.save().finally(function() {
 				next();
 			});
 		});
 		request.end();
+	}, function(err) {
+		console.log(err);
+		//no need to return an error as the state never changed from queued.
+		next();
+	});
+};
 
+var processAutopilot = function(signup, next) {
+	signup.set("state", "processing", {reset: true});
+	signup.save().then(function() {
 		// Autpilot signup
 		var pilotPayload = {
 			contact: {
@@ -148,6 +170,7 @@ var process = function(signup, next) {
 		var pilotRequest = https.request(pilotOpts, function(res) {
 			if (res.statusCode == 200) {
 				signup.state = 'complete';
+				console.log("Added to Autopilot successfully.");
 			} else {
 				console.log("failed to register user %s at autopilot. status: ", signup.email, res.statusCode);
 				if (signup.createdAt < new Date(new Date() - 10 * 60 * 1000)) {
@@ -156,6 +179,7 @@ var process = function(signup, next) {
 					signup.state = 'failed';
 				} else {
 					signup.state = 'queued';
+					console.log("Autopilot task re-queued.")
 				}
 			}
 			signup.save().finally(function() {
@@ -166,6 +190,7 @@ var process = function(signup, next) {
 		pilotRequest.on("error", function(err) {
 			console.log(err);
 			signup.state = 'queued';
+			console.log("Autopilot task re-queued.")
 			signup.save().finally(function() {
 				next();
 			});
@@ -178,7 +203,15 @@ var process = function(signup, next) {
 		//no need to return an error as the state never changed from queued.
 		next();
 	});
-}
+};
+
+var process = function(signup, next) {
+	if (signup.autopilotSessionId == "") {
+		return processIntercom(signup, next);
+	} else {
+		return processAutopilot(signup, next);
+	}
+};
 
 setInterval(function() {
 	var filter = {
