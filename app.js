@@ -6,6 +6,9 @@ var earlyaccess = require("./earlyaccess");
 var cookieSession = require('cookie-session');
 var config = require('./conf.json');
 var querystring = require('querystring');
+var log4js = require('log4js');
+var logger = log4js.getLogger();
+log4js.replaceConsole();
 
 var staticPath = config.staticPath;
 var port = config.port;

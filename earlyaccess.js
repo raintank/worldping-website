@@ -111,15 +111,15 @@ var processIntercom = function(signup, next) {
 		var request = https.request(opts, function(res) {
 			if (res.statusCode == 200) {
 				signup.state = 'complete';
-				console.log("Added to Intercom successfully.");
+				console.log("Added %s to Intercom successfully.", signup.email);
 			} else {
-				console.log("failed to register user %s at intercom. status: ", signup.email, res.statusCode);
+				console.log("failed to register %s at intercom. status: ", signup.email, res.statusCode);
 				if (signup.createdAt < new Date(new Date() - 10 * 60 * 1000)) {
 					//we have tried too many times.
-					console.log("unable to add user after 10minutes. giving up.");	
+					console.log("unable to add %s after 10minutes. giving up.", signup.email);	
 					signup.state = 'failed';
 				} else {
-					console.log("Intercom task re-queued.")
+					console.log("Intercom task for %s re-queued.", signup.email)
 					signup.state = 'queued';
 				}
 			}
@@ -131,7 +131,7 @@ var processIntercom = function(signup, next) {
 		request.on("error", function(err) {
 			console.log(err);
 			signup.state = 'queued';
-			console.log("Intercom task re-queued.")
+			console.log("Intercom task for %s re-queued.", signup.email)
 			signup.save().finally(function() {
 				next();
 			});
@@ -170,16 +170,16 @@ var processAutopilot = function(signup, next) {
 		var pilotRequest = https.request(pilotOpts, function(res) {
 			if (res.statusCode == 200) {
 				signup.state = 'complete';
-				console.log("Added to Autopilot successfully.");
+				console.log("Added %s to Autopilot successfully.", signup.email);
 			} else {
-				console.log("failed to register user %s at autopilot. status: ", signup.email, res.statusCode);
+				console.log("failed to register %s at autopilot. status: ", signup.email, res.statusCode);
 				if (signup.createdAt < new Date(new Date() - 10 * 60 * 1000)) {
 					//we have tried too many times.
-					console.log("unable to add userto autpilot after 10minutes. giving up.");	
+					console.log("unable to add %s to autpilot after 10minutes. giving up.", signup.email);	
 					signup.state = 'failed';
 				} else {
 					signup.state = 'queued';
-					console.log("Autopilot task re-queued.")
+					console.log("Autopilot task for %s re-queued.", signup.email)
 				}
 			}
 			signup.save().finally(function() {
@@ -190,7 +190,7 @@ var processAutopilot = function(signup, next) {
 		pilotRequest.on("error", function(err) {
 			console.log(err);
 			signup.state = 'queued';
-			console.log("Autopilot task re-queued.")
+			console.log("Autopilot task for %s re-queued.", signup.email)
 			signup.save().finally(function() {
 				next();
 			});
@@ -207,8 +207,10 @@ var processAutopilot = function(signup, next) {
 
 var process = function(signup, next) {
 	if (signup.autopilotSessionId == "") {
+		console.log("%s needs to be added to intercom", signup.email);
 		return processIntercom(signup, next);
 	} else {
+		console.log("%s needs to be added to autopilot", signup.email);
 		return processAutopilot(signup, next);
 	}
 };
