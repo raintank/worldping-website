@@ -57,25 +57,31 @@ Signups.sync();
 exports.enqueue = function(email, source, newsletter, autopilotSessionId, meta, ua, ip) {
 	console.log("processing earlyaccess signup of: ", email);
 	//create two entries in the db. One for tracking intercom and one for autopilot
-	return Signups.bulkCreate([{
-		email: email,
-		source: source,
-		newsletter: newsletter,
-		autopilotSessionId: autopilotSessionId,
-		meta: JSON.stringify(meta),
-		clientIP: ip,
-		userAgent: ua,
-		state: "queued"
-	},{
-		email: email,
-		source: source,
-		newsletter: newsletter,
-		autopilotSessionId: "",
-		meta: JSON.stringify(meta),
-		clientIP: ip,
-		userAgent: ua,
-		state: "queued"
-	}]);
+	var signups = [{
+                email: email,
+                source: source,
+                newsletter: newsletter,
+                autopilotSessionId: "",
+                meta: JSON.stringify(meta),
+                clientIP: ip,
+                userAgent: ua,
+                state: "queued"
+        }];
+	if (autopilotSessionId) {
+		signups.push({
+			email: email,
+			source: source,
+			newsletter: newsletter,
+			autopilotSessionId: autopilotSessionId,
+			meta: JSON.stringify(meta),
+			clientIP: ip,
+			userAgent: ua,
+			state: "queued"
+		});
+	} else {
+		console.log("autopilotSessionId not set for %s", email);
+	}
+	return Signups.bulkCreate(signups);
 }
 
 var processIntercom = function(signup, next) {
