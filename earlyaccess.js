@@ -132,6 +132,13 @@ var processIntercom = function(signup, next) {
 			signup.save().finally(function() {
 				next();
 			});
+			var bytes = 0;
+			res.on('data', function(chunk) {
+				bytes = bytes + chunk.length;
+			});
+			res.on('end', function() {
+				console.log("intercom response for %s was %d bytes", signup.email, bytes);
+			});
 		});
 		request.write(JSON.stringify(payload));
 		request.on("error", function(err) {
@@ -191,8 +198,23 @@ var processAutopilot = function(signup, next) {
 			signup.save().finally(function() {
 				next();
 			});
+			var bytes = 0;
+			res.on('data', function(chunk) {
+				bytes = bytes + chunk.length;
+			});
+			res.on('end', function() {
+				console.log("autopilot response for %s was %d bytes", signup.email, bytes);
+			});
 		});
-		pilotRequest.write(JSON.stringify(pilotPayload));
+		pilotRequest.setTimeout(10000, function() {
+			console.log("timeout waiting for autopilot for %s", signup.email);
+			pilotRequest.abort();
+			signup.state = 'queued';
+			console.log("Autopilot task for %s re-queued.", signup.email)
+			signup.save().finally(function() {
+				next();
+			});
+		});
 		pilotRequest.on("error", function(err) {
 			console.log(err);
 			signup.state = 'queued';
@@ -201,6 +223,7 @@ var processAutopilot = function(signup, next) {
 				next();
 			});
 		});
+		pilotRequest.write(JSON.stringify(pilotPayload));
 		pilotRequest.end();
 		// End Autopilot Section
 
