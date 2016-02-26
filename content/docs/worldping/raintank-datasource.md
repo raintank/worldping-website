@@ -24,7 +24,7 @@ Note: In order for the dashboards to function properly on import, it's important
 
 ### Export your raintank dashboard
 
-To import a raintank dashboard into your instsance of Grafana, you must first export the dashboard. To export a dashboard, locate the settings menu within the desired dashboard and click the gear icon. The export option will always be available, and will open a browser save-as dialog window. 
+To import a raintank dashboard into your instance of Grafana, you must first export the dashboard. To export a dashboard, locate the settings menu within the desired dashboard and click the gear icon. The export option will always be available, and will open a browser save-as dialog window. 
 
 ![Picture](/img/docs/export.gif)
 
