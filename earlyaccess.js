@@ -47,6 +47,9 @@ var Signups = sequelize.define('Signups', {
   state: {
 	type: Sequelize.STRING,
   },
+  dest: {
+	type: Sequelize.STRING,
+  }
 });
 
 //make sure the table exists.
@@ -61,26 +64,24 @@ exports.enqueue = function(email, source, newsletter, autopilotSessionId, meta, 
                 email: email,
                 source: source,
                 newsletter: newsletter,
-                autopilotSessionId: "",
+                autopilotSessionId: autopilotSessionId,
                 meta: JSON.stringify(meta),
                 clientIP: ip,
                 userAgent: ua,
-                state: "queued"
-        }];
-	if (autopilotSessionId) {
-		signups.push({
-			email: email,
-			source: source,
-			newsletter: newsletter,
-			autopilotSessionId: autopilotSessionId,
-			meta: JSON.stringify(meta),
-			clientIP: ip,
-			userAgent: ua,
-			state: "queued"
-		});
-	} else {
-		console.log("autopilotSessionId not set for %s", email);
-	}
+                state: "queued",
+		dest: "intercom"
+        },
+	{
+		email: email,
+		source: source,
+		newsletter: newsletter,
+		autopilotSessionId: autopilotSessionId,
+		meta: JSON.stringify(meta),
+		clientIP: ip,
+		userAgent: ua,
+		state: "queued",
+		dest: "autopilot"
+	}];
 	return Signups.bulkCreate(signups);
 }
 
@@ -235,12 +236,14 @@ var processAutopilot = function(signup, next) {
 };
 
 var process = function(signup, next) {
-	if (signup.autopilotSessionId == "") {
+	if (signup.dest === "intercom") {
 		console.log("%s needs to be added to intercom", signup.email);
 		return processIntercom(signup, next);
-	} else {
+	} else if (signup.dest === "autopilot") {
 		console.log("%s needs to be added to autopilot", signup.email);
 		return processAutopilot(signup, next);
+	} else {
+		console.log("unknown task destination %s for %s", signup.dest, signup.email);
 	}
 };
 
