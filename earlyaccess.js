@@ -207,22 +207,29 @@ var processAutopilot = function(signup, next) {
 				console.log("autopilot response for %s was %d bytes", signup.email, bytes);
 			});
 		});
-		pilotRequest.setTimeout(10000, function() {
+		var requeued = false;
+		pilotRequest.setTimeout(45000, function() {
 			console.log("timeout waiting for autopilot for %s", signup.email);
 			pilotRequest.abort();
-			signup.state = 'queued';
-			console.log("Autopilot task for %s re-queued.", signup.email)
-			signup.save().finally(function() {
-				next();
-			});
+			if (!requeued) {
+				requeued = true;
+				signup.state = 'queued';
+				console.log("Autopilot task for %s re-queued.", signup.email)
+				signup.save().finally(function() {
+					next();
+				});
+			}
 		});
 		pilotRequest.on("error", function(err) {
 			console.log(err);
-			signup.state = 'queued';
-			console.log("Autopilot task for %s re-queued.", signup.email)
-			signup.save().finally(function() {
-				next();
-			});
+			if (!requeued) {
+				requeued = true;
+				signup.state = 'queued';
+				console.log("Autopilot task for %s re-queued.", signup.email)
+				signup.save().finally(function() {
+					next();
+				});
+			}
 		});
 		pilotRequest.write(JSON.stringify(pilotPayload));
 		pilotRequest.end();
