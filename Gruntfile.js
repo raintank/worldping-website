@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     connect: {
       mysite: {
         options: {
-          hostname: '0.0.0.0',
+          hostname: '127.0.0.1',
           port: 1342,
           protocol: 'http',
           base: 'build/dev',
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
     var args = ["--destination=build/" + target];
 
     if (target === 'dev') {
-      args.push('--baseUrl=http://0.0.0.0:1342');
+      args.push('--baseUrl=http://127.0.0.1:1342');
       args.push('--buildDrafts=true');
       args.push('--buildFuture=true');
     }
