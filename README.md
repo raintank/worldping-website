@@ -1,5 +1,5 @@
-# website-v2
-new raintank website
+# worldPing Website
+based on raintank website
 
 Prerequisites for new setups:
 - Run `npm install`
