@@ -264,7 +264,7 @@ setInterval(function() {
 				{
 					state: "processing",
 					updatedAt: {
-						$lt: new Date(new Date() - 1 * 60 * 1000)
+						$lt: new Date(new Date() - 1 * 120 * 1000)
 					}
 				}
 			]
