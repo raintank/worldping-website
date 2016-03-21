@@ -208,7 +208,7 @@ var processAutopilot = function(signup, next) {
 			});
 		});
 		var requeued = false;
-		pilotRequest.setTimeout(45000, function() {
+		pilotRequest.setTimeout(70000, function() {
 			console.log("timeout waiting for autopilot for %s", signup.email);
 			pilotRequest.abort();
 			if (!requeued) {
