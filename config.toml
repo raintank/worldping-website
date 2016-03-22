@@ -9,10 +9,10 @@ title = "raintank"
   section = "section"
 
 [[menu.main]]
-    name = "worldPing"
+    name = "about worldPing"
     weight = -110
     identifier = "worldPing"
-    url = "/worldping/"
+    url = "#"
 
 [[menu.main]]
     name = "what is worldPing?"
