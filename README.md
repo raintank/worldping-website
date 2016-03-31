@@ -12,18 +12,11 @@ Quick build instructions:
 3. Open http://127.0.0.1:1342/ in a browser (or whatever the port specified in gruntfile.js)
 4. Shake vigorously. Pour. Enjoy.
 
-**Pushing to dev**
-milo.wearecapacity.com
-
-1. ssh into the box
-2. pull the latest commits from github: `cd /var/local/milo.wearecapacity.com && git pull`
-4. reprocess the assets, placing them in build/dist: `grunt`
-5. restart application: `service milo restart`
 
 **Pushing to production**
-raintank.io
+worldping.raintank.io
 
 1. ssh into the box
-2. pull the latest commits from github: `cd /var/local/www && git pull`
+2. pull the latest commits from github: `cd /var/local/worldping-website && git pull`
 4. reprocess the assets, placing them in build/dist: `grunt`
-5. restart application: `service raintank restart`
+5. restart application: `service worldping restart`
