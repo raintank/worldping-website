@@ -30,14 +30,14 @@ title = "raintank"
 
 [[menu.main]]
     name = "road map"
-    weight = -60    
+    weight = -80    
     identifier = "roadmap"
     url = "/worldping/road-map/"
     parent = "worldPing"
 
 [[menu.main]]
     name = "faq"
-    weight = -80
+    weight = -60
     indentifier = "faq"
     url = "/worldping/faq"
     parent = "worldPing"
