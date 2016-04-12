@@ -15,7 +15,7 @@
 	
 	<!-- breadcrumbs - needs work -->
 	<div class="breadcrumbs" style="margin-top:20px;">
-		<a href="/">home</a> / <a href="/docs">docs</a> / {{ .Title }}
+		<a href="/" onClick="ga('send', 'event', { eventCategory: 'Link', eventAction: 'worldPing-Docs-Breadcrumb-Home', eventLabel: 'Clicked'});">home</a> / <a href="/docs" onClick="ga('send', 'event', { eventCategory: 'Link', eventAction: 'worldPing-Docs-breadcrumb-DocsHome', eventLabel: 'Clicked'});">docs</a> / {{ .Title }}
 	</div>	
 	<!-- {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}

@@ -34,18 +34,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				            <ul class="dropdown-menu dropdown-menu-left" role="menu">
 				                {{ range .Children }}
 				                <li>
-				                	<a href="{{.URL}}"> {{ .Name }}</a>
+				                	<a href="{{.URL}}" onClick="ga('send', 'event', { eventCategory: 'Link', eventAction: 'worldPing Navbar', eventLabel: '{{ .Name }}'});"> {{ .Name }}</a>
 				                </li>
 				                {{ end }}
 				            </ul>
 			            </li>
 			          {{else}}
 			            <li class="{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
-			            	<a href="{{.URL}}">{{ .Name }}</a>
+			            	<a href="{{.URL}}" onClick="ga('send', 'event', { eventCategory: 'Link', eventAction: 'worldPing Navbar', eventLabel: '{{ .Name }}'});">{{ .Name }}</a>
 			            </li>	
 			          {{end}}
 			          {{end}}
-					    <li><div class="nav-btn"><a class="signUpCTA" href="https://grafana.net/plugins/raintank-worldping-app">Sign Up</a></div></li>
+					    <li><div class="nav-btn"><a href="https://grafana.net/plugins/raintank-worldping-app" onClick="ga('send', 'event', { eventCategory: 'Button', eventAction: 'worldPing Navbar', eventLabel: 'Signup'});" class="signUpCTA" >Sign Up</a></div></li>
 			        </ul>
 				</div><!--/.nav-collapse -->
 			</div>
