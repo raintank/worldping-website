@@ -38,7 +38,7 @@
                 <div class="col-md-8">
                         <ul class="docs-list" style="">
                             {{ range $taxonomy.Pages }}
-                            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}" onClick="ga('send', 'event', { eventCategory: 'Link', eventAction: 'worldPing Docs', eventLabel: '{{ .LinkTitle }}'});"> {{ .LinkTitle }} </a></li>
+                            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
                             {{ end }}
                         </ul>
                 </div>
