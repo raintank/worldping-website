@@ -12,6 +12,14 @@ Quick build instructions:
 3. Open http://127.0.0.1:1342/ in a browser (or whatever the port specified in gruntfile.js)
 4. Shake vigorously. Pour. Enjoy.
 
+**Pushing to dev**
+worldping.raintank.io
+
+1. ssh into the box
+2. pull the latest commits from github: `cd /var/local/worldping-staging && git pull`
+4. reprocess the assets, placing them in build/dist: `grunt`
+5. restart application: `service worldping-staging restart`
+
 
 **Pushing to production**
 worldping.raintank.io
