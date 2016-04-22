@@ -6,6 +6,4 @@ tags = [ "raintank", "worldPing", "quotas", "endpoints", "probes" ]
 section = ["worldPing"]
 +++
 
-Quotas in raintank are on both endpoints and probes. During the private beta, the initial quotas are 10 endpoints and 10 private probes.
-
-To request additional endpoints or private probes during the private beta, please email [hello@raintank.io](mailto:hello@raintank.io).
+Quotas exist in worldPing are on both endpoints and probes. The free version of worldPing includes 3 endpoints and 3 private probes.
