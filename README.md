@@ -13,7 +13,7 @@ Quick build instructions:
 4. Shake vigorously. Pour. Enjoy.
 
 **Pushing to dev**
-worldping.raintank.io
+worldping-staging.raintank.io
 
 1. ssh into the box
 2. pull the latest commits from github: `cd /var/local/worldping-staging && git pull`
