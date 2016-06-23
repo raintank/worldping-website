@@ -6,12 +6,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-        less: {
-      dev: {    
+    less: {
+      dev: {
         paths: ['static/less/'],
         src: ['static/less/raintank.less'],
         dest: 'build/dev/css/raintank.css',
-          options: { 
+          options: {
           strictMath: true
        }
       },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         src: ['static/less/raintank.less'],
         dest: 'build/dist/css/raintank.css',
         options: {
-      strictMath: true,
+        strictMath: true,
           plugins: [new AutoPrefixPlugin({ browsers: ['> 0.1%'] }), new CleanCssPlugin({})]
         }
       },

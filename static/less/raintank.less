@@ -1,9 +1,11 @@
-
 @import "variables.less";
 @import "bootstrap/bootstrap.less";
+@import "../css/bootstrap-slider.min.css";
 @import "icon-font.less";
+@import "custom-select.less";
 @import "raintank-general.less";
 @import "team.less";
+@import "pricing.less";
 @import "bootie-docs.less";
 
 //
@@ -22,7 +24,7 @@
   transition: 0.15s;
   text-align: center;
 
-  // For light backgrounds. 
+  // For light backgrounds.
   &:hover,
   &:active {
     border: 1px solid @highlight;
@@ -35,7 +37,7 @@
 // Raintank CTAs
 // ====================================
 
-.signUpCTA, 
+.signUpCTA,
 .signUpCTA:visited{
   width:100px;
   margin-left:10px;
@@ -60,7 +62,7 @@
 .heroCTA:visited{
 
   .ButtonCTA(@primaryCTA, @primaryCTA, @white, @white);
-  
+
   &:hover,
   &:active {
    background-color: darken(@primaryCTA, 10%);
@@ -87,7 +89,7 @@
 }
 
 
-.primaryAltCTA, 
+.primaryAltCTA,
 .primaryAltCTA:visited{
   .ButtonCTA(@primaryCTA, @primaryCTA, @white, @white);
 
@@ -104,7 +106,7 @@
   .ButtonCTA(transparent, @gray-light, @gray-light, @black);
 }
 
-.lightCTA, 
+.lightCTA,
 .lightCTA:visited{
   .ButtonCTA(transparent, @white, @white, @white);
 
@@ -116,7 +118,7 @@
   }
 }
 
-.specialCTA, 
+.specialCTA,
 .specialCTA:visited{
   .ButtonCTA(transparent, @primaryCTA, @primaryCTA, @white);
 
@@ -128,7 +130,7 @@
   }
 }
 
-.usecase, 
+.usecase,
 .usecase:visited {
   .ButtonCTA(transparent, @white, @white, @white);
     & i.secondary-icon, h3, h4 {color:@brand-primary;}
@@ -232,14 +234,14 @@
 // Dropdowns
 // --------------------------------------------------
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
+.navbar-nav .dropdown-menu > li > a:hover,
+.navbar-nav .dropdown-menu > li > a:focus {
   #gradient > .vertical(@start-color: @dropdown-link-hover-bg; @end-color: darken(@dropdown-link-hover-bg, 5%));
   background-color: darken(@dropdown-link-hover-bg, 5%);
 }
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
+.navbar-nav .dropdown-menu > .active > a,
+.navbar-nav .dropdown-menu > .active > a:hover,
+.navbar-nav .dropdown-menu > .active > a:focus {
   #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
   background-color: darken(@dropdown-link-active-bg, 5%);
 }
