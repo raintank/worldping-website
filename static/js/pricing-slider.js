@@ -31,12 +31,37 @@ function calculateChecks() {
 
   console.log([endpointCount, endpoints, locationCount, seconds, totalChecks]);
 
-  $('#pricing-slider').slider('setValue', totalChecks / 1000000)
+  $('#pricing-slider').slider('setValue', totalChecks / 1000000);
+  updatePrice();
+}
+
+function updatePrice() {
+  var millionChecks = $('#pricing-slider').slider('getValue');
+
+  var monthlyCost = 0;
+
+  if (millionChecks > 1000) {
+    $('#monthlyCost').text('Please call us');
+    return;
+  }
+
+  if (millionChecks > 200) {
+    monthlyCost += (millionChecks - 200) * 5;
+    millionChecks = 200;
+  }
+
+  if (millionChecks > 3) {
+    monthlyCost += (millionChecks - 3) * 7;
+  }
+
+  $('#monthlyCost').html('<div class="checks-slider-emc">$<span>' + monthlyCost + '</span><small> / month</small></div>');
 }
 
 $(function() {
   updateEndpointsText();
+  updatePrice();
   $('#endpoints-dropdown').on('change', 'input[type=checkbox]', updateEndpointsText);
   $('#seconds-dropdown').on('click', '.dropdown-menu button', updateSecondsText);
   $('#calculate').click(calculateChecks);
+  $('#pricing-slider').on('change', updatePrice);
 });
