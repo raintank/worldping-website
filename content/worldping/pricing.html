@@ -53,13 +53,24 @@ description = "Pricing"
             </div>
             from <input class="form-control" type="text" value="120" /> locations around the world,
             every
-            <div class="custom-select">
-              <select>
-                <option>25</option>
-                <option>50</option>
-                <option>75</option>
-                <option>100</option>
-              </select>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="seconds" data-toggle="dropdown">
+                <span>125</span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="seconds">
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">5</button>
+                </li>
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">10</button>
+                </li>
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">50</button>
+                </li>
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">120</button>
+                </li>
+              </ul>
             </div>
             seconds.
           </div>
