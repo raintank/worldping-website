@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         tasks: 'less:dev',
       },
       hugo: {
-        files: ['layouts/**', 'content/**'],
+        files: ['layouts/**', 'content/**', 'static/js/**'],
         tasks: 'hugo:dev',
       },
       all: {
