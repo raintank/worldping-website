@@ -1,6 +1,9 @@
 $('#pricing-slider').slider({
   tooltip: 'always',
   formatter: function(value) {
+    if (value >= 1000) {
+      return '1 Billion+ checks/mo';
+    }
     return value + ' Million checks/mo';
   }
 });
@@ -40,8 +43,8 @@ function updatePrice() {
 
   var monthlyCost = 0;
 
-  if (millionChecks > 1000) {
-    $('#monthlyCost').text('Please call us');
+  if (millionChecks >= 1000) {
+    $('#monthlyCost').html('<div class="please-call">Please call us</div>');
     return;
   }
 

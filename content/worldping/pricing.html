@@ -23,7 +23,7 @@ description = "Pricing"
         <h5 class="text-center">(<button type="button" class="btn btn-text btn-xs" data-toggle="collapse" href="#collapseExample">how many checks will I use?</button>)</h5>
         <div class="checks-madlib collapse" id="collapseExample">
           <div class="checks-madlib-config">
-            We will be monitoring <input class="form-control" type="text" value="5" id="endpointCount" /> endpoints for
+            We will be monitoring <input class="form-control" type="text" value="60" id="endpointCount" /> endpoints for
             <div class="dropdown" id="endpoints-dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="endpoints" data-toggle="dropdown">
                 <span>Ping, DNS, &amp; HTTP</span>
@@ -59,10 +59,10 @@ description = "Pricing"
               </button>
               <ul class="dropdown-menu" aria-labelledby="seconds">
                 <li>
-                  <button class="btn btn-text btn-xs" type="button">5</button>
+                  <button class="btn btn-text btn-xs" type="button">10</button>
                 </li>
                 <li>
-                  <button class="btn btn-text btn-xs" type="button">10</button>
+                  <button class="btn btn-text btn-xs" type="button">30</button>
                 </li>
                 <li>
                   <button class="btn btn-text btn-xs" type="button">60</button>
@@ -80,7 +80,7 @@ description = "Pricing"
       </div>
       <div class="col-sm-12">
         <div class="checks-slider">
-          <input id="pricing-slider" data-slider-id='pricingSlider' type="text" data-slider-min="1" data-slider-max="300" data-slider-step="1" data-slider-value="150"/>
+          <input id="pricing-slider" data-slider-id='pricingSlider' type="text" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="32" data-slider-scale="logarithmic" />
         </div>
         <div class="checks-slider-desc row">
           <div class="col-md-5 col-md-offset-1">
@@ -95,7 +95,7 @@ description = "Pricing"
           <div class="col-md-5 col-md-offset-1">
             <p>Estimated Monthly Cost:</p>
             <div id="monthlyCost">
-              <div class="checks-slider-emc">$<span>1029</span><small> / month</small></div>
+              <div class="checks-slider-emc">$<span>203</span><small> / month</small></div>
             </div>
           </div>
         </div>
