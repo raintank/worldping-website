@@ -2,7 +2,7 @@
 ------------------------- */
 
 .marketing.pricing {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 
@@ -189,7 +189,7 @@
 }
 
 .checks-slider-desc {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .checks-slider-bullets {
@@ -203,4 +203,56 @@
 
 .checks-slider-emc small {
   font-size: 18px;
+}
+
+
+/* Pricing Table */
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-height: 90%;
+    padding-top: 10px;
+  }
+  thead th{
+    background-color: @brand-primary;
+    color: @white;
+    text-align: center;
+    font-size: @font-size-h4;
+    padding: 10px 0;
+    margin: 0 auto;
+    border-bottom: 2px solid @white;
+  }
+
+   tbody th {
+    text-align: center;
+    color: @gray-dark;
+    font-size: @font-size-h5;
+    font-weight: 600;
+    padding: 10px 0;
+      &:nth-child(even) {
+        background-color: #e7f7fb;
+      }     
+    }
+
+  tbody td {
+    width: 25%;
+    padding: 10px 0 20px 0;
+    color: @gray-dark;
+    font-weight: 600;
+    font-size: @font-size-h5;
+      &:nth-child(even) {
+        background-color: #e7f7fb;
+     }
+   } 
+  
+  tfoot td {
+   padding-top: 40px;
+  }
 }

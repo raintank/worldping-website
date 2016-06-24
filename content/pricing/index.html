@@ -1,0 +1,152 @@
++++
+title       = "Pricing"
+description = "Pricing"
++++
+
+<section class="hero litmus-hero">
+  <div class="hero-content-container inner">
+    <div class="hero-caption">
+      <h1 class="alpha-heading text-center">Open SaaS Network Performance Monitoring</h1>
+    </div>
+  </div>
+</section>
+
+<div class="main-content-container">
+  <div class="marketing pricing">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="beta-heading text-primary text-center" style="margin-bottom: 10px;">Pay what you use.</h2>
+        <p class="lead text-center" style="margin-top: 0;">worldPing bills by how many checks you use in a month. Simple.</p>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <h3 class="text-center">Checks per month</h3>
+        <h5 class="text-center">(<button type="button" class="btn btn-text btn-xs" data-toggle="collapse" href="#collapseExample">how many checks will I use?</button>)</h5>
+        <div class="checks-madlib collapse" id="collapseExample">
+          <div class="checks-madlib-config">
+            We will be monitoring <input class="form-control" type="text" value="60" id="endpointCount" /> endpoints for
+            <div class="dropdown" id="endpoints-dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="endpoints" data-toggle="dropdown">
+                <span>Ping, DNS, &amp; HTTP</span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="endpoints">
+                <li>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="ping" value="ping" checked /> Ping
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="dns" value="dns" checked /> DNS
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="http" value="http" checked /> HTTP
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="https" value="https" /> HTTPS
+                  </label>
+                </li>
+              </ul>
+            </div>
+            from <input class="form-control" type="text" value="4" id="locationCount" /> locations around the world,
+            every
+            <div class="dropdown" id="seconds-dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="seconds" data-toggle="dropdown">
+                <span>60</span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="seconds">
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">10</button>
+                </li>
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">30</button>
+                </li>
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">60</button>
+                </li>
+                <li>
+                  <button class="btn btn-text btn-xs" type="button">120</button>
+                </li>
+              </ul>
+            </div>
+            seconds.
+          </div>
+          <button class="btn-calculate" id="calculate">Calculate</button>
+          <button type="button" class="close" aria-label="Close" data-toggle="collapse" href="#collapseExample"><span aria-hidden="true">&times;</span></button>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="checks-slider">
+          <input id="pricing-slider" data-slider-id='pricingSlider' type="text" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="32" data-slider-scale="logarithmic" />
+        </div>
+        <div class="checks-slider-desc row">
+          <div class="col-md-5 col-md-offset-1">
+            <ul class="checks-slider-bullets">
+              <li><strong>Unlimited Endpoints.</strong></li>
+              <li>Free for the first 3 Million checks per month.</li>
+              <li>Then +$7 per Million up to 200 Million.</li>
+              <li>Then +$5 per Million up to 1 Billion.</li>
+              <li><em>$20/minimum per month.</em></li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-md-offset-1">
+            <p>Estimated Monthly Cost:</p>
+            <div id="monthlyCost">
+              <div class="checks-slider-emc">$<span>203</span><small> / month</small></div>
+            </div>
+          </div>
+          <div class="col-md-12 text-center" style="margin-top: 20px;">
+            <a href="https://grafana.net/plugins/raintank-worldping-app?utm_source=worldping_rt_pricing" data-gacategory="Button" data-gaaction="Signup" data-galabel="Slider Pricing" class="primaryAltCTA" >Let's Do This!</a>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12" style="margin-bottom: 75px;">
+      <h2 class="beta-heading text-bold text-center">Not ready to commit? Put worldPing through its paces at no charge.</h2>
+        <table cellpadding="0" cellspacing="0" width="100%" height="20%" class="pricing-table">
+          <thead>
+            <tr>
+              <th colspan="4">worldPing Free Tier Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="/img/3_million.svg" />
+              </td>
+              <td>
+                <img src="/img/endpoints.svg" />
+              </td>
+              <td>
+                <img src="/img/protocols.svg" />
+              </td>
+              <td>
+                <img src="/img/locations.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>Checks per Month</td>
+              <td>Up to 3 Endpoints</td>
+              <td>All Protocols</td>
+              <td>20+ Global Probes</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4"><p class="lead text-center">What have you got to lose? Start using worldPing free today.</p></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="col-md-12 text-center">
+          <a href="https://grafana.net/plugins/raintank-worldping-app?utm_source=worldping_rt_pricing" data-gacategory="Button" data-gaaction="Signup" data-galabel="Free Tier Pricing" class="primaryAltCTA">Join the Free Tier</a>
+        </div>  
+    </div>
+  </div>    
+</div>
