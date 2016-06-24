@@ -23,7 +23,7 @@ description = "Pricing"
         <h5 class="text-center">(<button type="button" class="btn btn-text btn-xs" data-toggle="collapse" href="#collapseExample">how many checks will I use?</button>)</h5>
         <div class="checks-madlib collapse" id="collapseExample">
           <div class="checks-madlib-config">
-            We will be monitoring <input class="form-control" type="text" value="60" id="endpointCount" /> endpoints for
+            We will be monitoring <input class="form-control" type="text" value="5" id="endpointCount" /> endpoints for
             <div class="dropdown" id="endpoints-dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="endpoints" data-toggle="dropdown">
                 <span>Ping, DNS, &amp; HTTP</span>
@@ -51,7 +51,7 @@ description = "Pricing"
                 </li>
               </ul>
             </div>
-            from <input class="form-control" type="text" value="4" id="locationCount" /> locations around the world,
+            from <input class="form-control" type="text" value="15" id="locationCount" /> locations around the world,
             every
             <div class="dropdown" id="seconds-dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="seconds" data-toggle="dropdown">
@@ -80,27 +80,27 @@ description = "Pricing"
       </div>
       <div class="col-sm-12">
         <div class="checks-slider">
-          <input id="pricing-slider" data-slider-id='pricingSlider' type="text" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="32" data-slider-scale="logarithmic" />
+          <input id="pricing-slider" data-slider-id='pricingSlider' type="text" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="10" data-slider-scale="logarithmic" />
         </div>
         <div class="checks-slider-desc row">
           <div class="col-md-5 col-md-offset-1">
             <ul class="checks-slider-bullets">
               <li><strong>Unlimited Endpoints.</strong></li>
-              <li>Free for the first 3 Million checks per month.</li>
-              <li>Then +$7 per Million up to 200 Million.</li>
-              <li>Then +$5 per Million up to 1 Billion.</li>
+              <li>First 3 Million checks per month: Free</li>
+              <li>Then +$7 per Million from 3M to 200 Million.</li>
+              <li>Then +$5 per Million from 200M to 1 Billion.</li>
               <li><em>$20/minimum per month.</em></li>
             </ul>
           </div>
           <div class="col-md-5 col-md-offset-1">
-            <p>Estimated Monthly Cost:</p>
+            <p>Estimated Cost:</p>
             <div id="monthlyCost">
               <div class="checks-slider-emc">$<span>203</span><small> / month</small></div>
             </div>
           </div>
           <div class="col-md-12 text-center" style="margin-top: 20px;">
             <a href="https://grafana.net/plugins/raintank-worldping-app?utm_source=worldping_rt_pricing" data-gacategory="Button" data-gaaction="Signup" data-galabel="Slider Pricing" class="primaryAltCTA" >Let's Do This!</a>
-          </div>  
+          </div>
         </div>
       </div>
     </div>
@@ -146,7 +146,7 @@ description = "Pricing"
         </table>
         <div class="col-md-12 text-center">
           <a href="https://grafana.net/plugins/raintank-worldping-app?utm_source=worldping_rt_pricing" data-gacategory="Button" data-gaaction="Signup" data-galabel="Free Tier Pricing" class="primaryAltCTA">Join the Free Tier</a>
-        </div>  
+        </div>
     </div>
-  </div>    
+  </div>
 </div>
