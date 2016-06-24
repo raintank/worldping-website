@@ -57,7 +57,7 @@ function updatePrice() {
     monthlyCost += (millionChecks - 3) * 7;
   }
 
-  $('#monthlyCost').html('<div class="checks-slider-emc">$<span>' + monthlyCost + '</span><small> / month</small></div>');
+  $('#monthlyCost').html('<div class="checks-slider-emc">$<span>' + monthlyCost.toString().replace(/([0-9]+)([0-9]{3})$/, '$1,$2') + '</span><small> / month</small></div>');
 }
 
 $(function() {
