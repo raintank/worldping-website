@@ -44,7 +44,7 @@ function updatePrice() {
   var monthlyCost = 0;
 
   if (millionChecks >= 1000) {
-    $('#monthlyCost').html('<div class="please-call">Please call us</div>');
+    $('#monthlyCost').html('<div class="please-call"><a href="mailto:hello@raintank.io">Contact us</a></div>');
     return;
   }
 
@@ -53,8 +53,13 @@ function updatePrice() {
     millionChecks = 200;
   }
 
-  if (millionChecks > 3) {
+  if (millionChecks > 5) {
     monthlyCost += (millionChecks - 3) * 7;
+  }
+
+  if (millionChecks <= 5) {
+    $('#monthlyCost').html('<div class="checks-slider-emc">$<span>20</span><small> / month <em>minimum</em></small></div>');
+    return;
   }
 
   $('#monthlyCost').html('<div class="checks-slider-emc">$<span>' + monthlyCost.toString().replace(/([0-9]+)([0-9]{3})$/, '$1,$2') + '</span><small> / month</small></div>');
