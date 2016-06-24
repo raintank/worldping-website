@@ -1,0 +1,206 @@
+/* Pricing
+------------------------- */
+
+.marketing.pricing {
+  padding-top: 75px;
+}
+
+
+/* Madlib
+------------------------- */
+
+.checks-madlib {
+  position: relative;
+  margin: 20px 0;
+  background: #f4fbfd;
+  text-align: center;
+}
+
+.checks-madlib button.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.checks-madlib > .checks-madlib-config {
+  margin: 0 0 20px;
+  padding: 25px 65px 0;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.checks-madlib > .btn-calculate {
+  .ButtonCTA(transparent, @primaryCTA, @primaryCTA, @primaryCTA);
+  margin: 0 0 25px;
+
+  &:hover,
+  &:active {
+    background-color: @primaryCTA;
+    color: @white;
+  }
+}
+
+.btn-text {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: @brand-primary;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.checks-madlib .dropdown-menu .btn-text {
+  color: #4d4d4d;
+}
+
+.checks-madlib .dropdown,
+.checks-madlib .form-control,
+.checks-madlib .custom-select {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: auto;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.checks-madlib .dropdown-toggle,
+.checks-madlib .form-control,
+.checks-madlib .custom-select > select {
+  padding: 6px;
+  color: @primaryCTA;
+  background: transparent;
+  border: 0 solid transparent;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  line-height: 1;
+}
+
+.checks-madlib .dropdown-toggle,
+.checks-madlib .form-control,
+.checks-madlib .custom-select {
+  height: 34px;
+  border-bottom: 1px solid @primaryCTA;
+}
+
+.checks-madlib .dropdown-toggle::after,
+.checks-madlib .custom-select::after {
+  content: " ";
+  position: absolute;
+  top: 55%;
+  right: 6px;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 5px solid @primaryCTA;
+  margin-top: 0;
+}
+
+.checks-madlib .dropdown-toggle,
+.checks-madlib .custom-select {
+  padding-right: 18px;
+}
+
+.checks-madlib input[type="text"].form-control {
+  width: 50px;
+  text-align: center;
+}
+
+.checks-madlib .custom-select {
+  width: 60px;
+}
+
+.checks-madlib .dropdown-menu {
+  padding: 5px 10px;
+  background: @white;
+  border: 1px solid #494949;
+  border-radius: 0;
+  box-shadow: 0 0 0;
+}
+
+.checks-madlib input[type="checkbox"] {
+  top: initial;
+  width: auto;
+  height: auto;
+}
+
+
+
+/* Slider
+------------------------- */
+
+.checks-slider {
+  margin-bottom: 50px;
+  padding: 50px 75px 0;
+
+  @media (min-width: @screen-sm-min) {
+    padding: 50px 0 0;
+  }
+}
+
+.checks-slider .slider {
+  width: 100%;
+}
+
+.checks-slider .slider-track {
+  border: 1px solid #d6d6d6;
+  background: transparent none;
+  box-shadow: initial;
+}
+
+.checks-slider .slider-selection {
+  background-color: @primaryCTA;
+  background-image: none;
+  box-shadow: initial;
+}
+
+.checks-slider .slider-handle {
+  width: 26px;
+  height: 26px;
+  border: 3px solid @white;
+  background-color: @primaryCTA;
+  background-image: none;
+  box-shadow: initial;
+}
+
+.checks-slider .slider-horizontal .slider-handle {
+  margin-left: -13px;
+  margin-top: -9px;
+}
+
+.checks-slider .tooltip-inner {
+  background: transparent;
+  color: #494949;
+  font-size: 14px;
+}
+
+.checks-slider .tooltip.top .tooltip-arrow {
+  margin-left: -2px;
+  border-width: 5px 1px 0;
+  border-top-color: #494949;
+}
+
+.checks-slider .tooltip.top {
+  margin-top: -40px;
+}
+
+.checks-slider-desc {
+  margin-bottom: 40px;
+}
+
+.checks-slider-bullets {
+  padding: 0;
+  list-style-position: inside;
+}
+
+.checks-slider-emc {
+  font-size: 48px;
+}
+
+.checks-slider-emc small {
+  font-size: 18px;
+}
