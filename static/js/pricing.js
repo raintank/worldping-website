@@ -44,12 +44,14 @@ function updatePrice() {
   var plan = '';
   var baseprice = '';
   var overages = '';
+  var quotas = 'Unlimited Endpoints, Unlimited Private Probes';
   var monthlyCost = 0;
 
   if (millionChecks >= 1000) {
     $('#plan').text('Custom');
     $('#base-price').text('N/A');
     $('#overages').text('N/A');
+    $('#quotas').text(quotas);
     $('#monthlyCost').html('<div class="please-call"><a href="mailto:hello@raintank.io">Contact us</a></div>');
     return;
   }
@@ -66,7 +68,7 @@ function updatePrice() {
     overages = Math.max(millionChecks - 10, 0) + 'M at $9 per Million per month.';
 
     monthlyCost = 89 + Math.max(millionChecks - 10, 0) * 9;
-  } else if (millionChecks > 3) {
+  } else if (millionChecks > 3 || parseInt($('#endpointCount').val()) > 3) {
     plan = 'Small';
     baseprice = '$19/mo includes 3 Million checks';
     overages = Math.max(millionChecks - 3, 0) + 'M at $13 per Million per month.';
@@ -75,6 +77,7 @@ function updatePrice() {
   } else {
     plan = 'Free';
     baseprice = '$0/mo includes 3 Million checks';
+    quotas = 'Limited to 3 Endpoints, No Private Probes';
     overages = 'N/A';
 
     monthlyCost = 0;
@@ -83,6 +86,7 @@ function updatePrice() {
   $('#plan').text(plan);
   $('#base-price').text(baseprice);
   $('#overages').text(overages);
+  $('#quotas').text(quotas);
   $('#monthlyCost').html('<div class="checks-slider-emc">$<span>' + monthlyCost.toString().replace(/([0-9]+)([0-9]{3})$/, '$1,$2') + '</span><small> / month</small></div>');
 }
 
@@ -109,7 +113,7 @@ $(document).ready(function() {
   }
   var locationPath = filterPath(location.pathname);
   var scrollElem = scrollableElement('html', 'body');
- 
+
   $('a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
@@ -127,7 +131,7 @@ $(document).ready(function() {
       }
     }
   });
- 
+
   // use the first element that is "scrollable"
   function scrollableElement(els) {
     for (var i = 0, argLength = arguments.length; i <argLength; i++) {
@@ -146,5 +150,5 @@ $(document).ready(function() {
     }
     return [];
   }
- 
+
 });
