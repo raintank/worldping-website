@@ -329,6 +329,33 @@ input[type="checkbox"]{
 }
 
 
+.testimonial-content-container {
+  .container-fixed();
+  position:relative;
+  // margin-bottom:60px;
+
+  @media (min-width: @screen-sm-min) {
+    width: (@container-sm);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+  }
+
+  @media (min-width: @screen-md-min) {
+    width: (@container-md);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    width: (calc(@container-lg - 200px));
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+  }
+
+  &.resumed {margin-top:0;}
+}
+
+
 /* GENERIC CONTENT */
 .content-row {
   .container-fixed();
@@ -489,6 +516,13 @@ input[type="checkbox"]{
       a:hover, a:active {color:@gray-light;}
   }
 
+  &.drizzle {
+    background-color: @gray-lightest;
+    background-repeat: repeat-x;
+    color: @gray-base;
+    min-height: 0;
+    }
+
   h3 {
     margin-bottom:30px;
   }
@@ -622,6 +656,7 @@ p {margin-bottom:30px;}
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  margin-right: 20px;
 }
 .testimonial-company {
  max-width:100px;

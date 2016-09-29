@@ -211,7 +211,7 @@
 
 /* Pricing Table */
 
-.pricing-table {
+.free-pricing-table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
@@ -240,7 +240,7 @@
     font-weight: 600;
     padding: 10px 0;
       &:nth-child(even) {
-        background-color: #e7f7fb;
+        background-color: @table-bg-accent;
       }
     }
 
@@ -251,11 +251,145 @@
     font-weight: 600;
     font-size: @font-size-h5;
       &:nth-child(even) {
-        background-color: #e7f7fb;
+        background-color: @table-bg-accent;
      }
    }
 
   tfoot td {
    padding-top: 40px;
   }
+}
+
+/* Commercial Pricing Table
+------------------------- */
+
+table.pricing-table {
+  margin-top: 17rem;
+	border: none;
+	border-collapse: collapse;
+	font-size: 100%;
+	font-weight: 400;
+	margin-bottom: 2rem;
+	th {
+		text-align: center;
+	}
+	th.large {
+		font-size: 150%;
+		background-color: #2F2F2F;
+		border-top: 3px solid @white;
+		border-right: 2px solid @white;
+		padding: 20px 0;
+	}
+	td.blank, th.blank {
+		background-color: transparent;
+	}
+	th.most-pop {
+		color: @white;
+    font-style: italic;
+    font-weight: 600;
+    background-color: @brand-primary;
+		padding: .5rem 0;
+		position: relative;
+	}
+	td {
+		background-color: @table-bg-accent;
+		text-align: center;
+		font-weight: 700;
+		border: 1px solid @white;
+		color: @text-color;
+		height: 60px;
+	}
+	td.sidebar {
+		background-color: lighten(@table-bg-accent, 3);
+		border-left: 1px solid @table-bg-accent;
+		border-right: 3px solid @white;
+		border-bottom: 1px solid @white;
+		width: 150px;
+		text-align: left;
+		font-size: 85%;
+		padding: 10px;
+	}
+	td.pricing {
+		font-weight: 400;
+		background-color: @table-bg-accent;
+		border-left: 2px solid @white;
+		border-right: 2px solid @white;
+	}
+  td.custom {
+		font-weight: 300;
+		background-color: @white;
+		border-left: 2px solid @white;
+		border-right: 2px solid @white;
+    padding: rem-calc(15);
+	}
+  td.short-height {
+    height: 40px;
+	}
+
+  td.med-height {
+    height: 80px;
+	}
+  
+	td.icon {
+		vertical-align: top;
+	}
+
+  td.text-left {
+    text-align: left;
+    padding-left: 15px;
+  }
+
+	td {
+		img {
+			display: block;
+			margin: 20px auto 0 auto;
+		}
+	}
+
+	p.small {
+		font-weight: 300;
+	}
+
+  span.notation, h2.notation {
+    color: gray;
+    display: block;
+	}
+
+  th.pricing-table-bg--stripe,td.pricing-table-bg--stripe {
+    background-color: lighten(@table-bg-accent, 3);
+  }
+
+}
+
+h2.no-top-margin {
+  margin-top: 0;
+}
+
+.pricing-strikethrough {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.pricing-table-col--custom {
+  padding: 0;
+}
+
+.pricing-table-cell--price {
+  padding: rem-calc(10) 0;
+}
+
+.pricing-table-col--custom {
+	padding: 0;
+}
+
+.pricing-table-button--contact-us {
+  margin-left: rem-calc(20);
+}
+
+.pricing-col {
+	width: 200px;
+	border: 2px solid @white;
+	height: 50px;
+	color: @text-color;
+	background-color: @table-bg-accent;
 }
