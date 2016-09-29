@@ -41,27 +41,48 @@ function calculateChecks() {
 function updatePrice() {
   var millionChecks = $('#pricing-slider').slider('getValue');
 
+  var plan = '';
+  var baseprice = '';
+  var overages = '';
   var monthlyCost = 0;
 
   if (millionChecks >= 1000) {
+    $('#plan').text('Custom');
+    $('#base-price').text('N/A');
+    $('#overages').text('N/A');
     $('#monthlyCost').html('<div class="please-call"><a href="mailto:hello@raintank.io">Contact us</a></div>');
     return;
   }
 
-  if (millionChecks > 200) {
-    monthlyCost += (millionChecks - 200) * 5;
-    millionChecks = 200;
+  if (millionChecks > 42) {
+    plan = 'Large';
+    baseprice = '$379/mo includes 50 Million checks';
+    overages = Math.max(millionChecks - 50, 0) + 'M at $7 per Million per month.';
+
+    monthlyCost = 379 + Math.max(millionChecks - 50, 0) * 7;
+  } else if (millionChecks > 8) {
+    plan = 'Medium';
+    baseprice = '$89/mo includes 10 Million checks';
+    overages = Math.max(millionChecks - 10, 0) + 'M at $9 per Million per month.';
+
+    monthlyCost = 89 + Math.max(millionChecks - 10, 0) * 9;
+  } else if (millionChecks > 3) {
+    plan = 'Small';
+    baseprice = '$19/mo includes 3 Million checks';
+    overages = Math.max(millionChecks - 3, 0) + 'M at $13 per Million per month.';
+
+    monthlyCost = 19 + Math.max(millionChecks - 3, 0) * 13;
+  } else {
+    plan = 'Free';
+    baseprice = '$0/mo includes 3 Million checks';
+    overages = 'N/A';
+
+    monthlyCost = 0;
   }
 
-  if (millionChecks > 5) {
-    monthlyCost += (millionChecks - 3) * 7;
-  }
-
-  if (millionChecks <= 5) {
-    $('#monthlyCost').html('<div class="checks-slider-emc">$<span>20</span><small> / month <em>minimum</em></small></div>');
-    return;
-  }
-
+  $('#plan').text(plan);
+  $('#base-price').text(baseprice);
+  $('#overages').text(overages);
   $('#monthlyCost').html('<div class="checks-slider-emc">$<span>' + monthlyCost.toString().replace(/([0-9]+)([0-9]{3})$/, '$1,$2') + '</span><small> / month</small></div>');
 }
 
