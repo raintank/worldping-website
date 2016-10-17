@@ -30,7 +30,7 @@ function calculateChecks() {
   var endpoints = $('#endpoints-dropdown input[type=checkbox]:checked').length;
   var locationCount = parseInt($('#locationCount').val());
   var seconds = parseInt($('#seconds span').text());
-  var totalChecks = endpointCount * endpoints * locationCount * 30.5 * 24 * (3600 / seconds);
+  var totalChecks = endpointCount * endpoints * locationCount * 30.4375 * 24 * (3600 / seconds);
 
   console.log([endpointCount, endpoints, locationCount, seconds, totalChecks]);
 
