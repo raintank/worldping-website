@@ -47,36 +47,30 @@ function updatePrice() {
   var quotas = 'Unlimited Endpoints, Unlimited Private Probes';
   var monthlyCost = 0;
 
-  if (millionChecks >= 1000) {
+  if (millionChecks >= 100) {
     $('#plan').text('Custom');
-    $('#base-price').text('N/A');
-    $('#overages').text('N/A');
+    $('#base-price').text('TBD');
+    $('#overages').text('TBD');
     $('#quotas').text(quotas);
-    $('#monthlyCost').html('<div class="please-call"><a href="mailto:hello@raintank.io">Contact us</a></div>');
+    $('#monthlyCost').html('<div class="please-call"><a href="https://grafana.com/contact">Contact us</a></div>');
     return;
   }
 
-  if (millionChecks > 42) {
-    plan = 'Large';
-    baseprice = '$379/mo includes 50 Million checks';
-    overages = Math.max(millionChecks - 50, 0) + 'M at $7 per Million per month.';
+  if (millionChecks > 20) {
+    plan = 'Basic';
+    baseprice = '$475/mo includes 20 Million checks';
+    overages = Math.max(millionChecks - 20, 0) + 'M at $20 per Million per month.';
 
-    monthlyCost = 379 + Math.max(millionChecks - 50, 0) * 7;
-  } else if (millionChecks > 8) {
-    plan = 'Medium';
-    baseprice = '$89/mo includes 10 Million checks';
-    overages = Math.max(millionChecks - 10, 0) + 'M at $9 per Million per month.';
+    monthlyCost = 475 + Math.max(millionChecks - 20, 0) * 20;
+  } else if (millionChecks > 1 || parseInt($('#endpointCount').val()) > 3) {
+    plan = 'Basic';
+    baseprice = '$100/mo includes 5 Million checks';
+    overages = Math.max(millionChecks - 3, 0) + 'M at $25 per Million per month.';
 
-    monthlyCost = 89 + Math.max(millionChecks - 10, 0) * 9;
-  } else if (millionChecks > 3 || parseInt($('#endpointCount').val()) > 3) {
-    plan = 'Small';
-    baseprice = '$19/mo includes 3 Million checks';
-    overages = Math.max(millionChecks - 3, 0) + 'M at $13 per Million per month.';
-
-    monthlyCost = 19 + Math.max(millionChecks - 3, 0) * 13;
+    monthlyCost = 100 + Math.max(millionChecks - 5, 0) * 25;
   } else {
     plan = 'Free';
-    baseprice = '$0/mo includes 3 Million checks';
+    baseprice = '$0/mo includes 1 Million checks';
     quotas = 'Limited to 3 Endpoints, No Private Probes';
     overages = 'N/A';
 
