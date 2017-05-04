@@ -32,6 +32,7 @@ Taipei | Taiwan
 
 **Vultr** | 
 ------ | ------
+Atlanta | Georgia, USA
 Chicago | Illinois, USA
 Los Angeles | California, USA
 Miami | Florida, USA
