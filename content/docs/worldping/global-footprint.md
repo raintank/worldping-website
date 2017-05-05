@@ -30,9 +30,12 @@ Charleroi | Belgium
 Omaha | Nebraska, USA
 Taipei | Taiwan
 
-**Vultr** | 
+**Linode** | 
 ------ | ------
 Atlanta | Georgia, USA
+
+**Vultr** | 
+------ | ------
 Chicago | Illinois, USA
 Los Angeles | California, USA
 Miami | Florida, USA
