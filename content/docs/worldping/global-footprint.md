@@ -15,6 +15,7 @@ Frankfurt | Germany
 Portland | Oregon, USA
 Sydney | Australia
 Tokyo | Japan
+Sao Paulo | Brasil
 
 **Digital Ocean** | 
 ------ | ------ 
