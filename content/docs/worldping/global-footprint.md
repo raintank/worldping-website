@@ -1,7 +1,7 @@
 +++
 date = "2015-07-01T13:27:26-04:00"
-title = "raintank Global Footprint"
-description = "Deatiled breakdown of the raintank global footprint"
+title = "worldPing Global Footprint"
+description = "Deatiled breakdown of the worldPing global footprint"
 tags = [ "raintank", "worldPing", "probes" ]
 section = ["worldPing"]
 +++
