@@ -6,7 +6,24 @@ tags = [ "raintank", "worldPing", "probes" ]
 section = ["worldPing"]
 +++
 
-<iframe width='100%' height='400px' frameBorder='0' src='https://api.mapbox.com/styles/v1/wearecapacity/cj2m3ns5w00172rmrahi2x4qi.html?title=true&access_token=pk.eyJ1Ijoid2VhcmVjYXBhY2l0eSIsImEiOiJ2ZkcwNFBJIn0.z-6Cs83_A86Eqr3tFekS7g#1.2/31.2/15.6'></iframe>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoid2VhcmVjYXBhY2l0eSIsImEiOiJ2ZkcwNFBJIn0.z-6Cs83_A86Eqr3tFekS7g';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/light', //hosted style id
+    center: [-77.38, 39], // starting position
+    zoom: 3 // starting zoom
+});
+</script>
 <br/>
 
 **Amazon** | 
