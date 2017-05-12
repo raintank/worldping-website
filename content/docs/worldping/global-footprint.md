@@ -6,7 +6,7 @@ tags = [ "raintank", "worldPing", "probes" ]
 section = ["worldPing"]
 +++
 
-<iframe width='100%' height='400px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/wearecapacity.o2jefpi4/attribution,zoompan,zoomwheel.html?access_token=pk.eyJ1Ijoid2VhcmVjYXBhY2l0eSIsImEiOiJ2ZkcwNFBJIn0.z-6Cs83_A86Eqr3tFekS7g'></iframe>
+<iframe width='100%' height='400px' frameBorder='0' src='https://api.mapbox.com/styles/v1/wearecapacity/cj2m3ns5w00172rmrahi2x4qi.html?title=true&access_token=pk.eyJ1Ijoid2VhcmVjYXBhY2l0eSIsImEiOiJ2ZkcwNFBJIn0.z-6Cs83_A86Eqr3tFekS7g#1.2/31.2/15.6'></iframe>
 <br/>
 
 **Amazon** | 
