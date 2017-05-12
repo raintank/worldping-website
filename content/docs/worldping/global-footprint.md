@@ -6,7 +6,7 @@ tags = [ "raintank", "worldPing", "probes" ]
 section = ["worldPing"]
 +++
 
-<iframe src="https://www.google.com/maps/d/embed?mid=1--hr2oTbvXbSEoqeB5K4rOl3YHo" width="100%" height="400"></iframe><br/>
+<iframe src="https://www.google.com/maps/d/u/1/embed?mid=13JMUuQXYFE2v185ge4G5tHzrPfg" width="100%" height="400"></iframe><br/>
 
 **Amazon** | 
 ------ | ------
