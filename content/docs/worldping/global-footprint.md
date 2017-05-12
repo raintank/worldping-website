@@ -17,6 +17,10 @@ Sydney | Australia
 Tokyo | Japan
 Sao Paulo | Brasil
 
+**BelugaCDN** | 
+------ | ------
+Dallas | Texas, USA
+
 **Digital Ocean** | 
 ------ | ------ 
 Amsterdam | Netherlands
