@@ -10,7 +10,6 @@ section = ["worldPing"]
 
 **Amazon** | 
 ------ | ------
-Frankfurt | Germany
 Portland | Oregon, USA
 Sydney | Australia
 Tokyo | Japan
@@ -19,6 +18,7 @@ Sao Paulo | Brasil
 **BelugaCDN** | 
 ------ | ------
 Dallas | Texas, USA
+Frankfurt | Germany
 
 **Digital Ocean** | 
 ------ | ------ 
