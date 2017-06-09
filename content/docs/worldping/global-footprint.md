@@ -11,7 +11,6 @@ section = ["worldPing"]
 **Amazon** | 
 ------ | ------
 Portland | Oregon, USA
-Sydney | Australia
 Tokyo | Japan
 Sao Paulo | Brasil
 
@@ -47,3 +46,4 @@ Newark | New Jersey, USA
 Paris | France
 San Jose | California, USA
 Seattle | Washington, USA
+Sydney | Australia
