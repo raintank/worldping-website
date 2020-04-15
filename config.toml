@@ -1,4 +1,4 @@
-baseurl = "http://worldping.raintank.io/"
+baseurl = "https://worldping.raintank.io/"
 languageCode = "en-us"
 title = "raintank"
 
