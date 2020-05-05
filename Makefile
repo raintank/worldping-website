@@ -1,4 +1,4 @@
-VERSION=v1.0.0
+VERSION=v1.0.1
 IMAGE=us.gcr.io/kubernetes-dev/worldping-website
 .DEFAULT_GOAL := build
 
