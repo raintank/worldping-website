@@ -43,12 +43,6 @@ title = "raintank"
     parent = "worldPing"
 
 [[menu.main]]
-    name = "pricing"
-    weight = -50
-    identifier = "pricing"
-    url = "/pricing/"   
-
-[[menu.main]]
     name = "docs"
     weight = -40
     identifier = "docs"
